@@ -35,21 +35,33 @@ label Proto_Name:
 label New_Pronoun:
     $ pSub = renpy.input("Pronoun Subjective (he/she/they)")
     $ pSub = pSub.strip()
+    if pSub == "":
+        $ pSub = "he"
 
     $ pCon = renpy.input("Pronoun Contraction (he's/she's/they're)")
     $ pCon = pCon.strip()
+    if pCon == "":
+        $ pCon = "he's"
 
     $ pOb = renpy.input("Pronoun Object (him/her/them)")
     $ pOb = pOb.strip()
+    if pOb == "":
+        $ pOb = "him"
 
     $ pPos = renpy.input("Pronoun Possessive (his/hers/theirs)")
     $ pPos = pPos.strip()
+    if pPos == "":
+        $ pPos = "his"
 
     $ pPosAd = renpy.input("Pronoun Possessive Adjective (his/her/their)")
     $ pPosAd = pPosAd.strip()
+    if pPosAd == "":
+        $ pPosAd = "his"
 
     $ pRef = renpy.input("Pronoun Reflective (himself/herself/themselves)")
     $ pRef = pRef.strip()
+    if pRef == "":
+        $ pRef = "himself"
 
     jump New_Pronoun_Confirm
     return
