@@ -46,6 +46,85 @@ default pOb = "him"
 default pPos = "his"
 default pPosAd = "his"
 default pRef = "himself"
+
+label ChoosePronoun:
+    menu:
+        "What are your pronouns?"
+        "he/him":
+            $ pSub = "he"
+            $ pCon = "he's"
+            $ pOb = "him"
+            $ pPos = "his"
+            $ pPosAd = "his"
+            $ pRef = "himself"
+            return
+        "she/her":
+            $ pSub = "she"
+            $ pCon = "she's"
+            $ pOb = "her"
+            $ pPos = "hers"
+            $ pPosAd = "her"
+            $ pRef = "herself"
+            return
+        "they/them":
+            $ pSub = "they"
+            $ pCon = "they're"
+            $ pOb = "them"
+            $ pPos = "theirs"
+            $ pPosAd = "their"
+            $ pRef = "themselves"
+            return
+        "Make your own":
+            call NewPronoun
+            return
+
+label NewPronoun:
+    # player input their pronoun
+    $ pSub = renpy.input("Pronoun Subjective (he/she/they)")
+    # stip any extra spacing
+    $ pSub = pSub.strip()
+    # if player put nothing it will default to he/him
+    if pSub == "":
+        $ pSub = "he"
+
+    $ pCon = renpy.input("Pronoun Contraction (he's/she's/they're)")
+    $ pCon = pCon.strip()
+    if pCon == "":
+        $ pCon = "he's"
+
+    $ pOb = renpy.input("Pronoun Object (him/her/them)")
+    $ pOb = pOb.strip()
+    if pOb == "":
+        $ pOb = "him"
+
+    $ pPos = renpy.input("Pronoun Possessive (his/hers/theirs)")
+    $ pPos = pPos.strip()
+    if pPos == "":
+        $ pPos = "his"
+
+    $ pPosAd = renpy.input("Pronoun Possessive Adjective (his/her/their)")
+    $ pPosAd = pPosAd.strip()
+    if pPosAd == "":
+        $ pPosAd = "his"
+
+    $ pRef = renpy.input("Pronoun Reflective (himself/herself/themselves)")
+    $ pRef = pRef.strip()
+    if pRef == "":
+        $ pRef = "himself"
+
+    jump NewPronounConfirm
+    return
+
+label NewPronounConfirm:
+    menu:
+        "is this correct: Subjective ([pSub]), Contraction ([pCon]), Object ([pOb]), 
+        Possessive ([pPos]), Possessive Adjective ([pPosAd]), Reflective ([pRef])?"
+
+        "Yes":
+            return
+        "No":
+            jump NewPronoun
+    return
 ############################################################
 # Sakura name
 default sakuraName = "???"
