@@ -79,8 +79,11 @@ label ChoosePronoun:
             return
 
 label NewPronoun:
+    # player input their pronoun
     $ pSub = renpy.input("Pronoun Subjective (he/she/they)")
+    # stip any extra spacing
     $ pSub = pSub.strip()
+    # if player put nothing it will default to he/him
     if pSub == "":
         $ pSub = "he"
 

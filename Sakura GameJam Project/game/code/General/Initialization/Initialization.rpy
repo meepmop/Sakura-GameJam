@@ -3,6 +3,6 @@
 
 label start:
     
-    jump Proto_Name
+    jump GameStart
 
     return
