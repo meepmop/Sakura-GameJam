@@ -47,7 +47,38 @@ default pPos = "his"
 default pPosAd = "his"
 default pRef = "himself"
 
-label New_Pronoun:
+label ChoosePronoun:
+    menu:
+        "What are your pronouns?"
+        "he/him":
+            $ pSub = "he"
+            $ pCon = "he's"
+            $ pOb = "him"
+            $ pPos = "his"
+            $ pPosAd = "his"
+            $ pRef = "himself"
+            return
+        "she/her":
+            $ pSub = "she"
+            $ pCon = "she's"
+            $ pOb = "her"
+            $ pPos = "hers"
+            $ pPosAd = "her"
+            $ pRef = "herself"
+            return
+        "they/them":
+            $ pSub = "they"
+            $ pCon = "they're"
+            $ pOb = "them"
+            $ pPos = "theirs"
+            $ pPosAd = "their"
+            $ pRef = "themselves"
+            return
+        "Make your own":
+            call NewPronoun
+            return
+
+label NewPronoun:
     $ pSub = renpy.input("Pronoun Subjective (he/she/they)")
     $ pSub = pSub.strip()
     if pSub == "":
@@ -78,10 +109,10 @@ label New_Pronoun:
     if pRef == "":
         $ pRef = "himself"
 
-    jump New_Pronoun_Confirm
+    jump NewPronounConfirm
     return
 
-label New_Pronoun_Confirm:
+label NewPronounConfirm:
     menu:
         "is this correct: Subjective ([pSub]), Contraction ([pCon]), Object ([pOb]), 
         Possessive ([pPos]), Possessive Adjective ([pPosAd]), Reflective ([pRef])?"
@@ -89,7 +120,7 @@ label New_Pronoun_Confirm:
         "Yes":
             return
         "No":
-            jump New_Pronoun
+            jump NewPronoun
     return
 ############################################################
 # Sakura name

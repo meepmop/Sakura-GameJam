@@ -25,9 +25,7 @@ label Proto_Name:
     # Pronouns
     ############################################################
     sb "Oh, I never asked about your pronouns!"
-    
-    call New_Pronoun
-
+    call ChoosePronoun
     sb "So you go by [pSub!c]/[pOb!c]? Nice!"
 
     return
