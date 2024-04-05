@@ -10,20 +10,15 @@ default specifiedName = "Bingus"
 # input name
 label InsertName:
     $ userInput = renpy.input("Put in the desired name", length=32)
+    # strip any extra spacing
+    $ userInput = userInput.strip()
     # if the player put nothing use this
     if userInput == "":
-        $ userInput = specifiedName
-    # I'm sorry but I'm lazy to do a for loop
-    elif userInput == " ":
-        $ userInput = specifiedName
-    elif userInput == "  ":
         $ userInput = specifiedName
     jump Capitalization
     return
 # capitalization
 label Capitalization:
-    # strip any extra spacing
-    $ userInput = userInput.strip()
     # if it has multiple words, split it
     $ sentences = userInput.split(" ")
     # always capitalize the first letter of each word in the sentence
