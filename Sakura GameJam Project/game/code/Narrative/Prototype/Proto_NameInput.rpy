@@ -3,23 +3,22 @@ label Proto_Name:
     # name the player
     ############################################################
     e "Hi, What is your name?"
-    # pop up for the player name and allow them to input
-    $ playerName = renpy.input("Put in your name")
-    # strip any extra spacing
-    $ playerName = playerName.strip()
-    # if the player enters nothing then set to default state
-    if playerName == "":
-        $ playerName = "Kiku"
+    # call the default name in this scenario
+    $ specifiedName = playerName
+    call InsertName
+    $ playerName = userInput
+
     e "Nice to meet you, [p]!"
 
     ############################################################
     # name the other character
     ############################################################
     sb "Hey, how about picking a new name for me?"
-    $ sakuraName = renpy.input("Name the Sakura boy")
-    $ sakuraName = sakuraName.strip()
-    if sakuraName == "":
-        $ sakuraName = "Sakura"
+    # call the default name in this scenario
+    $ specifiedName = "Sakura"
+    call InsertName
+    $ sakuraName = userInput
+
     sb "Thanks for the name, [p]! I love being [sb]!"
 
     ############################################################
