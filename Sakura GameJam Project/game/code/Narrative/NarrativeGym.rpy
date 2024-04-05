@@ -32,4 +32,14 @@
 
 label GameStart:
     "Hello! Game Starts here!"
+    p "ur mom."
+    menu:
+        "Ur Mom"
+        "Uno reverse":
+            p "bruh"
+        "No u":
+            p "fek u"
+        "No u uwu":
+            p "rofl"
+        # hi there I'm so sorry in advance for breaking this game
     return
