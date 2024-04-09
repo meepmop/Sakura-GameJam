@@ -3,6 +3,6 @@
 
 label start:
     
-    jump GameStart
+    jump Protologue
 
     return
