@@ -6,7 +6,6 @@ label Protologue:
     call InsertName
     $ playerName = userInput
     # name has been established
-    "What are your pronouns?"
     call ChoosePronoun
     call ConfirmIdentity
 
