@@ -1,4 +1,16 @@
 label Protologue:
+    ############################################################
+    # put the name of the character
+    $ targetPerson = 0
+    $ specifiedName = playerName
+    call InsertName
+    $ playerName = userInput
+    # name has been established
+    "What are your pronouns?"
+    call ChoosePronoun
+    call ConfirmIdentity
+
+    ############################################################
     # *Open with a black screen, and soft, hopeful music playing.*
     p "It seems like this year's bloom will be even better than the last."
     p "{i}Sigh{/i}"
@@ -65,6 +77,7 @@ label Protologue:
     sb "Tell me, what even was their name anyways?"
     ############################################################
     # put the name of the character
+    $ targetPerson = 1
     $ specifiedName = "Sakura"
     call InsertName
     # name has been established
@@ -88,21 +101,12 @@ label Protologue:
     p "Okay. Maybe we should actually get you to a hospital–"
     sb "Nonsense! While I may lack my memories, I just know that it must be fate 
     that we met this way uhm… What's your name again?"
-    p "..."
-    ############################################################
-    # put the name of the character
-    $ specifiedName = playerName
-    call InsertName
-    $ playerName = userInput
-    # name has been established
-    ############################################################
+    p "...[p]"
     sb "Simply Divine. [p].~ I will cherish that name for the rest of my days."
     sb "Tell me, will you help recover my lost memories?"
     sb "If you do, you have my word that those concert tickets will be ours~!"
     menu ConcertTicket:
         sb "If you do, you have my word that those concert tickets will be ours~!"
-        "How did you know about-":
-            call Proto_HowDid
         "This is ridiculous–":
             call Proto_Ridiculous
         "No.":

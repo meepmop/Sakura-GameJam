@@ -7,9 +7,13 @@ define e = Character("Eileen")
 ############################################################
 default userInput = ""
 default specifiedName = "Bingus"
+default targetPerson = 0
 # input name
 label InsertName:
-    $ userInput = renpy.input("Put in the desired name", length=32)
+    if targetPerson == 0:
+        $ userInput = renpy.input("Put in your name", length=32)
+    if targetPerson == 1:
+        $ userInput = renpy.input("Put in your love interest's name", length=32)
     # strip any extra spacing
     $ userInput = userInput.strip()
     # if the player put nothing use this
@@ -33,6 +37,19 @@ label Capitalization:
         "no":
             jump InsertName
     return
+
+label ConfirmIdentity:
+    menu YouSureAboutIdentity:
+        "Do you wish to be [p] with the pronouns of [pSub]/[pOb]?"
+        "yes":
+            return
+        "no":
+            $ specifiedName = playerName
+            call InsertName
+            $ playerName = userInput
+            # name has been established
+            call ChoosePronoun
+            jump ConfirmIdentity
 
 ############################################################
 # Player name

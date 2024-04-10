@@ -6,7 +6,7 @@ label Proto_StayQuiet:
     "Too stunned to speak, it's as if their appearance alone locks my lips in place."
     sb "I'm surprised my neck hasn't snapped."
     sb "...Oh, wait just a moment..!"
-    sb "It seems the grass being a bit more ‘cushiony' than normal wasn't just my imagination."
+    sb "It seems the grass being a bit more 'cushiony' than normal wasn't just my imagination."
     sb "My apologies~"
     return
 
@@ -49,10 +49,20 @@ label Proto_WhyLate:
 ############################################################
 # Concert Ticket choice
 ############################################################
-label Proto_HowDid:
-    return
 label Proto_Ridiculous:
+    p "This is ridiculous."
+    p "There's no way some stupid fall could just cause you to suddenly blank out on who the Hell you are!!"
+    p "I'm gonna call the cops-"
+    sb "Why don't we just get started~"
+    "[sb] casts a wink your way and lets out another lighthearted laugh." 
+    "You can't tell whether your face flushes from endearment or annoyance."
+    "It's almost infectious."
+    "This person… there must be a reason which fate brought you both together."
+    "Be it for some 'Divine Purpose', or just a pair of concert tickets."
+    "One thing remains clear."
+    "You were about to have quite the week ahead of you."
     return
+
 label Proto_No:
     p "No."
     return
