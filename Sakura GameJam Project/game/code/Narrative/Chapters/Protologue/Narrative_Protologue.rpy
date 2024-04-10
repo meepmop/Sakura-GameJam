@@ -14,6 +14,7 @@ label Protologue:
     p "It seems like this year's bloom will be even better than the last."
     p "{i}Sigh{/i}"
 
+    scene BGYYFront
     # *The screen slowly fades into YuraYura's infamous cherry blossom tree.*
     "While this marks only my second year at YuraYura Academy, it will also serve 
     as my 21st anniversary of being officially maidenless."
