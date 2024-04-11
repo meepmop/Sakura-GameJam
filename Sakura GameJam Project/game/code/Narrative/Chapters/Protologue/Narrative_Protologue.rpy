@@ -1,4 +1,5 @@
 label Protologue:
+    # establish identity
     ############################################################
     # put the name of the character
     $ targetPerson = 0
@@ -8,14 +9,15 @@ label Protologue:
     # name has been established
     call ChoosePronoun
     call ConfirmIdentity
-
     ############################################################
+    # game actually starts
     # *Open with a black screen, and soft, hopeful music playing.*
     p "It seems like this year's bloom will be even better than the last."
     p "{i}Sigh{/i}"
-
-    scene BGYYFront
+    
+    scene BGYYFront with Fade(0.0,0.0,1.0)
     # *The screen slowly fades into YuraYura's infamous cherry blossom tree.*
+    
     "While this marks only my second year at YuraYura Academy, it will also serve 
     as my 21st anniversary of being officially maidenless."
     "Or…in plain terms. Lacking a Partner."
@@ -37,19 +39,32 @@ label Protologue:
     p "Holding hands, sharing Boba…"
     p "If it weren't for the fact mom didn't promise me front row tickets to that 
     virtual idol concert, I'd honestly be none the wiser."
+    
     # *A small icon of MCs phone with a virtual idol game appears briefly.*
+    show ITPlayerPhone at centerMiddle
+
     p "Who even needs love anyways when I already have it at the touch of my fingertips?"
     p "Ah~ My beloveds~"
     p "Don't worry. Your Producer will be with you all soon enough~"
+    
+    # get rid of the phone
+    hide ITPlayerPhone
+
     p "...{w}..."
     p "At least…I hope so."
     p "If the guy mom set up for me hasn't shown up in the last 5 hours, I doubt 
     they're gonna–"
+    
+    # add a little shake
+    scene BGYYFront with hpunch
+    
     p "?!?!"
     # *The music cuts off and a loud thud plays while the screen goes black.*
-
+    scene black
     sb "Ow, ow, ow..!!"
     # *A shuffling sound effect plays, and the screen fades back into the image of sbwith their hair down looking all baby girl.*
+    show CHsb_neutral
+    scene BGYYFront with Fade(0.0,0.0,1.0)
     sb "My head…"
     ############################################################
     menu MyHead:
@@ -63,6 +78,11 @@ label Protologue:
     ############################################################
     sb "Uhm..anyways!"
     # *Depending on the choice made, SB will have their face in the CG image change from ^-^ to a more ^-^;;; expression.*
+    # if specific choice is chosen to trigger different emote
+    if sbLikes == True:
+        show CHsb_happy
+    else:
+        show CHsb_neutral
     sb "It is uh, nice to...meet you? Haha~"
     ############################################################
     menu WhoSent:
@@ -76,20 +96,23 @@ label Protologue:
     jerk to have left a beautiful flower alone to wilt away into the night."
     sb "Tell me, what even was their name anyways?"
     ############################################################
+    # naming the sakura boy
+    ############################################################
     # put the name of the character
     $ targetPerson = 1
     $ specifiedName = "Sakura"
     call InsertName
     # name has been established
     ############################################################
+    show CHsb_thinking
     sb "Hmm…"
     sb "Hmmmm…"
     p "..?"
-    # *A picture of Sakura Boi taking MC's hands into their own all excited “:D" appears.*
-    ############################################################
     # delayed name change
     $ sakuraName = userInput
-    ############################################################
+
+    # *A picture of Sakura Boi taking MC's hands into their own all excited “:D" appears.*
+    show CHsb_happy
     sb "While I am not a fan of outright abandonment, that sounds like quite the 
     exquisite name!"
     p "Eh?!?!"
@@ -113,4 +136,5 @@ label Protologue:
             # game ends prematurely
             jump Proto_No
 
+    call situTriggerReset
     return

@@ -11,7 +11,10 @@ label Proto_StayQuiet:
     return
 
 label Proto_TheyOk:
+    # makes sure that the choice will give a happy emote when exit
+    $ sbLikes = True
     # 1+ Attraction
+    call sbLoveIncrease
     p "Are you alright?"
     p "You're not hurt, are you?"
     p "I don't particularly feel like dragging anyone to the hospital today."
@@ -20,6 +23,8 @@ label Proto_TheyOk:
     return
 
 label Proto_Insult:
+    # -1 Attraction
+    call sbLoveDecrease
     p "Hey! What the hell's wrong with you?!"
     p "How'd you even get up in that tree in the first place!?"
     p "You know if you damaged that tree, the administration is never gonna let us hear 
@@ -65,4 +70,5 @@ label Proto_Ridiculous:
 
 label Proto_No:
     p "No."
+    call situTriggerReset
     return
