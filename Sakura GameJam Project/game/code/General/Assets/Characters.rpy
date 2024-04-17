@@ -1,6 +1,5 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
-
 define e = Character("Eileen")
 ############################################################
 # User Input Standardization
@@ -144,5 +143,21 @@ label NewPronounConfirm:
     return
 ############################################################
 # Sakura name
+############################################################
 default sakuraName = "???"
 define sb = Character("[sakuraName]")
+############################################################
+# General Characters
+############################################################
+# John doe -- aka any character we idk
+define jd = Character("???")
+define ks = Character ("Kaito")
+define ah = Character("Amari")
+define ma = Character("Mikael")
+
+############################################################
+# Mob Characters
+############################################################
+define sta = Character("Student A")
+define stb = Character("Student B")
+define stc = Character("Student C")
