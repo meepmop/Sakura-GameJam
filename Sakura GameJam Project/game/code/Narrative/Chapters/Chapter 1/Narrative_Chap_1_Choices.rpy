@@ -262,3 +262,34 @@ label Chap1_IDoneDay:
     infamous Baking Club, set you as my next target!"
 
     return
+############################################################
+# littleHelp
+############################################################
+label Chap1_OfferAssist:
+    # + Affection (SB)
+    call sbLoveIncrease
+    p "Would you mind letting go of my friend here?"
+    "You instantly notice how [sb]'s face lights up at your acceptance of your friendship."
+    "However, before they can say anything to further embarrass you, Mikael reluctantly 
+    releases their grip with a huff."
+
+    return
+label Chap1_Shrug:
+    # - Affection (SB)
+    call sbLoveDecrease
+    "You shrug."
+    "Not knowing what exactly to do, you watch helplessly as Mikael further interrogates your 
+    so-called companion."
+    "However, after a few more minutes of this, Mikael decides that they’ve had their 
+    fill, and opts to free [sb] with a disgruntled huff."
+
+    return
+label Chap1_PraiseMikael:
+    # + Affection (Mikael)
+    call maLoveIncrease
+    p "If it means anything…I understood you perfectly."
+    p "Were it not for your accent, I’d have thought it was your native language."
+    "Instantly, you can see Mikael’s expression brighten as he almost excitedly 
+    releases [sb] from his grip."
+
+    return

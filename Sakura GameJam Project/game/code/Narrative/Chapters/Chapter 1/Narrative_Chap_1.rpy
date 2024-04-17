@@ -194,4 +194,30 @@ label Chapter1_Cont_NearbyClass:
         "I think I’m done for the day.":
             call Chap1_IDoneDay
     ############################################################
+    # *A CG of Mikael with [SB] in their hold shows up. They both are looking 
+    # towards the MC. Mikael appears to be grinning while [SB] looks like they’re currently fearing for their life.*
+    # *Mikael’s theme plays.*
+    sb "Uhh…is it really necessary to be this close?"
+    sb "You know, personal space is a thing."
+    p "You’re one to talk."
+    sb "W-Well! This is different! I don’t even know this person!"
+    ma "What do you mean you don’t know me?!"
+    ma "I had just taken the time to give my whole introduction and everythin’!!"
+    "Mikael can be seen pouting as he moves to grab at [sb]'s chin and yank it in his direction."
+    ma "I. Am. Mikael. Amoris."
+    ma "Are you sayin’ my Japanese hasn’t gotten’ better these past few years??"
+    sb "W-Well…I would not have known you prior to this exchange–so–"
+    "[sb] casts a worried glance your way."
+    sb "A little help here?"
+    ############################################################
+    menu littleHelp:
+        sb "A little help here?"
+        "Offer Assistance":
+            call Chap1_OfferAssist
+        "Shrug":
+            call Chap1_Shrug
+        "Praise Mikael":
+            call Chap1_PraiseMikael
+    ############################################################
+
     return
