@@ -65,6 +65,7 @@ label Chapter1:
     "Cutting your losses, you decide to follow in [sb]'s trail."
     "Knowing there’s only so many places they could be, you decide the following:"
     ############################################################
+    # will jump to a search choice in the choices script and return back when chosen correctly
     jump Chap1_SearchChoice
     ############################################################
 
@@ -79,10 +80,118 @@ label Chapter1_Cont_NearbyClass:
     "How did love come so easy to these people?"
     "Why couldn’t it be that way for you?"
     "It honestly makes your chest tighten."
-    return
-
-
-
-
-
+    # *The Scene now changes to that of a traditional Japanese Classroom. 
+    # It holds hints of the upcoming festival within it.*
+    jd "Unbelievable!!"
+    p "Huh–"
+    jd "When I get my hands on him..!"
+    jd "Oho~ Kaito-Kun~ I can practically see your hair graying by the second! Please, calm yourself~"
+    ks "You’re not helping."
+    jd "Ah~ Would you rather me join in your rage?"
+    ah "Ahem. I, Haruka Amari, shall swear vengeance on the one foolish 
+    enough to oppose YuraYura’s student council!"
+    "Before you’ve the chance to leave, you find yourself cornered by the louder of the two people."
+    "Their eyes glisten with a manic fire as they firmly take your hands into their own."
+    ah "You!!"
+    ah "Tell me, have you seen the fiend responsible for this tragedy!?!"
+    ############################################################
+    menu tellMeFiend:
+        ah "Tell me, have you seen the fiend responsible for this tragedy!?!"
+        "Scream":
+            call Chap1_Scream
+        "Yank your hands away":
+            call Chap1_YankHand
+        "Remain still":
+            call Chap1_StayStill
+    ############################################################
+    ks "Enough."
+    # *A CG of both Amari and Kaito standing side by side appears. Kaito looks less than impressed while Amari is seen striking a pose.*
+    # *Kaito’s theme will now play.*
+    ah "Aww...you’re no fun~!"
+    "Now moving back to Kaito’s side, Amari strikes a pose."
+    "Or rather…a few poses. Much to Kaito’s displeasure."
+    ks "It’s obvious that [pSub] got nothing to do with him."
+    ks "I mean…just look at how utterly clueless [pSub] seem."
+    ks "In fact, if I recall correctly, [pPosAd] files mention that outside of classes, 
+    they’ve hardly any involvement in the student-life here."
+    ks "Pathetic."
+    ############################################################
+    menu excuseMePathethic:
+        ks "Pathetic."
+        "Pathetic?!":
+            call Chap1_Pathetic
+        "I’ll show you pathetic..!":
+            call Chap1_IllShowYou
+        "Well actually…":
+            call Chap1_WellActually
+    ############################################################
+    "Taking the time to adjust his vest, Kaito makes his way towards the 
+    opposite end of the classroom."
+    "Running his fingers across the powdered white substance which coats the 
+    desk in front of him, you notice the glint of sorrow which lingers behind his mask."
+    ks "There’s no doubt about it. This is his work."
+    ah "Gone just as quickly as they came too, no?"
+    ah "A true master of stealth~"
+    ks "You mean a true pain in the ass."
+    ks "Though…it’s rather strange."
+    ks "Typically they opt to target one of our councilmen and not some 
+    obscure classroom."
+    ############################################################
+    menu whatJustHappened:
+        ks "Typically they opt to target one of our councilmen and not some 
+        obscure classroom."
+        "Who is this guy?":
+            call Chap1_WhoThatGuy
+        "Is that…flour?":
+            call Chap1_IsThatFlour
+        "Remain Quiet":
+            call Chap1_RemainQuiet
+    ############################################################
+    "Suddenly, before another word can be spoken, a loud scream can be 
+    heard coming from outside of the classroom."
+    sta "HELP ME! PRESIDENT-SAMA!! IT’S EVERYWHERE!!!!"
+    stb "The flour bomber is back again! Run!!"
+    stc "My eyes!! They’re so dry!!!!"
+    ks "..!"
+    ks "Mikael!!!"
+    "Without skipping a beat, Kaito can be seen bolting out of the area."
+    ks "Out of my way!"
+    # *Some clattering sound effects could be heard*
+    ks "I said MOVE!"
+    ah "Oh dear…there he goes again~"
+    ah "I shouldn’t leave poor Kaito-Kun alone too long."
+    ah "May we cross paths once more in the near future! My beloved [p]~!"
+    "With a dramatic twirl, Amari decides to take their leave, leaving you alone 
+    in the room just as, if not, even more confused than when you had entered it."
+    "Once finally alone, you can’t help but let out a heavy sigh."
+    jd "Um…[p]?"
+    ############################################################
+    menu turnToTheVoice:
+        jd "Um…[p]?"
+        "Ignore the voice":
+            call Chap1_IgnoreVoice
+        "Turn your head":
+            call Chap1_TurnHead
+    ############################################################
+    sb "You know, I had originally planned on giving you this ice cream as a 
+    form of apology…"
+    sb "However, that rather scary looking guy with the mask went ahead and knocked 
+    it right from my hands!"
+    sb "Talk about a bummer. Huh..~?"
+    jd "If you’d like, I can get you somethin’ even better~"
+    sb "Oh. That’d be wonderful~"
+    "[sb]’s lips curl into a warm smile." 
+    "However, following a moment of thought, [sb] quickly tenses, and you can feel 
+    your eyes widening."
+    ############################################################
+    menu newCharacter:
+        "However, following a moment of thought, [sb] quickly tenses, and you can feel 
+        your eyes widening."
+        "Who the hell are you?!":
+            call Chap1_WhoHellYou
+        "Not another one…":
+            call Chap1_NotAnother
+        "I think I’m done for the day.":
+            call Chap1_IDoneDay
+    ############################################################
     return
