@@ -63,8 +63,8 @@ label Protologue:
     scene black
     sb "Ow, ow, ow..!!"
     # *A shuffling sound effect plays, and the screen fades back into the image of sbwith their hair down looking all baby girl.*
-    show CHsb_neutral
     scene BGYYFront with Fade(0.0,0.0,1.0)
+    show CHsb_neutral
     sb "My head…"
     ############################################################
     menu MyHead:
