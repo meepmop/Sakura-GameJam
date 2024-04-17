@@ -79,7 +79,7 @@ label Protologue:
     sb "Uhm..anyways!"
     # *Depending on the choice made, SB will have their face in the CG image change from ^-^ to a more ^-^;;; expression.*
     # if specific choice is chosen to trigger different emote
-    if sbLikes == True:
+    if sbTrig == True:
         show CHsb_happy
     else:
         show CHsb_neutral
@@ -137,4 +137,5 @@ label Protologue:
             jump Proto_No
 
     call situTriggerReset
+    jump Chapter1
     return

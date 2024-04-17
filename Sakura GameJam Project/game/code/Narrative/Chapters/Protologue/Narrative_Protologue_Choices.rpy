@@ -12,7 +12,7 @@ label Proto_StayQuiet:
 
 label Proto_TheyOk:
     # makes sure that the choice will give a happy emote when exit
-    $ sbLikes = True
+    $ sbTrig = True
     # 1+ Attraction
     call sbLoveIncrease
     p "Are you alright?"

@@ -6,11 +6,11 @@
 default sbLove = 0
 # sb Attraction level calling
 label sbLoveIncrease:
-    # "[sb] liked that"
+    "[sb] liked that"
     $ sbLove += 1
     return
 label sbLoveDecrease:
-    # "[sb] disliked that"
+    "[sb] disliked that"
     $ sbLove -= 1
     return
 ############################################################
@@ -18,9 +18,12 @@ label sbLoveDecrease:
 ############################################################
 # if choice trigger something that sb likes to the images or actions
 # only per chapter usage
-default sbLikes = False
+default sbTrig = False
+# need a choice to go away? use this to tag
+default choice1Chosen = False
 
 # reset any situational triggers
 label situTriggerReset:
-    $ sbLikes = False
+    $ sbTrig = False
+    $ choice1Chosen = False
     return
