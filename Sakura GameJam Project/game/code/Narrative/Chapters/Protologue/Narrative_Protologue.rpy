@@ -64,7 +64,7 @@ label Protologue:
     sb "Ow, ow, ow..!!"
     # *A shuffling sound effect plays, and the screen fades back into the image of sbwith their hair down looking all baby girl.*
     scene BG YYFront with Fade(0.0,0.0,1.0)
-    show sb neutral
+    show sb ouch
     sb "My head…"
     ############################################################
     menu MyHead:
@@ -93,7 +93,10 @@ label Protologue:
         "Why are you late?":
             show sb neutral
             call Proto_WhyLate
+
     ############################################################
+    show sb neutral
+
     sb "Though, if it's already this late…that so-called other person must be a real 
     jerk to have left a beautiful flower alone to wilt away into the night."
     sb "Tell me, what even was their name anyways?"
@@ -121,9 +124,15 @@ label Protologue:
     show sb neutral
     p "Don't you have a name of your own?! Don't go taking other people's–!"
     sb "How am I to take what never even bothered to show up in the first place~?"
+
+    show sb happy
+
     sb "If anything, consider it that person's 'tax' for failing to accompany you."
     sb "Besides~ It's not like I could come up with a name of my own."
     sb "It seems that fall did quite the number on my memories~"
+
+    show sb neutral
+
     p "Okay. Maybe we should actually get you to a hospital–"
     show sb neutral
     sb "Nonsense! While I may lack my memories, I just know that it must be fate 

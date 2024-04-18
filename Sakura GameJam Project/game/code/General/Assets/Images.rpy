@@ -8,6 +8,9 @@ image BG YYFront = "BG/Placeholder/bg_SchoolFront.png"
 image sb neutral = "Characters/Placeholder/ch_sb_neutral.png"
 image sb happy = "Characters/Placeholder/ch_sb_happy.png"
 image sb thinking = "Characters/Placeholder/ch_sb_thinking.png"
+image sb ouch = "Characters/Placeholder/ch_sb_ouch.png"
+image sb oh = "Characters/Placeholder/ch_sb_oh.png"
+image sb line = "Characters/Placeholder/ch_sb_line.png"
 
 ################################################################################
 # defined items
