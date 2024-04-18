@@ -41,8 +41,10 @@ label Proto_MomSent:
     p "You know. The one who was supposed to be here a couple hours ago?"
     sb "Honestly. Is it bad that I don't have an answer to that?"
     sb "I could be."
+    show sb happy
     sb "But I could also just be some random guy who just so happened to fall 
     out from that tree."
+    show sb neutral
     sb "I'm thinking the second option might be more likely~"
     return
 label Proto_WhyLate:
@@ -58,6 +60,7 @@ label Proto_Ridiculous:
     p "This is ridiculous."
     p "There's no way some stupid fall could just cause you to suddenly blank out on who the Hell you are!!"
     p "I'm gonna call the cops-"
+    show sb happy
     sb "Why don't we just get started~"
     "[sb] casts a wink your way and lets out another lighthearted laugh." 
     "You can't tell whether your face flushes from endearment or annoyance."
