@@ -1,18 +1,21 @@
 # defined backgrounds
 ################################################################################
-image BGYYFront = "BG/demo/bg_cave.jpg"
+image BG YYFront = "BG/Placeholder/bg_SchoolFront.png"
 ################################################################################
 # defined characters
 ################################################################################
 # Sakura Boy
-image CHsb_neutral = "Characters/demo/eileen happy.png"
-image CHsb_happy = "Characters/demo/eileen vhappy.png"
-image CHsb_thinking = "Characters/demo/eileen concerned.png"
+image sb neutral = "Characters/Placeholder/ch_sb_neutral.png"
+image sb happy = "Characters/Placeholder/ch_sb_happy.png"
+image sb thinking = "Characters/Placeholder/ch_sb_thinking.png"
+image sb ouch = "Characters/Placeholder/ch_sb_ouch.png"
+image sb oh = "Characters/Placeholder/ch_sb_oh.png"
+image sb line = "Characters/Placeholder/ch_sb_line.png"
 
 ################################################################################
 # defined items
 ################################################################################
-image ITPlayerPhone = "Items/demo/logo base.png"
+image IT PlayerPhone = "Items/Placeholder/it_phoneHusband.png"
 ################################################################################
 # defined transistion
 ################################################################################

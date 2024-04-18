@@ -3,6 +3,14 @@
 
 label start:
     
-    jump Protologue
-
+    menu levelSelect:
+        "Choose a chapter"
+        "Protologue":
+            jump Protologue
+        "Chapter 1":
+            # for debugging
+            $ sb = "Sakura"
+            jump Chapter1
+    
+    # jump Protologue
     return
