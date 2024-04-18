@@ -112,6 +112,7 @@ label Protologue:
     $ sakuraName = userInput
 
     # *A picture of Sakura Boi taking MC's hands into their own all excited “:D" appears.*
+    hide CHsb_thinking
     show CHsb_happy
     sb "While I am not a fan of outright abandonment, that sounds like quite the 
     exquisite name!"
@@ -137,5 +138,6 @@ label Protologue:
             jump Proto_No
 
     call situTriggerReset
+    scene black with fade
     jump Chapter1
     return
