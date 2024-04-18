@@ -219,5 +219,103 @@ label Chapter1_Cont_NearbyClass:
         "Praise Mikael":
             call Chap1_PraiseMikael
     ############################################################
-
+    ma "So, about that ice cream~"
+    ma "How ‘Bout I whip y’all up some as an apology for Sakuraba’s bitchiness?"
+    sb "Doesn’t that require less baking and more, uh, freezing?"
+    ma "Well. Yeah. But."
+    "You visibly notice Mikael fluster."
+    "It almost brings a smile to your face."
+    "Despite having only just met the man, it was as if his presence alone 
+    was enough to shine some positivity on this already hectic morning."
+    "Clearing your throat, you decide to ask the following:"
+    ############################################################
+    menu clearThroatDecide:
+        "Clearing your throat, you decide to ask the following:"
+        "Who’s Sakuraba?":
+            call Chap1_Sakuraba
+        "Shouldn’t you be cleaning?":
+            call Chap1_BeCleaning
+        "Didn’t you just have those cookies?":
+            call Chap1_Cookies
+    ############################################################
+    ma "Hey…now that I think about it."
+    ma "I never got your name."
+    "Mikael extends his hand out to you."
+    "It’s huge in comparison to yours."
+    "In fact, you can only compare it to the ‘Yaoi’ hands you see in your idol game."
+    "It’s almost unnerving."
+    ############################################################
+    menu almostUnnerving:
+        "It’s almost unnerving."
+        "Remain quiet":
+            call Chap1_RemainQuietAgain
+        "Introduce yourself":
+            call Chap1_IntroduceSelf
+        "Introduce yourself!!!":
+            call Chap1_IntroduceSelfWithConfidence
+    ############################################################
+    ma "Now, with introductions out the way."
+    ma "Would you mind tellin’ me what you two are doin’ here anyways?"
+    ma "While I somewhat recognize your face, I know for sure I haven’t seen flower 
+    boy over here before."
+    "You quickly cast a glance [sb]'s way, taking notice of how embarrassed they look 
+    at Mikael’s makeshift 'title'."
+    p "Well, apparently they don’t remember who they are."
+    "You sigh heavily while pulling out your phone and flashing it Mikael’s way."
+    "On it, it shows your interpretation of what’s happened so far."
+    "You figured it’d be best to write it all down in the event someone called you crazy."
+    "However, judging from how the man before you was scratching their chin, you 
+    feared that still might be the case."
+    ma "So you’re sayin’ they just fell from some tree?!"
+    ma "Talk about cool!!"
+    sb "It was rather painful, you see~"
+    ma "Oh, I bet!"
+    ma "You see, one time Kaito ‘n I–"
+    "You quickly see Mikael’s body tense as he cuts himself off mid sentence."
+    ############################################################
+    menu michaelTenses:
+        "You quickly see Mikael’s body tense as he cuts himself off mid sentence."
+        "What about him":
+            call Chap1_WhatAboutHim
+        "Switch Subjects":
+            call Chap1_SwitchSubject
+    ############################################################
+    "After a few moments of prolonged silence, [sb] decides to break it by stepping 
+    in between both yourself and Mikael."
+    "Now clasping their hands together, you feel as though that they were about to 
+    turn this supposedly one off interaction into a recurring occurrence."
+    sb "Say…Mikael."
+    ma "That’s my name~"
+    sb "You know…"
+    sb "Despite your hand in wreaking havoc in this school, I feel as though I can 
+    trust you."
+    sb "Those eyes of yours, I can sense the lingering sorrow behind them."
+    sb "You’re seeking answers as well."
+    sb "That's why you’ve taken up the mantle of being YuraYura’s ‘Flour Bomber’, yes?"
+    p "?!?!"
+    p "You can’t just go saying stuff like that!"
+    p "What if he targets us next?!"
+    p "You’ll never get your memories back if I have to send you to the damn hospital–!"
+    ma "Heh. I knew I knew somethin’ was off about ya."
+    "Mikael cards his fingers through his hair."
+    "Shaking his head, you can tell that the redhead was more impressed if anything 
+    that someone had called him out on his feelings."
+    ma "Yeah. I want answers."
+    ma "In fact, I want lots more than that."
+    ma "That bastard of a President didn’t always make me wanna punch his face in."
+    ma "But, that’s a story for another day~"
+    ma "Tell ya what."
+    ma "From now on, whatever weird memory thing y'all got goin’. I’m gonna help!"
+    ma "Though…I’ll need somethin’ in turn~"
+    ############################################################
+    menu whatDoYouNeedInReturn:
+        ma "Though…I’ll need somethin’ in turn~"
+        "Absolutely not":
+            call Chap1_AbsolutelyNo
+        "And that is…?":
+            call Chap1_AndThatIs
+    ############################################################
+    ma "Of course not~"
+    ma "All I ask, is that you keep Sakuraba busy until Friday’s festival."
+    call situTriggerReset
     return

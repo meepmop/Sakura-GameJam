@@ -293,3 +293,128 @@ label Chap1_PraiseMikael:
     releases [sb] from his grip."
 
     return
+############################################################
+# clearThroatDecide
+############################################################
+label Chap1_Sakuraba:
+    # + Affection (Mikael)
+    call maLoveIncrease
+    p "It sounds like you and that Sakuraba guy don’t really get along."
+    p "Did he make you drop your ice cream too?"
+    "Mikael reaches to scratch at the back of his head."
+    "It appears as though despite the frown which paints his lips, his eyes 
+    hold a story which only he could tell."
+    ma "Sakuraba. Or, as that theater chick usually calls him, Kaito."
+    ma "Let’s just say we’ve got history."
+    ma "I wouldn’t be wastin’ all that flour if we didn’t."
+    ma "Though~ I ain’t wanna trouble you with all that."
+    return
+label Chap1_BeCleaning:
+    # - Affection (Mikael) + Affection (Kaito)
+    call maLoveDecrease
+    call ksLoveIncrease
+    p "If you’re the one responsible for this, shouldn’t you be the one to clean it up?"
+    p "You know, I can bet the custodial staff aren't too thrilled either."
+    p "Surely if you’ve got some sort of grudge, it can be held without involving others in 
+    your dirty work."
+    ma "Oh C’mon! Surely a little flour never hurt no one."
+    "While Mikael takes a more confident tone, you can see his body language shift in a way 
+    that makes him seem less confident."
+    ma "But…I guess I’ll help clean. At least this classroom, that is."
+
+    return
+label Chap1_Cookies:
+    # + Affection (SB)
+    call sbLoveIncrease
+    p "What ever happened to those Sakura cookies, [sb]?"
+    "Just as you ask this, you see [sb]'s face darken, and you are met with a rather sheepish smile."
+    sb "I…uh…traded them for that ice cream~"
+    sb "Though, I guess that’s out the window now, huh?"
+    ma "My offer still stands, ya know!"
+
+    return
+############################################################
+# almostUnnerving
+############################################################
+label Chap1_RemainQuietAgain:
+    # + Affection (SB)
+    call sbLoveIncrease
+    "Seemingly lost in the thought of the other’s rather large hands, 
+    you’re unable to catch their question."
+    "You blink. Once. Twice."
+    "Trying to recall what they said, you’re about to shamefully ask Mikael to repeat himself."
+    sb "Oh, I can answer this~ [pCon] [p]!"
+    sb "[pCon] helping me recover my memories~"
+    return
+label Chap1_IntroduceSelf:
+    # ~ Affection (Mikael)
+    "Looking less than thrilled, you reach out to shake Mikael’s hand."
+    "It’s warm."
+    "So much so that you nearly stumble over your bland introduction."
+    p "[p]..."
+    p "I’m…[p]."
+    ma "Oh wow…you really are a wallflower!"
+    return
+label Chap1_IntroduceSelfWithConfidence:
+    # + Affection (Mikael, Amari)
+    call ahLoveIncrease
+    call maLoveIncrease
+    "Figuring you’d try and take a page from Amari’s book, you steady yourself."
+    "Briefly closing your eyes, you snap them open once more with a cheesy at best 
+    grin and clasp Mikael’s hand into your own."
+    p "I am [p]! And I am not a wallflower!!!"
+    ma "That’s the spirit!!!"
+    return
+############################################################
+# michaelTenses
+############################################################
+label Chap1_WhatAboutHim:
+    # - Affection (Mikael)
+    call maLoveDecrease
+    p "You..?"
+    "You’re met with a heavy sigh from the redhead before you."
+    ma "It’s nothin’."
+    ma "Just, stupid memories, I guess."
+    ma "Two idiots doin’ idiot things."
+    return
+label Chap1_SwitchSubject:
+    # + Affection (Mikael) + Affection (SB)
+    call maLoveIncrease
+    call sbLoveIncrease
+    "You fumble with your phone, awkwardly pulling up your idol game to show 
+    off one of your virtual ‘husbandos’."
+    "They look strikingly similar to Kaito."
+    p "Do you mean..?"
+    sb "Oh~ He’s rather pretty."
+    sb "He even has the serious look down~"
+    "Mikael huffs out a small laugh at the forced change in conversation."
+    "However, the gesture does not go unappreciated."
+    ma "Not bad~"
+    ma "I can see why you’re such a wallflower around here."
+    ma "Especially if you’re constantly lookin’ at virtual men like that."
+    return
+############################################################
+# whatDoYouNeedInReturn
+############################################################
+label Chap1_AbsolutelyNo:
+    # - Affection (Mikael) + Affection (Kaito)
+    call maLoveDecrease
+    call ksLoveIncrease
+    p "Listen. As much as I appreciate just how unbelievable these past few days have been…"
+    p "I’m pretty sure teaming up with the infamous Flour Bomber will make getting [sb]'s 
+    memories back even more difficult."
+    p "Besides, no one here even cared about who I was prior to their existence."
+    ma "Hey!"
+    ma "It’s not my fault that you decided to be a wallflower up until this point~"
+    "[sb] can be seen trying to hold back their laughter at the frequent comparison."
+    return
+label Chap1_AndThatIs:
+    # + Affection (Mikael) + Affection (SB)
+    call maLoveIncrease
+    call sbLoveIncrease
+    p "You’re not gonna make us flour someone, are you?"
+    "Mikael lets out a hearty laugh at the assumption."
+    "They seem to say something which you cannot fully comprehend."
+    "However, as someone with a grand total of 1 year of elementary English Skills, you assume 
+    it was something along the lines of ‘Kitten’."
+    return
