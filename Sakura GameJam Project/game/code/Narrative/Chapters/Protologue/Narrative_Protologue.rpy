@@ -15,7 +15,7 @@ label Protologue:
     p "It seems like this year's bloom will be even better than the last."
     p "{i}Sigh{/i}"
     
-    scene BGYYFront with Fade(0.0,0.0,1.0)
+    scene BG YYFront with Fade(0.0,0.0,1.0)
     # *The screen slowly fades into YuraYura's infamous cherry blossom tree.*
     
     "While this marks only my second year at YuraYura Academy, it will also serve 
@@ -41,7 +41,7 @@ label Protologue:
     virtual idol concert, I'd honestly be none the wiser."
     
     # *A small icon of MCs phone with a virtual idol game appears briefly.*
-    show ITPlayerPhone at centerMiddle
+    show IT PlayerPhone at centerMiddle
 
     p "Who even needs love anyways when I already have it at the touch of my fingertips?"
     p "Ah~ My beloveds~"
@@ -56,15 +56,15 @@ label Protologue:
     they're gonna–"
     
     # add a little shake
-    scene BGYYFront with hpunch
+    scene BG YYFront with hpunch
     
     p "?!?!"
     # *The music cuts off and a loud thud plays while the screen goes black.*
     scene black
     sb "Ow, ow, ow..!!"
     # *A shuffling sound effect plays, and the screen fades back into the image of sbwith their hair down looking all baby girl.*
-    scene BGYYFront with Fade(0.0,0.0,1.0)
-    show CHsb_neutral
+    scene BG YYFront with Fade(0.0,0.0,1.0)
+    show sb ouch
     sb "My head…"
     ############################################################
     menu MyHead:
@@ -80,18 +80,23 @@ label Protologue:
     # *Depending on the choice made, SB will have their face in the CG image change from ^-^ to a more ^-^;;; expression.*
     # if specific choice is chosen to trigger different emote
     if sbTrig == True:
-        show CHsb_happy
+        show sb happy
     else:
-        show CHsb_neutral
+        show sb neutral
     sb "It is uh, nice to...meet you? Haha~"
     ############################################################
     menu WhoSent:
         sb "It is uh, nice to...meet you? Haha~"
         "Ask if they're the person your mom sent":
+            show sb neutral
             call Proto_MomSent
         "Why are you late?":
+            show sb neutral
             call Proto_WhyLate
+
     ############################################################
+    show sb neutral
+
     sb "Though, if it's already this late…that so-called other person must be a real 
     jerk to have left a beautiful flower alone to wilt away into the night."
     sb "Tell me, what even was their name anyways?"
@@ -104,7 +109,7 @@ label Protologue:
     call InsertName
     # name has been established
     ############################################################
-    show CHsb_thinking
+    show sb thinking
     sb "Hmm…"
     sb "Hmmmm…"
     p "..?"
@@ -112,31 +117,43 @@ label Protologue:
     $ sakuraName = userInput
 
     # *A picture of Sakura Boi taking MC's hands into their own all excited “:D" appears.*
-    hide CHsb_thinking
-    show CHsb_happy
+    show sb happy
     sb "While I am not a fan of outright abandonment, that sounds like quite the 
     exquisite name!"
     p "Eh?!?!"
+    show sb neutral
     p "Don't you have a name of your own?! Don't go taking other people's–!"
     sb "How am I to take what never even bothered to show up in the first place~?"
+
+    show sb happy
+
     sb "If anything, consider it that person's 'tax' for failing to accompany you."
     sb "Besides~ It's not like I could come up with a name of my own."
     sb "It seems that fall did quite the number on my memories~"
+
+    show sb neutral
+
     p "Okay. Maybe we should actually get you to a hospital–"
+    show sb neutral
     sb "Nonsense! While I may lack my memories, I just know that it must be fate 
-    that we met this way uhm… What's your name again?"
+    that we met this way" 
+    show sb thinking
+    sb "uhm… What's your name again?"
     p "...[p]"
+    show sb happy
     sb "Simply Divine. [p].~ I will cherish that name for the rest of my days."
     sb "Tell me, will you help recover my lost memories?"
     sb "If you do, you have my word that those concert tickets will be ours~!"
+    ############################################################
     menu ConcertTicket:
         sb "If you do, you have my word that those concert tickets will be ours~!"
         "This is ridiculous–":
+            show sb neutral
             call Proto_Ridiculous
         "No.":
             # game ends prematurely
             jump Proto_No
-
+    ############################################################
     call situTriggerReset
     scene black with fade
     jump Chapter1
