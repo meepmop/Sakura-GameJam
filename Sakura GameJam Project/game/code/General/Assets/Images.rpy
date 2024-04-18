@@ -1,6 +1,8 @@
 # defined backgrounds
 ################################################################################
 image BG YYFront = "BG/Placeholder/bg_SchoolFront.png"
+image BG YYInside = "BG/Placeholder/bg_SchoolInside.png"
+image BG Classroom = "BG/Placeholder/bg_Classroom.png"
 ################################################################################
 # defined characters
 ################################################################################
@@ -16,6 +18,10 @@ image sb line = "Characters/Placeholder/ch_sb_line.png"
 # defined items
 ################################################################################
 image IT PlayerPhone = "Items/Placeholder/it_phoneHusband.png"
+################################################################################
+# defined CG
+################################################################################
+image CG C1 sbrunning = "CG/chapter 1/cg_c1_sbrunning.png"
 ################################################################################
 # defined transistion
 ################################################################################
