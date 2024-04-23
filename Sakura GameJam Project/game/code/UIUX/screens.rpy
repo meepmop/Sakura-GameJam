@@ -557,6 +557,8 @@ screen about():
         vbox:
 
             label "[config.name!t]"
+            ## Credits
+            text _("Producer: Hailey Rojas \nProgrammer: Giovanna Gowmez \nLogo Designer: Mika Dilig \n")
             text _("Version [config.version!t]\n")
 
             ## gui.about is usually set in options.rpy.
