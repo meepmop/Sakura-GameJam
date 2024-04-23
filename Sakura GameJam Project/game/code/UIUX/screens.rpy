@@ -1254,7 +1254,6 @@ style skip_triangle:
     ## glyph in it.
     font "DejaVuSans.ttf"
 
-
 ## Notify screen ###############################################################
 ##
 ## The notify screen is used to show the player a message. (For example, when
@@ -1268,7 +1267,7 @@ screen notify(message):
     style_prefix "notify"
 
     frame at notify_appear:
-        text "[message!tq]"
+        text message
 
     timer 3.25 action Hide('notify')
 

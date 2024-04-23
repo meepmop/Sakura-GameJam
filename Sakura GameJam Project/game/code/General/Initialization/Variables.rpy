@@ -6,7 +6,7 @@
 default sbLove = 0
 # sb Attraction level calling
 label sbLoveIncrease:
-    "[sb] liked that"
+    $ renpy.notify("{image=Items/Placeholder/logo_sb_approve.png} [sb] liked that")
     $ sbLove += 1
     return
 label sbLoveDecrease:
@@ -18,7 +18,7 @@ label sbLoveDecrease:
 default ksLove = 0
 # ks Attraction level calling
 label ksLoveIncrease:
-    "[ks] liked that"
+    $ renpy.notify("{image=Items/Placeholder/logo_ks_approve.png} [ks] liked that")
     $ ksLove += 1
     return
 label ksLoveDecrease:
@@ -34,7 +34,7 @@ label ahLoveIncrease:
     $ ahLove += 1
     return
 label ahLoveDecrease:
-    "[ah] disliked that"
+    $ renpy.notify("{image=Items/Placeholder/logo_ah_disapprove.png} [ah] disliked that")
     $ ahLove -= 1
     return
 ############################################################
