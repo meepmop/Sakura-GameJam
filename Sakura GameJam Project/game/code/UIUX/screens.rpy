@@ -1253,6 +1253,40 @@ style skip_triangle:
     ## We have to use a font that has the BLACK RIGHT-POINTING SMALL TRIANGLE
     ## glyph in it.
     font "DejaVuSans.ttf"
+###############################################################################
+# testing notif ###############################################################
+###############################################################################
+# it works, but like it needs to be tuned
+default notices = []
+init python:
+
+    def notify_me(m=""):
+        global notices
+        if m:
+            notices.append(m)
+        if notices:
+            renpy.show_screen('notify_plus', notices=notices)
+            notices = []
+
+screen notify_plus(notices):
+
+    zorder 100
+    style_prefix "notify"
+
+    for dd, i in enumerate(notices):
+        frame at notify_plus_appear(dd*3.5):
+            text i
+
+    timer 4.25+(dd*3.5) action Hide('notify_plus')
+
+transform notify_plus_appear(dd=0):
+    on show:
+        yoffset dd*7
+        alpha 0 xanchor 1.0 xpos 0.0
+        pause dd
+        linear .25 alpha 1.0 xalign 0.0
+        pause 3.25
+        linear .5 alpha 0.0
 
 ## Notify screen ###############################################################
 ##

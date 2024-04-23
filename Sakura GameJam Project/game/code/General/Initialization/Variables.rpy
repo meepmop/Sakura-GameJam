@@ -6,6 +6,8 @@
 default sbLove = 0
 # sb Attraction level calling
 label sbLoveIncrease:
+    # $ notices.append("{image=Items/Placeholder/logo_sb_approve.png} [sb] liked that")
+    # $ notify_me("nice")
     $ renpy.notify("{image=Items/Placeholder/logo_sb_approve.png} [sb] liked that")
     $ sbLove += 1
     return
