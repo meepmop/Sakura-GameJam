@@ -4,6 +4,7 @@ label Chapter1:
     \nTime: Morning"
 
     # *There would be casual/’lighthearted’ musical beats happening here.*
+    scene BG YYFront with fade
     "The weekend passes by just as quickly as it came."
     "As Cherry Blossoms continue to litter the streets with their 
     iconic Sakura Pink hue, you can’t help but admire their beauty."
@@ -20,6 +21,7 @@ label Chapter1:
     sb "Oi, Oiiiii! Over here~!"
     "You quickly shift your gaze towards the direction which the voice is coming from.
     However, you can’t help but feel your brow twitch at the display."
+    scene CG C1 sbrunning
     # *Insert Picture of [sb] waving with their hair now tied up, a 
     # cherry blossom tree branch sticking out to neatly keep it in place. 
     # They seem to be holding a small clear bag of cherry blossom infused 
@@ -44,15 +46,27 @@ label Chapter1:
     "However, as your mom always would say. Everything happens for a reason."
     "And if you wanted to attend that Idol Concert, you had to accept it."
     # *The scene transitions to the inside of one of the class buildings of YuraYura. 
+    scene BG YYInside
     # There seems to be signs of the upcoming cherry blossom festival everywhere, 
     # ranging from posters in the background to decorative flowers hung up all 
     # around the hall.*
+    show sb neutral
+
     p "Here we are."
     p "This is where we’ll start, I guess."
+
+    show sb oh
+
     sb "Woooow~! How pretty..~!"
     sb "It’s as though nature itself has reflected itself in this very hallway..!"
+
+    show sb happy
+
     sb "I simply must see more of it!!"
     p "We can but–"
+
+    hide sb
+
     "Before you can properly finish your sentence, [sb] takes it upon themselves 
     to go ahead and rush ahead of you."
     "It isn’t long before you lose sight of them and their noises of pure excitement 
@@ -81,6 +95,7 @@ label Chapter1_Cont_NearbyClass:
     "Why couldn’t it be that way for you?"
     "It honestly makes your chest tighten."
     # *The Scene now changes to that of a traditional Japanese Classroom. 
+    scene BG Classroom
     # It holds hints of the upcoming festival within it.*
     jd "Unbelievable!!"
     p "Huh–"
