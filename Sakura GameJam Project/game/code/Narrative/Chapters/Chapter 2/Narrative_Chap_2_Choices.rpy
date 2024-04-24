@@ -108,3 +108,74 @@ label Chap2_YouMess:
     ks "Well…they’re…"
     p "Not here. Exactly."
     return
+############################################################
+# sbSendMichievous
+############################################################
+label Chap2_SaySomething:
+    # - Affection (SB) + Affection (Kaito) + Affection (Mikael)
+    call sbLoveDecrease
+    call ksLoveIncrease
+    call maLoveIncrease
+    call loveNotification
+    "Taking notice of [sb]'s sudden look of excitement, you try and pick up 
+    the conversation from where it left off."
+    "Unfortunately, before you can get a word out, [sb] quickly asserts their 
+    vocal dominance upon you."
+    "They almost seem like they enjoy it, too."
+    return
+label Chap2_RemainQuietAgain:
+    # + Affection (SB) + Affection (Amari) - Affection (Mikael)
+    call sbLoveIncrease
+    call ahLoveIncrease
+    call maLoveDecrease
+    call loveNotification
+    return
+############################################################
+# greaterThorn
+############################################################
+label Chap2_Uhh:
+    # + Affection (Kaito) + Affection (Amari) 
+    call ksLoveIncrease
+    call ahLoveIncrease
+    call loveNotification
+    "As much as you’d love to tear into Kaito yourself, judging from the genuine 
+    hurt which laced the man’s voice, you gathered that [sb]'s words hit a bit too 
+    close to home."
+    "In fact, you noticed how rather than sit there and take [sb]'s wrath, 
+    Kaito was beginning to roll up his sleeves."
+    p "Uh…[sb]?"
+    p "Something tells me that we should…get out of here–"
+    ks "No, no. I insist."
+    ks "If you’re to use such heinous tactics on me, then allow me to repay it in kind 
+    with some of my own."
+    ks "After all, I’m already late for my duties."
+    ks "What’s a few more minutes?"
+
+    return
+label Chap2_FutherPush:
+    # - Affection (Kaito) + Affection (SB) - Affection (Amari) + Affection (Mikael)
+    call ksLoveDecrease
+    call sbLoveIncrease
+    call ahLoveDecrease
+    call maLoveIncrease
+    call loveNotification
+    "Figuring this would be a good opportunity to deal some sweet, sweet, emotional 
+    damage, you clear your throat loudly enough to get the room’s attention."
+    p "I may not know half of what [sb] was referring to, but clearly you must be 
+    pretty screwed up if just referencing that Mikael guy has you so bothered."
+    p "Not just anyone would make me wanna shove some poor guy’s ice cream out of 
+    their hands."
+    p "I mean, not unless we were lovers. But who could ever love a stuck up, pompous, 
+    prick like you–"
+    "Pausing mid sentence, you suddenly felt a heavy sense of dread pooling in your 
+    stomach."
+    "It seemed like in the time it took you to have your little ‘moment’, Kaito 
+    had already taken to rolling up his sleeves."
+    ks "Are you finished?"
+    p "...What’re you doing?"
+    ks "Isn’t it obvious?"
+    ks "I am giving both you and your unknown companion here time to run."
+    ks "While I am not particularly fond of encouraging on-campus violence, as 
+    President of the Student Council, I’m sure I can grant myself this one exception."
+
+    return

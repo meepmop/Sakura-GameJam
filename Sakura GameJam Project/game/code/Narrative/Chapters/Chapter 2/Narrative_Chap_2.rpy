@@ -66,6 +66,52 @@ label Chapter2:
             call Chap2_RoomMess
         "You’re a mess.":
             call Chap2_YouMess
+    ############################################################
+    "Letting out an irritated huff, you take another look at your phone."
+    "Almost 1."
+    "You had no idea how you were going to last another half hour with this man."
+    "After all, just a few minutes with him had already made you want to punch him."
+    "It’s then you catch a glimpse of the slightly mischievous grin which [sb] casts your way."
+    ############################################################
+    menu sbSendMichievous:
+        "It’s then you catch a glimpse of the slightly mischievous grin which [sb] casts your way."
+        "Say Something":
+            call Chap2_SaySomething
+        "Remain Quiet.":
+            call Chap2_RemainQuietAgain
+    ############################################################
+    sb "Hey."
+    sb "Kaito Sakuraba…was it?"
+    sb "You know, for some reason, now that I actually think about it, that name sounds familiar."
+    sb "You and that Mikael guy would always have lunch at the nearby park~"
+    sb "The Anime-Themed Bento boxes were your favorite, were they not?"
+    "Both you and Kaito stare confusedly at [sb]."
+    ks "How did you…"
+    "The sudden shift in attention almost causes [sb] to stumble."
+    sb "Was that too forward??"
+    sb "Forgive me~"
+    # *A CG of what looks to be a younger Kaito getting an octopus-cut hot dog fed to him by Mikael pops up. Kaito is purposely positioned so that you can only see the back of his head. There are sakura petals littering the area around them. No one else is around them.*
+    sb "I mean~ I just knew I recognized something about you two."
+    ma "Do you like it?"
+    ma "I made sure to pack your favorite~"
+    ks "Your craftsmanship has most certainly improved since coming here."
+    ks "Though, I am quite jealous to know how others are soon going to be able to taste your–"
+    # *The CG gets disrupted by a rather displeased looking Kaito.*
+    ks "Enough!"
+    "You notice how Kaito’s fists are now clenched."
+    ks "Is this how you plan to distract me?? By bringing up the insignificant moments of the past?!"
+    ks "As far as I’m concerned, I don’t even know who you are."
+    ks "At the very least I could verify [p]'s existence!"
+    ks "Yet you. Bearing the falsities of someone who’s oh so innocent and nice."
+    ks "Truly, you’re a greater thorn in my side than I initially thought."
+    ############################################################
+    menu greaterThorn:
+        ks "Truly, you’re a greater thorn in my side than I initially thought."
+        "Uh…":
+            call Chap2_Uhh
+        "Further push Kaito":
+            call Chap2_FutherPush
+    ############################################################
 
     return
 

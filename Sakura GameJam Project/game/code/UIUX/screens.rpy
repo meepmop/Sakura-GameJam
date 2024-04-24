@@ -1281,7 +1281,7 @@ screen notify_plus(notices):
         frame at notify_plus_appear(dd*3.5):
             text i
 
-    timer 1.5+(dd*3.5) action Hide('notify_plus')
+    timer 2.5+(dd*3.5) action Hide('notify_plus')
 
 # additional notify code in how it appears -- the look basically
 transform notify_plus_appear(dd=0):
@@ -1290,7 +1290,7 @@ transform notify_plus_appear(dd=0):
         alpha 0 xanchor 1.0 xpos 0.0
         pause dd
         linear .25 alpha 1.0 xalign 0.0
-        pause 3.25
+        pause 2.0
         linear .5 alpha 0.0
 
 ## Notify screen ###############################################################
