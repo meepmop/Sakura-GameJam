@@ -24,8 +24,10 @@ label Chapter2:
         "Remain quiet":
             call Chap2_RemainQuiet
     ############################################################
-    "Deciding to put an end to this conversation, you gesture towards the room marked ‘Student Council Office’." 
-    "Unlike the rest of the Campus, this particular part of it was lacking any sort of festive flair." 
+    "Deciding to put an end to this conversation, you gesture towards the room 
+    marked ‘Student Council Office’." 
+    "Unlike the rest of the Campus, this particular part of it was lacking any sort of 
+    festive flair." 
     # *When Mikael is talking here once more, he’s still transparent to convey that this 
     # conversation took place in the past.*
     ma "Just keep him busy for a bit!"
@@ -51,7 +53,8 @@ label Chapter2:
     "Kaito takes a moment to survey the area."
     "When he notices it seems to be just you two here, you see him step aside 
     to gesture for you both to step inside."
-    # *The Background changes to the student council office. It has papers scattered everywhere and looks rather messy.*
+    # *The Background changes to the student council office. It has papers scattered everywhere 
+    # and looks rather messy.*
     # *Kaito’s Theme Plays*
     ks "I’m assuming Amoris is up to something yet again?"
     ks "He must be reaching the bottom of the barrel if he’s enlisting the help of not only 
@@ -90,7 +93,8 @@ label Chapter2:
     "The sudden shift in attention almost causes [sb] to stumble."
     sb "Was that too forward??"
     sb "Forgive me~"
-    # *A CG of what looks to be a younger Kaito getting an octopus-cut hot dog fed to him by Mikael pops up. Kaito is purposely positioned so that you can only see the back of his head. There are sakura petals littering the area around them. No one else is around them.*
+    # *A CG of what looks to be a younger Kaito getting an octopus-cut hot dog fed to him by
+    # Mikael pops up. Kaito is purposely positioned so that you can only see the back of his head. There are sakura petals littering the area around them. No one else is around them.*
     sb "I mean~ I just knew I recognized something about you two."
     ma "Do you like it?"
     ma "I made sure to pack your favorite~"
@@ -124,7 +128,8 @@ label Chapter2:
     p "H-He’s fast!"
     sb "I think we’ve done a bit too well, don’t ya think~"
     ks "Get back here and reap what you’ve both sewn!!"
-    ks "Once I get my hands on you, you are going to wish that you let me keep to my regularly scheduled activities!!"
+    ks "Once I get my hands on you, you are going to wish that you let me keep to my 
+    regularly scheduled activities!!"
     ks "I’ve even taken the liberty of calling the school’s infirmary to reserve both your seats!"
     sb "Oh, how kind~"
     sb "Did you hear that? That must mean he cares~"
@@ -153,6 +158,74 @@ label Chapter2:
     ah "Care for a lift~?"
     ah "Well. Not that you’ve much of a choice."
     ah "Not unless you wish to suffer at the hands of my one and only best friend~"
-
+    ############################################################
+    menu sufferHands:
+        ah "Not unless you wish to suffer at the hands of my one and only best friend~"
+        "Take Amari’s hand":
+            call Chap2_TakeAmariHand
+        "Stand still":
+            call Chap2_StandStill
+        "Accept your fate":
+            jump Chap2_AcceptFate
+    ############################################################
+    ah "Ahahaha! How absolutely wonderful~!"
+    ah "One could even classify such as amazing~ Don’t you think?"
+    ks "I’ve found you–!"
+    sb "Uh oh."
+    "Quickly snapping at the reins of their stallion, Amari continues to cackle as the 
+    horse bucks beneath you all."
+    "Both you and [sb] hold on for dear life while the animal charges through the 
+    passing by students and straight for Kaito."
+    ks "A-Amari!?"
+    ah "‘Tis nothing personal, Kaito-Kun~"
+    ah "Consider this just part of the show~!"
+    ############################################################
+    menu partOfShow:
+        ah "Consider this just part of the show~!"
+        "Warn Kaito":
+            call Chap2_WarnKaito
+        "Taunt Kaito":
+            call Chap2_TauntKaito
+    ############################################################
+    "Fortunately enough for Kaito, it seemed as though luck was on his side."
+    "Having taken a leap of faith, Kaito had just barely in the knick of time 
+    dodged the impending doom which was Amari."
+    "Though, judging from how excited the eccentric was despite nearly trampling his 
+    supposed ‘best friend’, something told you that this wasn’t too out of the norm for them."
+    # *The scene shifts to the Campus’ Cherry Blossom tree. It’s the same spot where you first 
+    # met [SB].*
+    ah "Ahh~ What joy that always brings me."
+    ah "I’m quite certain Kaito-Kun should have been kept more than busy with that stunt."
+    "Hopping off their steed, Amari runs his fingers through their mane, cooing out a few words 
+    of praise in the process."
+    "Deciding to join them on the comfort which was the ground, you notice that [sb] appears 
+    to be struggling."
+    ############################################################
+    menu strugglingSB:
+        "Deciding to join them on the comfort which was the ground, you notice that [sb] appears 
+        to be struggling."
+        "Help them":
+            call Chap2_HelpThem
+        "They can handle it":
+            call Chap2_HandleIt
+    ############################################################
+    ah "You know, dramatics aside, I am beyond happy to finally have you both to myself~"
+    ah "I simply must know. Just what have you done to cause my best friend to ‘start swinging’ 
+    as the youth say~"
+    ############################################################
+    menu startSwinging:
+        ah "I simply must know. Just what have you done to cause my best friend to ‘start swinging’ 
+        as the youth say~"
+        "We bullied him.":
+            call Chap2_WeBully
+        "[sb] bullied him":
+            call Chap2_SakuraBully
+    ############################################################
+    ah "I see…"
+    "Clapping their hands together, with a spark of burning passion, Amari takes [sb]’s 
+    hands into their own."
+    ah "Oh, flower of dawn, won’t you relay to me your wisdom?!"
+    ah "Show me what you’ve done to spark the fire within Kaito-Kun’s heart!"
+    sb "?!?!"
     return
 

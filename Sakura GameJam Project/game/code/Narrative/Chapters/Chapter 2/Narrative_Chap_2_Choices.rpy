@@ -200,10 +200,115 @@ label Chap2_Ignore:
     call sbLoveDecrease
     call ahLoveDecrease
     call loveNotification
-    "Having had enough of [sb]’s antics for one day, you decided to drag them in the direction 
+    "Having had enough of [sb]’s antics for one day, you decided to drag them in 
+    the direction 
     opposite of where they’d suggested."
     "Much to their displeasure, you were met with a rather bland looking hallway in appearance." 
     "Not to mention, there were crowds of students flocking in every direction."
     "However, it seemed as though despite this, the Elevators which would lead to your 
     escape were currently occupied, and with the nearby staircases looking no better."
+    return
+############################################################
+# sufferHands
+############################################################
+label Chap2_TakeAmariHand:
+    # + Affection (Amari) 
+    call ahLoveIncrease
+    call loveNotification
+    "Considering Amari had a point, you reach out your hand for the other to take."
+    "Surprisingly, despite the slender appearance, you find both you and [sb] are 
+    easily lifted onto their steed."
+    return
+label Chap2_StandStill:
+    # - Affection (Amari) + Affection (SB)
+    call ahLoveDecrease
+    call sbLoveIncrease
+    call loveNotification
+    "Finding yourself frozen, it takes [sb] pushing you forward for you to get a grip."
+    "However, despite this, you still couldn’t help but wonder how the hell there was 
+    a damn horse in front of you."
+    "Where did it even come from?"
+    "Did the damned thing ride the elevator to get up here!?"
+    "There were so many questions just waiting to be answered."
+    return
+label Chap2_AcceptFate:
+    # *Choosing this option will immediately end the game*
+    "Rather than accept the offer of being spared Kaito’s wrath from Amari, you 
+    instead turn away from them."
+    sb "[p]?!"
+    p "You know, I’ve had a lot of weird things happen to me this week, but I think I draw the line at equestrians."
+    p "I’m sure Kaito wouldn’t dare lay a hand on us with all these people around–"
+    ks "I beg to differ!"
+    # *The screen fades to black as a loud punching sound plays*
+    return
+############################################################
+# partOfShow
+############################################################
+label Chap2_WarnKaito:
+    # + Affection (Kaito) + Affection (Mikael)
+    call ksLoveIncrease
+    call maLoveIncrease
+    call loveNotification
+    p "What’re you doing?!"
+    p "It’s like you want to die!!!!"
+    return
+label Chap2_TauntKaito:
+    # - Affection (Kaito) + Affection (SB) + Affection (Amari)
+    call ksLoveDecrease
+    call sbLoveIncrease
+    call ahLoveIncrease
+    call loveNotification
+    p "Looks like you can keep that spot in the infirmary open, huh?!"
+    p "Charge!!"
+    return
+############################################################
+# strugglingSB
+############################################################
+label Chap2_HelpThem:
+    # + Affection (SB) 
+    call sbLoveIncrease
+    call loveNotification
+    "Reaching your hand for [sb] to grasp, you’re met with an embarrassed ‘Thank you’."
+    sb "It seems like I didn’t meet the height requirements~"
+    sb "I’m so glad to have someone like you by my side, [p]."
+
+    return
+label Chap2_HandleIt:
+    # - Affection (SB) + Affection (AH)
+    call sbLoveDecrease
+    call ahLoveIncrease
+    call loveNotification
+    "Rolling your eyes at the pitiful display of shortness before you, you 
+    turn away from [sb]."
+    "This causes them to let out a pathetic whine, and after a few more attempts to 
+    safely dismount, [sb] ends up with their face smacked right against the unforgiving 
+    dirt below."
+    sb "Ouch…"
+    return
+############################################################
+# startSwinging
+############################################################
+label Chap2_WeBully:
+    # + Affection (Amari) + Affection (SB) + Affection (Mikael)
+    call ahLoveIncrease
+    call sbLoveIncrease
+    call maLoveIncrease
+    call loveNotification
+    p "Well, that Mikael guy just told us to keep him busy for a bit."
+    p "He looked like he hadn’t slept in a few days…so that part wasn’t too hard."
+    p "Honestly, I have to admit. Were it not for [sb]’s weird prying, I don’t 
+    think we’d have been able to do it."
+
+    return
+label Chap2_SakuraBully:
+    # + Affection (Kaito) - Affection (SB) + - Affection (Amari)
+    call ksLoveIncrease
+    call sbLoveDecrease
+    call ahLoveDecrease
+    call loveNotification
+    p "Don’t ask me, [sb] was the one who went ahead and pried into the guy’s past."
+    p "I was only doing that Mikael guy a favor so that he wouldn’t flour bomb us!"
+    sb "H-Hey! I couldn’t help it~"
+    sb "Just looking at him caused all sorts of emotions to swell up within me…"
+    sb "It almost made me want to cry~"
     return

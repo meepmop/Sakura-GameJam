@@ -94,7 +94,8 @@ label loveNotification:
             $ loveStateTotal = loveStateTotal - ahLoveState
             if loveStateTotal == 0:
                 $ notify_me("[ah] disliked that")
-            $ notices.append("[ah] disliked that")
+            elif loveStateTotal >= 1:
+                $ notices.append("[ah] disliked that")
         if ahLoveState == 1:
             $ loveStateTotal = loveStateTotal - ahLoveState
             if loveStateTotal == 0:
@@ -108,7 +109,6 @@ label loveNotification:
         if maLoveState == 1:
             $ loveStateTotal = loveStateTotal - maLoveState
             $ notify_me("[ma] liked that")
-
     # reset the numbers
     $ sbLoveState = 0
     $ ksLoveState = 0
