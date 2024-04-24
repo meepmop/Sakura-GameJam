@@ -1284,7 +1284,8 @@ screen notify_plus(notices):
             # the text that appears
             text i
     # when all of them got their turn, then turn it all off
-    timer (dd*3.5) action Hide('notify_plus')
+    # timer (dd*3.5) action Hide('notify_plus')
+    timer (dd*3.5) action Hide()
 
 
 # additional notify code in how it appears -- the look basically
