@@ -24,6 +24,7 @@ label Proto_TheyOk:
     $ sbTrig = True
     # 1+ Attraction
     call sbLoveIncrease
+    call loveNotification
     p "Are you alright?"
     p "You're not hurt, are you?"
     p "I don't particularly feel like dragging anyone to the hospital today."
@@ -40,6 +41,7 @@ label Proto_TheyOk:
 label Proto_Insult:
     # -1 Attraction
     call sbLoveDecrease
+    call loveNotification
 
     show sb line
 
