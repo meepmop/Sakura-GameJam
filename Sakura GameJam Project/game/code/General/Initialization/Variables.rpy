@@ -9,6 +9,7 @@ default maLoveState = 0
 default loveStateTotal = 0
 # 0 = neutral, 1 = Liked, 2 = Disliked
 label loveNotification:
+    # add the total of the love and hate
     $ loveStateTotal = sbLoveState + ksLoveState + ahLoveState + maLoveState
     # only one person liked it
     if loveStateTotal == 1:
@@ -65,7 +66,7 @@ label loveNotification:
             # minus from the lovestate total from sb contribution so we know that the other person
             # needs to end the notification system
             $ loveStateTotal = loveStateTotal - sbLoveState
-            $ renpy.append("[sb] disliked that")
+            $ notices.append("[sb] disliked that")
         # if it's only 1 that adds to 2 then it's a like
         if sbLoveState == 1:
             # minus from the lovestate total from sb contribution so we know that the other person
@@ -79,7 +80,7 @@ label loveNotification:
             if loveStateTotal == 0:
                 $ notify_me("[ks] disliked that")
             # if not, continue along
-            $ renpy.append("[ks] disliked that")
+            $ notices.append("[ks] disliked that")
         if ksLoveState == 1:
             $ loveStateTotal = loveStateTotal - ksLoveState
             # if that is the end of the line -- end of the line message
