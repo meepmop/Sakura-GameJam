@@ -1257,7 +1257,9 @@ style skip_triangle:
 # testing notif ###############################################################
 ###############################################################################
 # it works, but like it needs to be tuned
+# array of notices
 default notices = []
+# always run ahead of time
 init python:
 
     def notify_me(m=""):
@@ -1268,6 +1270,7 @@ init python:
             renpy.show_screen('notify_plus', notices=notices)
             notices = []
 
+# the fuction of the notices and the additional of notify
 screen notify_plus(notices):
 
     zorder 100
@@ -1277,11 +1280,12 @@ screen notify_plus(notices):
         frame at notify_plus_appear(dd*3.5):
             text i
 
-    timer 4.25+(dd*3.5) action Hide('notify_plus')
+    timer 1.5+(dd*3.5) action Hide('notify_plus')
 
+# additional notify code in how it appears -- the look basically
 transform notify_plus_appear(dd=0):
     on show:
-        yoffset dd*7
+        yoffset dd*10
         alpha 0 xanchor 1.0 xpos 0.0
         pause dd
         linear .25 alpha 1.0 xalign 0.0
