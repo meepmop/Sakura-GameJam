@@ -1273,20 +1273,24 @@ init python:
 
 # the fuction of the notices and the additional of notify
 screen notify_plus(notices):
-
+    # make it the top
     zorder 100
     style_prefix "notify"
-
+    # for dd (idk what dd is), i in enumerate(notice) -- mention all the messages
+    # i guess for each message, mention the thing
     for dd, i in enumerate(notices):
-        frame at notify_plus_appear(dd*3.5):
+        # show notification at the transforms of top left
+        frame at notify_plus_appear(dd*0.5):
+            # the text that appears
             text i
+    # when all of them got their turn, then turn it all off
+    timer (dd*3.5) action Hide('notify_plus')
 
-    timer 2.5+(dd*3.5) action Hide('notify_plus')
 
 # additional notify code in how it appears -- the look basically
 transform notify_plus_appear(dd=0):
     on show:
-        yoffset dd*10
+        yoffset dd*100
         alpha 0 xanchor 1.0 xpos 0.0
         pause dd
         linear .25 alpha 1.0 xalign 0.0
@@ -1304,7 +1308,6 @@ screen notify(message):
 
     zorder 100
     style_prefix "notify"
-
     frame at notify_appear:
         text message
 

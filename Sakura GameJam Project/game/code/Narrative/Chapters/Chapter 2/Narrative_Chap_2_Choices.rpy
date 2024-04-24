@@ -177,5 +177,33 @@ label Chap2_FutherPush:
     ks "I am giving both you and your unknown companion here time to run."
     ks "While I am not particularly fond of encouraging on-campus violence, as 
     President of the Student Council, I’m sure I can grant myself this one exception."
-
+    return
+############################################################
+# cherryBlossomEscape
+############################################################
+label Chap2_ListenToSakura:
+    # + Affection (SB) + Affection (Amari) 
+    call sbLoveIncrease
+    call ahLoveIncrease
+    call loveNotification
+    "You figured that while cheesy, [sb]'s intuition regarding an escape route was about as 
+    good as yours."
+    "Letting out a rushed sigh, you turn the corner and continue to run."
+    "However, while beautifully decorated, this hallway only had a few lecture halls and no 
+    staircase to secure your escape."
+    "With your eye now noticeably twitching, you began to count your seconds until Kaito’s 
+    promised ass-whooping."
+    "That is…until you heard a painstakingly familiar voice."
+    return
+label Chap2_Ignore:
+    # - Affection (SB) - Affection (Amari) 
+    call sbLoveDecrease
+    call ahLoveDecrease
+    call loveNotification
+    "Having had enough of [sb]’s antics for one day, you decided to drag them in the direction 
+    opposite of where they’d suggested."
+    "Much to their displeasure, you were met with a rather bland looking hallway in appearance." 
+    "Not to mention, there were crowds of students flocking in every direction."
+    "However, it seemed as though despite this, the Elevators which would lead to your 
+    escape were currently occupied, and with the nearby staircases looking no better."
     return
