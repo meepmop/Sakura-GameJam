@@ -1257,6 +1257,7 @@ style skip_triangle:
 # testing notif ###############################################################
 ###############################################################################
 # it works, but like it needs to be tuned
+# I like stole this from here lol: https://lemmasoft.renai.us/forums/viewtopic.php?f=8&t=47025&p=472212#p472212
 # array of notices
 default notices = []
 # always run ahead of time
