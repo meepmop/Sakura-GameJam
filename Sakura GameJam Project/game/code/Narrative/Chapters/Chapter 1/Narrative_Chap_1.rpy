@@ -332,6 +332,7 @@ label Chapter1_Cont_NearbyClass:
     ############################################################
     ma "Of course not~"
     ma "All I ask, is that you keep Sakuraba busy until Friday’s festival."
+    scene black
     call situTriggerReset
     jump Chapter2
     return
