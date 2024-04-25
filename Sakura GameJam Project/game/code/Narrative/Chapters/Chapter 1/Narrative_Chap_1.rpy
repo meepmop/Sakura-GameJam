@@ -255,6 +255,7 @@ label Chapter1_Cont_NearbyClass:
     # *A CG of Mikael with [SB] in their hold shows up. They both are looking 
     # towards the MC. Mikael appears to be grinning while [SB] looks like they’re currently fearing for their life.*
     # *Mikael’s theme plays.*
+    scene CG C1 mahug
     sb "Uhh…is it really necessary to be this close?"
     sb "You know, personal space is a thing."
     p "You’re one to talk."
@@ -277,6 +278,7 @@ label Chapter1_Cont_NearbyClass:
         "Praise Mikael":
             call Chap1_PraiseMikael
     ############################################################
+    scene BG Classroom
     ma "So, about that ice cream~"
     ma "How ‘Bout I whip y’all up some as an apology for Sakuraba’s bitchiness?"
     sb "Doesn’t that require less baking and more, uh, freezing?"

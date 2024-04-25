@@ -94,12 +94,15 @@ label Chapter2:
     sb "Was that too forward??"
     sb "Forgive me~"
     # *A CG of what looks to be a younger Kaito getting an octopus-cut hot dog fed to him by
-    # Mikael pops up. Kaito is purposely positioned so that you can only see the back of his head. There are sakura petals littering the area around them. No one else is around them.*
+    # Mikael pops up. Kaito is purposely positioned so that you can only see the back of his head. 
+    # There are sakura petals littering the area around them. No one else is around them.*
+    scene CG C2 kseat
     sb "I mean~ I just knew I recognized something about you two."
     ma "Do you like it?"
     ma "I made sure to pack your favorite~"
     ks "Your craftsmanship has most certainly improved since coming here."
     ks "Though, I am quite jealous to know how others are soon going to be able to taste your–"
+    scene black
     # *The CG gets disrupted by a rather displeased looking Kaito.*
     ks "Enough!"
     "You notice how Kaito’s fists are now clenched."
@@ -152,6 +155,7 @@ label Chapter2:
     princess, nonetheless!"
     "Turning your attention towards the source of the dramatics, your eyes widen 
     at the sight before you."
+    scene CG C2 ahhorse
     # *Insert CG of Amari on horseback extending their hand out towards you. 
     # Don’t ask how they got an entire horse both on Campus and inside the building, 
     # just roll with it.*
@@ -187,6 +191,7 @@ label Chapter2:
         "Taunt Kaito":
             call Chap2_TauntKaito
     ############################################################
+    scene black
     "Fortunately enough for Kaito, it seemed as though luck was on his side."
     "Having taken a leap of faith, Kaito had just barely in the knick of time 
     dodged the impending doom which was Amari."
@@ -244,8 +249,10 @@ label Chapter2:
     "It was as if they were silently asking for your support."
     sb "When I look at you, it’s almost like I see someone that’s constantly changing."
     sb "Judging from how dramatic you are…I’m assuming that’s in character."
+    scene CG C2 ahpray
     sb "But, it’s kind of funny. That this spot you took us to, also once served as 
     the beginning for said character in the first place."
+    
     # *A CG of a younger Amari seemingly praying at this tree is shown. They have 
     # longer hair, decorated with a sakura blossom, and are wearing a high school 
     # male uniform which appears slightly too big on them. Nearby, a kimono can be 
@@ -255,8 +262,10 @@ label Chapter2:
         sb "But, it’s kind of funny. That this spot you took us to, also once served as 
         the beginning for said character in the first place."
         "Stay Quiet":
+            scene black
             call Chap2_StayQuiet
         "Speak up":
+            scene black
             call Chap2_SpeakUp
     ############################################################
     ah "Tell me more~"
