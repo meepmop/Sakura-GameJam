@@ -201,7 +201,7 @@ label Chapter2:
     "Deciding to join them on the comfort which was the ground, you notice that [sb] appears 
     to be struggling."
     ############################################################
-    menu strugglingSB:
+    menu strugglingSakura:
         "Deciding to join them on the comfort which was the ground, you notice that [sb] appears 
         to be struggling."
         "Help them":
@@ -227,5 +227,82 @@ label Chapter2:
     ah "Oh, flower of dawn, won’t you relay to me your wisdom?!"
     ah "Show me what you’ve done to spark the fire within Kaito-Kun’s heart!"
     sb "?!?!"
+    ############################################################
+    menu sparkTheFire:
+        sb "?!?!"
+        "Nudge [sb]":
+            call Chap2_NudgeSB
+        "Stand there awkwardly":
+            call Chap2_StandAwkward
+    ############################################################
+    sb "Alright, alright!"
+    sb "You just have to promise. No trying to hurt me or [p]. Don’t shoot the messenger!"
+    ah "You have my word– My heart, even~! Now, speak..!"
+    ah "Speak to me the words which set Kaito-Kun’s heart ablaze~!"
+    "With a huff, [sb] manages to pry themselves away from Amari."
+    "They press their fingers together, and glance towards you."
+    "It was as if they were silently asking for your support."
+    sb "When I look at you, it’s almost like I see someone that’s constantly changing."
+    sb "Judging from how dramatic you are…I’m assuming that’s in character."
+    sb "But, it’s kind of funny. That this spot you took us to, also once served as 
+    the beginning for said character in the first place."
+    # *A CG of a younger Amari seemingly praying at this tree is shown. They have 
+    # longer hair, decorated with a sakura blossom, and are wearing a high school 
+    # male uniform which appears slightly too big on them. Nearby, a kimono can be 
+    # seen along with a pair of scissors as well as their backpack.*
+    ############################################################
+    menu beginningForCharacter:
+        sb "But, it’s kind of funny. That this spot you took us to, also once served as 
+        the beginning for said character in the first place."
+        "Stay Quiet":
+            call Chap2_StayQuiet
+        "Speak up":
+            call Chap2_SpeakUp
+    ############################################################
+    ah "Tell me more~"
+    sb "W-Wouldn’t you already know all this stuff anyways??"
+    sb "I-I’m only saying what comes to mind– it’s only when sakura petals fall, 
+    that I can truly gain a sense of who someone really is."
+    sb "It’s not like I can learn your whole life story…"
+    ah "Oho~"
+    ah "Ohohoho~"
+    ah "I see."
+    ah "A shame, really."
+    ah "I’d of loved to hear what happened next~"
+    ah "After all, each retelling of tragedy has its own unique touch."
+    "With a wink, Amari twirls their body to end up right behind you."
+    "Placing their hands on your shoulders, you instantly become stiff as a board."
+    ah "Wouldn’t you agree, [p]?"
+    ############################################################
+    menu wouldntAgree:
+        ah "Wouldn’t you agree, [p]?"
+        "T-Touching…":
+            call Chap2_Touching
+        "The only thing that’s ‘tragic’ is…":
+            call Chap2_OnlyTragic
+    ############################################################
+    "Humming out a small tune, Amari releases their hold on you."
+    "Rather than pay mind to your feelings on the matter, they instead focus 
+    their attention towards the Sakura tree once more."
+    ah "The Cherry Blossom season is nearing its conclusion."
+    ah "That means soon enough, there won’t be any ‘petals’ for [sb] to latch on to."
+    ah "As someone that never truly viewed themself as ‘in the norm’, I can tell that you and I, 
+    [sb], are the same~"
+    ah "Though, that should be a talk for another day."
+    ah "I’d love to see what you’re able to accomplish come Friday~"
+    ############################################################    
+    menu accomplishFriday:
+        ah "I’d love to see what you’re able to accomplish come Friday~"
+        "Mention Mikael":
+            call Chap2_MentionMikael
+        "Mention Kaito":
+            call Chap2_MentionKaito
+        "Mention your Idol Tickets":
+            call Chap2_MentionIdol
+    ############################################################
+    ah "Everything shall fall in place soon enough~!"
+    ah "Just trust in the blossom of fate, and she shall deliver!"
+    ah "You have my word!"
+
     return
 
