@@ -262,7 +262,7 @@ label Chap2_TauntKaito:
     p "Charge!!"
     return
 ############################################################
-# strugglingSB
+# strugglingSakura
 ############################################################
 label Chap2_HelpThem:
     # + Affection (SB) 
@@ -311,4 +311,101 @@ label Chap2_SakuraBully:
     sb "H-Hey! I couldn’t help it~"
     sb "Just looking at him caused all sorts of emotions to swell up within me…"
     sb "It almost made me want to cry~"
+    return
+############################################################
+# sparkTheFire
+############################################################
+label Chap2_NudgeSB:
+    # - Affection (SB) + Affection (Amari)
+    call sbLoveDecrease
+    call ahLoveIncrease
+    call loveNotification
+    p "C’mon, [sb]~ Try peering into their past or something…"
+    p "Unless what you pulled back there was just for show~"
+    sb "Way to put me on the spot…" 
+    sb "So cruel~"
+    return
+label Chap2_StandAwkward:
+    # + Affection (SB) - Affection (Amari)
+    call sbLoveIncrease
+    call ahLoveDecrease
+    call loveNotification
+    "When [sb] casts a worried look your way, you match it with an awkward upwards tug 
+    of your lips."
+    "Unsure of who’s side to take in this situation, you opt to just let fate take 
+    its course."
+    "After all, part of you did wish to see what was the deal with [sb]'s 
+    whole…peering into the past situation."
+
+    return
+############################################################
+# beginningForCharacter
+############################################################
+label Chap2_StayQuiet:
+    # + Affection (Amari) - Affection (SB)
+    call ahLoveIncrease
+    call sbLoveDecrease
+    call loveNotification
+    "Trusting Amari’s word to not try and attack you both, you simply stare in awe 
+    at the vivid image which [sb] once again paints for you."
+    "It’s almost scary."
+    "How could this guy know the memories of others but not their own?!"
+
+    return
+label Chap2_SpeakUp:
+    # - Affection (Amari) + Affection (SB)
+    call ahLoveDecrease
+    call sbLoveIncrease
+    call loveNotification
+    p "Are you sure that you actually want to hear this stuff?"
+    p "Seems…kinda like an invasion of your privacy, don’t you think–"
+    ah "Nonsense!"
+    return
+############################################################
+# wouldntAgree
+############################################################
+label Chap2_Touching:
+    # + Affection (Amari)
+    call ahLoveIncrease
+    call loveNotification
+    p "T-Touching…you’re–"
+    ah "Ah~ The way you squirm is quite wonderful~"
+    ah "However, I’ll spare you…"
+    ah "For now, that is~"
+
+    return
+label Chap2_OnlyTragic:
+    # - Affection (Amari) + Affection (SB)
+    call ahLoveDecrease
+    call sbLoveIncrease
+    call loveNotification
+    "Forcing yourself not to react to the firm touch of Amari, you force yourself 
+    to put on the farce of being unaffected."
+    p "You know, t-the only thing that’s tragic is here is how you’re 
+    viewing this as some sort of ‘show’"
+    p "[sb] isn’t some form of entertainment."
+    p "They're human."
+    p "Just…a kind of messed up one at the moment."
+    return
+############################################################
+# accomplishFriday
+############################################################
+label Chap2_MentionMikael:
+    # + Affection (Mikael)
+    call maLoveIncrease
+    call loveNotification
+    p "At least we don’t have to worry about being flour bombed 
+    now that we did that guy’s dirty work…"
+    return
+label Chap2_MentionKaito:
+    # + Affection (Kaito)
+    call ksLoveIncrease
+    call loveNotification
+    p "I’m just hoping that jerk loses his grudge by then…"
+    return
+label Chap2_MentionIdol:
+    # + Affection (SB)
+    call sbLoveIncrease
+    call loveNotification
+    p "I just need a body to take to that damn concert…"
     return
