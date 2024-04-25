@@ -44,6 +44,10 @@ image IT PlayerPhone = "Items/Placeholder/it_phoneHusband.png"
 # defined CG
 ################################################################################
 image CG C1 sbrunning = "CG/chapter 1/cg_c1_sbrunning.png"
+image CG C1 mahug = "CG/chapter 1/cg_c1_mahug.png"
+image CG C2 kseat = "CG/chapter 2/cg_c2_kseat.png"
+image CG C2 ahhorse = "CG/chapter 2/cg_c2_ahhorse.png"
+image CG C2 ahpray = "CG/chapter 2/cg_c2_ahpray.png"
 ################################################################################
 # defined transistion
 ################################################################################
