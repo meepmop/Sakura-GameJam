@@ -13,7 +13,29 @@ image sb thinking = "Characters/Placeholder/ch_sb_thinking.png"
 image sb ouch = "Characters/Placeholder/ch_sb_ouch.png"
 image sb oh = "Characters/Placeholder/ch_sb_oh.png"
 image sb line = "Characters/Placeholder/ch_sb_line.png"
+################################################################################
+# Kaito
+image ks neutral = "Characters/Placeholder/ch_ks_neutral.png"
+image ks angry = "Characters/Placeholder/ch_ks_angry.png"
+image ks shine = "Characters/Placeholder/ch_ks_shine.png"
+image ks thinking = "Characters/Placeholder/ch_ks_thinking.png"
+image ks sad = "Characters/Placeholder/ch_ks_sad.png"
+image ks oh = "Characters/Placeholder/ch_ks_oh.png"
 
+################################################################################
+# Amari
+image ah neutral = "Characters/Placeholder/ch_ah_neutral.png"
+image ah happy = "Characters/Placeholder/ch_ah_happy.png"
+image ah owo = "Characters/Placeholder/ch_ah_owo.png"
+image ah twt = "Characters/Placeholder/ch_ah_twt.png"
+image ah shine = "Characters/Placeholder/ch_ah_shine.png"
+image ah vhappy = "Characters/Placeholder/ch_ah_vhappy.png"
+image ah bored = "Characters/Placeholder/ch_ah_bored.png"
+
+################################################################################
+# Michael
+image ma happy = "Characters/Placeholder/ch_ma_happy.png"
+image ma vhappy = "Characters/Placeholder/ch_ma_vhappy.png"
 ################################################################################
 # defined items
 ################################################################################
@@ -25,9 +47,7 @@ image CG C1 sbrunning = "CG/chapter 1/cg_c1_sbrunning.png"
 ################################################################################
 # defined transistion
 ################################################################################
-transform topLeftFirst:
-    xalign 0.0
-    yalign 0.0
+
 ################################################################################
 # defined positions
 ################################################################################
