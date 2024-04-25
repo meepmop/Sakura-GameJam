@@ -96,34 +96,34 @@ label ChoosePronoun:
 
 label NewPronoun:
     # player input their pronoun
-    $ pSub = renpy.input("Pronoun Subjective (he/she/they)")
+    $ pSub = renpy.input("Pronoun Subjective (he/she/they) (he ate the cookie)")
     # stip any extra spacing
     $ pSub = pSub.strip()
     # if player put nothing it will default to he/him
     if pSub == "":
         $ pSub = "he"
 
-    $ pCon = renpy.input("Pronoun Contraction (he's/she's/they're)")
+    $ pCon = renpy.input("Pronoun Contraction (he's/she's/they're) (she's sleeping)")
     $ pCon = pCon.strip()
     if pCon == "":
         $ pCon = "he's"
 
-    $ pOb = renpy.input("Pronoun Object (him/her/them)")
+    $ pOb = renpy.input("Pronoun Object (him/her/them) (are you going to invite them)")
     $ pOb = pOb.strip()
     if pOb == "":
         $ pOb = "him"
 
-    $ pPos = renpy.input("Pronoun Possessive (his/hers/theirs)")
+    $ pPos = renpy.input("Pronoun Possessive (his/hers/theirs) (that bag is theirs)")
     $ pPos = pPos.strip()
     if pPos == "":
         $ pPos = "his"
 
-    $ pPosAd = renpy.input("Pronoun Possessive Adjective (his/her/their)")
+    $ pPosAd = renpy.input("Pronoun Possessive Adjective (his/her/their) (their cookie is red)")
     $ pPosAd = pPosAd.strip()
     if pPosAd == "":
         $ pPosAd = "his"
 
-    $ pRef = renpy.input("Pronoun Reflective (himself/herself/themselves)")
+    $ pRef = renpy.input("Pronoun Reflective (himself/herself/themselves) (she bought the bag herself)")
     $ pRef = pRef.strip()
     if pRef == "":
         $ pRef = "himself"
