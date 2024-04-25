@@ -2,6 +2,7 @@ label Chapter2:
     # Open up with asset of the school Hallway*
     # General lighthearted music is playing.*
     # A slightly transparent sprite of Mikael is used*
+    call Music_dayBegin
     ma "It’s simple, really~"
     ma "Ya just gotta keep him busy, butter him up, smooze him. Ya know?"
     ma "If ya do, ya got my word. Both you and Flower Boy over there won’t be gettin’ any of 
@@ -56,6 +57,7 @@ label Chapter2:
     # *The Background changes to the student council office. It has papers scattered everywhere 
     # and looks rather messy.*
     # *Kaito’s Theme Plays*
+    call Music_ksTheme
     ks "I’m assuming Amoris is up to something yet again?"
     ks "He must be reaching the bottom of the barrel if he’s enlisting the help of not only 
     a wallflower, but a complete stranger nonetheless."
@@ -197,8 +199,10 @@ label Chapter2:
     dodged the impending doom which was Amari."
     "Though, judging from how excited the eccentric was despite nearly trampling his 
     supposed ‘best friend’, something told you that this wasn’t too out of the norm for them."
+    call Music_kill
     # *The scene shifts to the Campus’ Cherry Blossom tree. It’s the same spot where you first 
     # met [SB].*
+    call Music_sbTheme
     ah "Ahh~ What joy that always brings me."
     ah "I’m quite certain Kaito-Kun should have been kept more than busy with that stunt."
     "Hopping off their steed, Amari runs his fingers through their mane, cooing out a few words 
@@ -312,6 +316,6 @@ label Chapter2:
     ah "Everything shall fall in place soon enough~!"
     ah "Just trust in the blossom of fate, and she shall deliver!"
     ah "You have my word!"
-
+    call Music_kill
     return
 

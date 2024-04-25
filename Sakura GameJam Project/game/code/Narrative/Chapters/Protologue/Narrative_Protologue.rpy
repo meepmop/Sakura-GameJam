@@ -12,6 +12,7 @@ label Protologue:
     ############################################################
     # game actually starts
     # *Open with a black screen, and soft, hopeful music playing.*
+    call Music_dayBegin
     p "It seems like this year's bloom will be even better than the last."
     p "{i}Sigh{/i}"
     
@@ -55,6 +56,7 @@ label Protologue:
     p "If the guy mom set up for me hasn't shown up in the last 5 hours, I doubt 
     they're gonna–"
     
+    call Music_kill
     # add a little shake
     scene BG YYFront with hpunch
     
@@ -67,6 +69,7 @@ label Protologue:
     show sb ouch
     sb "My head…"
     ############################################################
+    call Music_sbTheme
     menu MyHead:
         sb "My head…"
         "Stay Quiet":
@@ -156,5 +159,6 @@ label Protologue:
     ############################################################
     call situTriggerReset
     scene black with fade
+    call Music_kill
     jump Chapter1
     return
