@@ -238,6 +238,7 @@ label Chap1_IgnoreVoice:
     "It irritates you to the point that when you finally decide to direct your 
     attention towards the source of said voice, your face is ice cold."
     show sb happy
+    call Music_sbTheme
     sb "[p]?? It’s me– I…just wanted to check back in with you, haha~"
 
     return
@@ -247,6 +248,7 @@ label Chap1_TurnHead:
     call loveNotification
     "Despite how utterly crazy these last few days have been, you figure it 
     can’t possibly get any worse and begrudgingly turn towards the source of the voice."
+    call Music_sbTheme
     show sb neutral
     sb "Are you alright..?"
     show sb happy

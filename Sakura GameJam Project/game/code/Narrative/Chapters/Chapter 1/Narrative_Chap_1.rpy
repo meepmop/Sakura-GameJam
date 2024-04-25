@@ -4,6 +4,7 @@ label Chapter1:
     \nTime: Morning"
 
     # *There would be casual/’lighthearted’ musical beats happening here.*
+    call Music_dayBegin
     scene BG YYFront with fade
     "The weekend passes by just as quickly as it came."
     "As Cherry Blossoms continue to litter the streets with their 
@@ -142,6 +143,7 @@ label Chapter1_Cont_NearbyClass:
     ks "Enough."
     # *A CG of both Amari and Kaito standing side by side appears. Kaito looks less than impressed while Amari is seen striking a pose.*
     # *Kaito’s theme will now play.*
+    call Music_ksTheme
     show ah owo
     ah "Aww...you’re no fun~!"
     "Now moving back to Kaito’s side, Amari strikes a pose."
@@ -212,6 +214,7 @@ label Chapter1_Cont_NearbyClass:
     # *Some clattering sound effects could be heard*
     ks "I said MOVE!"
     show ah owo
+    call Music_kill
     ah "Oh dear…there he goes again~"
     ah "I shouldn’t leave poor Kaito-Kun alone too long."
     ah "May we cross paths once more in the near future! My beloved [p]~!"
@@ -255,6 +258,8 @@ label Chapter1_Cont_NearbyClass:
     # *A CG of Mikael with [SB] in their hold shows up. They both are looking 
     # towards the MC. Mikael appears to be grinning while [SB] looks like they’re currently fearing for their life.*
     # *Mikael’s theme plays.*
+    call Music_maTheme
+    scene CG C1 mahug
     sb "Uhh…is it really necessary to be this close?"
     sb "You know, personal space is a thing."
     p "You’re one to talk."
@@ -277,6 +282,7 @@ label Chapter1_Cont_NearbyClass:
         "Praise Mikael":
             call Chap1_PraiseMikael
     ############################################################
+    scene BG Classroom
     ma "So, about that ice cream~"
     ma "How ‘Bout I whip y’all up some as an apology for Sakuraba’s bitchiness?"
     sb "Doesn’t that require less baking and more, uh, freezing?"
@@ -377,5 +383,6 @@ label Chapter1_Cont_NearbyClass:
     ma "All I ask, is that you keep Sakuraba busy until Friday’s festival."
     scene black
     call situTriggerReset
+    call Music_kill
     jump Chapter2
     return
