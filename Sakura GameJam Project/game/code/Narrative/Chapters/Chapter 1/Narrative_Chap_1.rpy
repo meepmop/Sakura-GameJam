@@ -97,16 +97,35 @@ label Chapter1_Cont_NearbyClass:
     # *The Scene now changes to that of a traditional Japanese Classroom. 
     scene BG Classroom
     # It holds hints of the upcoming festival within it.*
+    show ah neutral at left
+    show ks angry at right
+
     jd "Unbelievable!!"
     p "Huh–"
     jd "When I get my hands on him..!"
+
+    show ah happy
+
     jd "Oho~ Kaito-Kun~ I can practically see your hair graying by the second! Please, calm yourself~"
     ks "You’re not helping."
+    
+    show ah owo
+
     jd "Ah~ Would you rather me join in your rage?"
+
+    show ah twt
+
     ah "Ahem. I, Haruka Amari, shall swear vengeance on the one foolish 
     enough to oppose YuraYura’s student council!"
     "Before you’ve the chance to leave, you find yourself cornered by the louder of the two people."
+    
+    show ah shine
+    show ks shine
+
     "Their eyes glisten with a manic fire as they firmly take your hands into their own."
+
+    show ah twt
+
     ah "You!!"
     ah "Tell me, have you seen the fiend responsible for this tragedy!?!"
     ############################################################
@@ -119,9 +138,11 @@ label Chapter1_Cont_NearbyClass:
         "Remain still":
             call Chap1_StayStill
     ############################################################
+    show ks neutral
     ks "Enough."
     # *A CG of both Amari and Kaito standing side by side appears. Kaito looks less than impressed while Amari is seen striking a pose.*
     # *Kaito’s theme will now play.*
+    show ah owo
     ah "Aww...you’re no fun~!"
     "Now moving back to Kaito’s side, Amari strikes a pose."
     "Or rather…a few poses. Much to Kaito’s displeasure."
@@ -142,12 +163,24 @@ label Chapter1_Cont_NearbyClass:
     ############################################################
     "Taking the time to adjust his vest, Kaito makes his way towards the 
     opposite end of the classroom."
+
+    show ks sad
+    
     "Running his fingers across the powdered white substance which coats the 
     desk in front of him, you notice the glint of sorrow which lingers behind his mask."
     ks "There’s no doubt about it. This is his work."
+    
+    show ah neutral
+    
     ah "Gone just as quickly as they came too, no?"
     ah "A true master of stealth~"
+    
+    show ks angry
+
     ks "You mean a true pain in the ass."
+    
+    show ks neutral
+
     ks "Though…it’s rather strange."
     ks "Typically they opt to target one of our councilmen and not some 
     obscure classroom."
@@ -162,20 +195,27 @@ label Chapter1_Cont_NearbyClass:
         "Remain Quiet":
             call Chap1_RemainQuiet
     ############################################################
+    show ks neutral
+    show ah neutral
+
     "Suddenly, before another word can be spoken, a loud scream can be 
     heard coming from outside of the classroom."
     sta "HELP ME! PRESIDENT-SAMA!! IT’S EVERYWHERE!!!!"
     stb "The flour bomber is back again! Run!!"
     stc "My eyes!! They’re so dry!!!!"
+    show ks oh
     ks "..!"
     ks "Mikael!!!"
+    hide ks
     "Without skipping a beat, Kaito can be seen bolting out of the area."
     ks "Out of my way!"
     # *Some clattering sound effects could be heard*
     ks "I said MOVE!"
+    show ah owo
     ah "Oh dear…there he goes again~"
     ah "I shouldn’t leave poor Kaito-Kun alone too long."
     ah "May we cross paths once more in the near future! My beloved [p]~!"
+    hide ah
     "With a dramatic twirl, Amari decides to take their leave, leaving you alone 
     in the room just as, if not, even more confused than when you had entered it."
     "Once finally alone, you can’t help but let out a heavy sigh."
@@ -195,7 +235,10 @@ label Chapter1_Cont_NearbyClass:
     sb "Talk about a bummer. Huh..~?"
     jd "If you’d like, I can get you somethin’ even better~"
     sb "Oh. That’d be wonderful~"
+    show sb neutral
     "[sb]’s lips curl into a warm smile." 
+    show sb oh at left
+    show ma happy at right
     "However, following a moment of thought, [sb] quickly tenses, and you can feel 
     your eyes widening."
     ############################################################

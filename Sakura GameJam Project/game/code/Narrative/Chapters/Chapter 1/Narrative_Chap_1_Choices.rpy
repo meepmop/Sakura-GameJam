@@ -92,12 +92,16 @@ label Chap1_Scream:
     call loveNotification
     p "What the Hell!? G-Get your hands off of me!!"
     "Amari’s lips seem to curl into a full on grin at your discontent."
+
+    show ah vhappy
+
     "He laughs, gripping onto your hands with an even more firm grip than before."
     ah "Yes! Scream for me! Sing out your woes in the form of absolute fear for which 
     shall serve as your divine punishment!!"
     
     return
 label Chap1_YankHand:
+    show ks neutral
     p "I don’t have time for this."
     "You scowl as you forcibly yank your hands away."
     "Looking beyond displeased with this display of dramatics, you focus your 
@@ -109,6 +113,7 @@ label Chap1_StayStill:
     call ahLoveDecrease
     call loveNotification
     "You remain still as a statue."
+    show ah neutral
     "Unmoving, you can only lazily direct your gaze to the equally unimpressed man behind them."
     "It’s almost as if by locking eye contact, you both seem to ask if Amari had 
     finished with their antics."
@@ -125,10 +130,15 @@ label Chap1_Pathetic:
     "You feel a mix of embarrassment and rage swell up in your chest."
     "You don’t know why, but for some reason just looking at this guy 
     makes you wish you made the move to punch him."
+    show ks thinking
+
     ks "Need I repeat myself?"
     ks "You’re a nobody. So, why don’t you just go back to being the wallflower you were with that stupid Idol game of yours?"
     p "...okay how do you know about–"
     ks "We’ve more important matters to tend to."
+
+    show ks neutral
+
     "Despite having his face covered, you can practically feel the man’s scowl."
     "It seems as it stood, you were the least of his priorities."
 
@@ -140,10 +150,12 @@ label Chap1_IllShowYou:
     "Deciding not to let this insult stand, you find yourself rolling up one of your sleeves."
     "After all, a little well earned violence never hurt no one."
     p "Oh yeah? I’ll show you pathetic..!"
+    show ks oh
     ks "?!?!"
     "Winding your arm back, you’re prepared to give Kaito a good hit to the face."
     "However, right before you connect with the cloth layer above it, you’re met 
     with a well-timed block."
+    show ah twt
     ah "Unfortunately, Kaito-Kun can only be harmed by one person."
     ah "And they’d be rather upset if I allowed it to be you~"
 
@@ -156,6 +168,7 @@ label Chap1_WellActually:
     call loveNotification
     "Feeling yourself deflate, you hang your head low at the other’s insults."
     "Doing so, out of the corner of your eye, you catch the slight creasing of Kaito’s eyes."
+    show ah bored
     "However, Amari appears less than pleased."
     ah "How dull."
     ah "I’d have at least appreciated a show of expression."
@@ -172,9 +185,15 @@ label Chap1_WhoThatGuy:
     call loveNotification
     p "Uh. Can I ask who this guy even is?"
     "As soon as the question leaves your lips, you instantly feel Kaito’s growing animosity."
+    
+    show ks angry
+
     p "I just can’t win today, can I…"
     ks "They’re a menace, that’s who they are!"
     ks "Who would even waste such good flour in the first place?!"
+    
+    show ah owo
+
     ah "Now, now. Just because you and your little ‘partner’  had a falling out, 
     doesn’t mean you have to take it out on poor little [p] here~"
     ks "W-We were not–"
@@ -185,9 +204,12 @@ label Chap1_IsThatFlour:
     call ahLoveDecrease
     call loveNotification
     p "That white stuff. Is that..?"
+    show ks sad
     ks "Perfectly good flour."
+    show ah twt
     ah "And about a few kilos worth too~"
     p "Why’d someone even do such a thing?"
+    show ah bored
     ah "Is it not obvious? They’re simply dying for attention."
 
     return
@@ -215,6 +237,7 @@ label Chap1_IgnoreVoice:
     "In fact, you can feel quite the headache coming on."
     "It irritates you to the point that when you finally decide to direct your 
     attention towards the source of said voice, your face is ice cold."
+    show sb happy
     sb "[p]?? It’s me– I…just wanted to check back in with you, haha~"
 
     return
@@ -224,7 +247,9 @@ label Chap1_TurnHead:
     call loveNotification
     "Despite how utterly crazy these last few days have been, you figure it 
     can’t possibly get any worse and begrudgingly turn towards the source of the voice."
+    show sb neutral
     sb "Are you alright..?"
+    show sb happy
     sb "You know, once I’d ran off…I realized I’d forgotten my new companion, haha~"
 
     return
@@ -243,6 +268,7 @@ label Chap1_WhoHellYou:
     "Their lips part into a wide grin, and they pull [sb] close into their embrace."
     "Now resting their chin against [sb]'s shoulder blade, both you and them can feel as 
     though that despite the other’s excitement, it’d be best not to get on their bad side."
+    show ma vhappy
     jd "Who the Hell am I?"
     ma "Why, I’m the one and Mikael Amoris! Current President of YuraYura’s Baking Club as 
     well as the one and only flour bomber~"
@@ -257,6 +283,7 @@ label Chap1_NotAnother:
     hadn’t spoken up at all."
     "Now resting their chin against [sb]'s shoulder blade, both of you can only wait to see 
     what this lunatic’s next moves were."
+    show ma vhappy
     ma "If anyone were to appear before you, you’d best be glad that it was YuraYura’s very own 
     Mikael Amoris, current President of the infamous Baking Club~"
 
@@ -267,12 +294,14 @@ label Chap1_IDoneDay:
     call sbLoveDecrease
     call loveNotification
     p "I think I’ve had enough."
+    show sb ouch
     "About to turn on your heels and leave this mess of a day behind, you can see [sb]'s eyes glisten."
     "It was almost as if they had asked you not to leave."
     "Not like that mattered to you anyways."
     jd "Ya know, maybe you and Sakuraba ain’t so different after all."
     "Now pulling [sb] closer to him, the mysterious man opts to rest their face against 
     his prey’s shoulder blade."
+    show ma vhappy
     ma "Be careful abandoning your friends, lest I, Mikael Amoris, current President of the 
     infamous Baking Club, set you as my next target!"
 
