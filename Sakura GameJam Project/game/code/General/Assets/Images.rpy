@@ -15,12 +15,12 @@ image sb oh = "Characters/Sakura/SB_Frown_P2.png"
 image sb line = "Characters/Sakura/SB_Smile_P1_Basic.png"
 ################################################################################
 # Kaito
-image ks neutral = "Characters/Placeholder/ch_ks_neutral.png"
-image ks angry = "Characters/Placeholder/ch_ks_angry.png"
-image ks shine = "Characters/Placeholder/ch_ks_shine.png"
-image ks thinking = "Characters/Placeholder/ch_ks_thinking.png"
-image ks sad = "Characters/Placeholder/ch_ks_sad.png"
-image ks oh = "Characters/Placeholder/ch_ks_oh.png"
+image ks neutral = "Characters/Kaito/KS_BasicPose_P1.png"
+image ks angry = "Characters/Kaito/KS_EyesClosed_P1.png"
+image ks shine = "Characters/Kaito/KS_Bashful_P2.png"
+image ks thinking = "Characters/Kaito/KS_EyesClosed_P1.png"
+image ks sad = "Characters/Kaito/KS_Nervous_P2.png"
+image ks oh = "Characters/Kaito/KS_EyebrowsRaised_P1.png"
 
 ################################################################################
 # Amari
@@ -34,8 +34,8 @@ image ah bored = "Characters/Amari/AH_OpenSmile_P1_Basic.png"
 
 ################################################################################
 # Michael
-image ma happy = "Characters/Placeholder/ch_ma_happy.png"
-image ma vhappy = "Characters/Placeholder/ch_ma_vhappy.png"
+image ma happy = "Characters/Michael/MA_SmileBasic_P1.png"
+image ma vhappy = "Characters/Michael/MA_Smile_P2.png"
 ################################################################################
 # defined items
 ################################################################################
