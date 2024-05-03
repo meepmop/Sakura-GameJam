@@ -5,7 +5,7 @@ label start:
     
     menu levelSelect:
         "Choose a chapter"
-        "Protologue":
+        "Prologue":
             jump Protologue
         "Chapter 1":
             # for debugging

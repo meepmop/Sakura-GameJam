@@ -145,15 +145,15 @@ label NewPronounConfirm:
 # Sakura name
 ############################################################
 default sakuraName = "???"
-define sb = Character("[sakuraName]")
+define sb = Character("[sakuraName]", color="#ff5173")
 ############################################################
 # General Characters
 ############################################################
 # John doe -- aka any character we idk
 define jd = Character("???")
-define ks = Character ("Kaito")
-define ah = Character("Amari")
-define ma = Character("Mikael")
+define ks = Character ("Kaito", color = "#006400")
+define ah = Character("Amari" ,color = "#5227c9")
+define ma = Character("Mikael", color = "#8B0000")
 
 ############################################################
 # Mob Characters

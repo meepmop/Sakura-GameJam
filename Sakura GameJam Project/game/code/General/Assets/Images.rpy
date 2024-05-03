@@ -7,12 +7,12 @@ image BG Classroom = "BG/Placeholder/bg_Classroom.png"
 # defined characters
 ################################################################################
 # Sakura Boy
-image sb neutral = "Characters/Placeholder/ch_sb_neutral.png"
-image sb happy = "Characters/Placeholder/ch_sb_happy.png"
-image sb thinking = "Characters/Placeholder/ch_sb_thinking.png"
-image sb ouch = "Characters/Placeholder/ch_sb_ouch.png"
-image sb oh = "Characters/Placeholder/ch_sb_oh.png"
-image sb line = "Characters/Placeholder/ch_sb_line.png"
+image sb neutral = "Characters/Sakura/SB_Smile_P1_Basic.png"
+image sb happy = "Characters/Sakura/SB_Smile_P1_Basic.png"
+image sb thinking = "Characters/Sakura/SB_Smile_P2.png"
+image sb ouch = "Characters/Sakura/SB_Frown_P1.png"
+image sb oh = "Characters/Sakura/SB_Frown_P2.png"
+image sb line = "Characters/Sakura/SB_Smile_P1_Basic.png"
 ################################################################################
 # Kaito
 image ks neutral = "Characters/Placeholder/ch_ks_neutral.png"
@@ -24,13 +24,13 @@ image ks oh = "Characters/Placeholder/ch_ks_oh.png"
 
 ################################################################################
 # Amari
-image ah neutral = "Characters/Placeholder/ch_ah_neutral.png"
-image ah happy = "Characters/Placeholder/ch_ah_happy.png"
-image ah owo = "Characters/Placeholder/ch_ah_owo.png"
-image ah twt = "Characters/Placeholder/ch_ah_twt.png"
-image ah shine = "Characters/Placeholder/ch_ah_shine.png"
-image ah vhappy = "Characters/Placeholder/ch_ah_vhappy.png"
-image ah bored = "Characters/Placeholder/ch_ah_bored.png"
+image ah neutral = "Characters/Amari/AH_OpenSmile_P1_Basic.png"
+image ah happy = "Characters/Amari/AH_EyesOpenSmile_P2.png"
+image ah owo = "Characters/Amari/AH_OhSideGlance_P1.png"
+image ah twt = "Characters/Amari/AH_OhSideGlance_P1.png"
+image ah shine = "Characters/Amari/AH_EyesOpenSmile_P2.png"
+image ah vhappy = "Characters/Amari/AH_EyesClosedSmile_P2.png"
+image ah bored = "Characters/Amari/AH_OpenSmile_P1_Basic.png"
 
 ################################################################################
 # Michael
