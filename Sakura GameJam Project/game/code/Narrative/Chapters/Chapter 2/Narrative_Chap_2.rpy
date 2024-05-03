@@ -2,6 +2,7 @@ label Chapter2:
     # Open up with asset of the school Hallway*
     # General lighthearted music is playing.*
     # A slightly transparent sprite of Mikael is used*
+    scene BG YYInside
     call Music_dayBegin
     ma "It’s simple, really~"
     ma "Ya just gotta keep him busy, butter him up, smooze him. Ya know?"
@@ -54,6 +55,7 @@ label Chapter2:
     "Kaito takes a moment to survey the area."
     "When he notices it seems to be just you two here, you see him step aside 
     to gesture for you both to step inside."
+    scene BG Classroom
     # *The Background changes to the student council office. It has papers scattered everywhere 
     # and looks rather messy.*
     # *Kaito’s Theme Plays*
@@ -161,6 +163,7 @@ label Chapter2:
     # *Insert CG of Amari on horseback extending their hand out towards you. 
     # Don’t ask how they got an entire horse both on Campus and inside the building, 
     # just roll with it.*
+    call Music_ahTheme
     ah "Care for a lift~?"
     ah "Well. Not that you’ve much of a choice."
     ah "Not unless you wish to suffer at the hands of my one and only best friend~"
@@ -253,6 +256,7 @@ label Chapter2:
     "It was as if they were silently asking for your support."
     sb "When I look at you, it’s almost like I see someone that’s constantly changing."
     sb "Judging from how dramatic you are…I’m assuming that’s in character."
+    call Music_cryTheme
     scene CG C2 ahpray
     sb "But, it’s kind of funny. That this spot you took us to, also once served as 
     the beginning for said character in the first place."
