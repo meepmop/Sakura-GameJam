@@ -293,7 +293,7 @@ screen navigation():
         xalign 0.5
         yalign 0.9
 
-        spacing gui.navigation_spacing
+        spacing 40
 
         if main_menu:
 
@@ -312,7 +312,9 @@ screen navigation():
             auto "gui/button/load_%s.png"
             action ShowMenu("load")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        imagebutton:
+            auto "gui/button/options_%s.png"
+            action ShowMenu("preferences")
 
         if _in_replay:
 
@@ -363,6 +365,9 @@ screen main_menu():
     tag menu
 
     add gui.main_menu_background
+    add "gui/Fleeting_Blossoms_Logo.png":
+        xalign 0.5
+        yalign 0.5
 
     ## This empty frame darkens the main menu.
     ## frame:
