@@ -298,17 +298,14 @@ screen navigation():
         if main_menu:
 
             textbutton _("Start") action Start()
-
-<<<<<<< Updated upstream
         else:
-=======
+
                 ##textbutton _("Start") action Start()
                 imagebutton:
                     auto "gui/button/start_%s.png"
                     activate_sound "audio/gui/select.mp3"
                     hover_sound "audio/gui/hover.mp3"
                     action Start()
->>>>>>> Stashed changes
 
             textbutton _("History") action ShowMenu("history")
 
@@ -316,11 +313,10 @@ screen navigation():
 
         textbutton _("Load") action ShowMenu("load")
 
-<<<<<<< Updated upstream
         textbutton _("Preferences") action ShowMenu("preferences")
 
         if _in_replay:
-=======
+
             imagebutton:
                 auto "gui/button/load_%s.png"
                 action ShowMenu("load")
@@ -332,7 +328,6 @@ screen navigation():
                 action ShowMenu("preferences")
                 activate_sound "audio/gui/select.mp3"
                 hover_sound "audio/gui/hover.mp3"
->>>>>>> Stashed changes
 
             textbutton _("End Replay") action EndReplay(confirm=True)
 
@@ -342,26 +337,22 @@ screen navigation():
 
         textbutton _("About") action ShowMenu("about")
 
-<<<<<<< Updated upstream
+
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-=======
             imagebutton:
                 auto "gui/button/about_%s.png"
                 action ShowMenu("about")
                 activate_sound "audio/gui/select.mp3"
                 hover_sound "audio/gui/hover.mp3"
->>>>>>> Stashed changes
 
             ## Help isn't necessary or relevant to mobile devices.
             textbutton _("Help") action ShowMenu("help")
 
         if renpy.variant("pc"):
 
-<<<<<<< Updated upstream
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
             textbutton _("Quit") action Quit(confirm=not main_menu)
-=======
                 ## Help isn't necessary or relevant to mobile devices.
                 imagebutton:
                     auto "gui/button/help_%s.png"
@@ -422,8 +413,6 @@ screen navigation():
                 ## The quit button is banned on iOS and unnecessary on Android and
                 ## Web.
                 textbutton _("Quit") action Quit(confirm=not main_menu)
->>>>>>> Stashed changes
-
 
 style navigation_button is gui_button
 style navigation_button_text is gui_button_text
