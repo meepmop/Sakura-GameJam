@@ -54,7 +54,7 @@ label ConfirmIdentity:
 # Player name
 ############################################################
 default playerName = "Kiku"
-define p = Character("[playerName]")
+define p = Character("[playerName]", who_color="#df78ff")
 # Player pronouns
 default pSub = "he"
 default pCon = "he's"
@@ -145,15 +145,15 @@ label NewPronounConfirm:
 # Sakura name
 ############################################################
 default sakuraName = "???"
-define sb = Character("[sakuraName]")
+define sb = Character("[sakuraName]", who_color="#df78ff")
 ############################################################
 # General Characters
 ############################################################
 # John doe -- aka any character we idk
 define jd = Character("???")
-define ks = Character ("Kaito")
-define ah = Character("Amari")
-define ma = Character("Mikael")
+define ks = Character ("Kaito", who_color="#61f288")
+define ah = Character("Amari",  who_color="#618ff2")
+define ma = Character("Mikael", who_color="#ff6363")
 
 ############################################################
 # Mob Characters
