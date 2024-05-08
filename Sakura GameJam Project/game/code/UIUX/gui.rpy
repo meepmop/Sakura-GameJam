@@ -27,7 +27,7 @@ define config.check_conflicting_properties = True
 define gui.text_outlines = [(2, "#000", 0, 0)]
 
 ## An accent color used throughout the interface to label and highlight text.
-define gui.accent_color = '#cc0066'
+define gui.accent_color = '#df78ff'
 
 ## The color used for a text button when it is neither selected nor hovered.
 define gui.idle_color = '#707070'
@@ -53,7 +53,7 @@ define gui.hover_muted_color = '#ea99c1'
 
 ## The colors used for dialogue and menu choice text.
 define gui.text_color = '#fff'
-define gui.interface_text_color = '#404040'
+define gui.interface_text_color = '#ffa6f5'
 
 
 ## Fonts and Font Sizes ########################################################
@@ -108,7 +108,7 @@ define gui.textbox_yalign = 1.0
 
 ## The placement of the speaking character's name, relative to the textbox.
 ## These can be a whole number of pixels from the left or top, or 0.5 to center.
-define gui.name_xpos = 0.5
+define gui.name_xpos = 0.47
 define gui.name_ypos = 0
 
 ## The horizontal alignment of the character's name. This can be 0.0 for left-

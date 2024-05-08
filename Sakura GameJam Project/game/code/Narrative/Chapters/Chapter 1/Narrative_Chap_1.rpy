@@ -1,18 +1,16 @@
 label Chapter1:
-    "Day: Monday
-    \nSetting: Streets of Tokyo leading towards YuraYura Academy
-    \nTime: Morning"
-
+    show text "Day: Monday\n\nSetting: Streets of Tokyo leading towards YuraYura Academy\n\nTime:Morning" with dissolve
+    pause 3.0
+    hide text with dissolve
+    
     # *There would be casual/’lighthearted’ musical beats happening here.*
-    call Music_dayBegin
+    $ renpy.music.play("audio/Music/DayBegins_Intro.ogg", fadein=1.0)
+    $ renpy.music.queue("audio/Music/DayBegins_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
     scene BG YYFront with fade
     "The weekend passes by just as quickly as it came."
-    "As Cherry Blossoms continue to litter the streets with their 
-    iconic Sakura Pink hue, you can’t help but admire their beauty."
     ############################################################
     menu familiarSakura:
-        "As Cherry Blossoms continue to litter the streets with their 
-        iconic Sakura Pink hue, you can’t help but admire their beauty."
+        "As Cherry Blossoms continue to litter the streets with their iconic Sakura Pink hue, you can’t help but admire their beauty."
         "The petals remind me of…":
             call Chap1_Familiar
         "Focus your attention back to your phone.":
@@ -98,26 +96,33 @@ label Chapter1_Cont_NearbyClass:
     # *The Scene now changes to that of a traditional Japanese Classroom. 
     scene BG Classroom
     # It holds hints of the upcoming festival within it.*
-    show ah neutral at left
+    show ah neutral at left:
+        xzoom -1.0
     show ks angry at right
+    with dissolve
 
-    jd "Unbelievable!!"
+    ks "Unbelievable!!"
     p "Huh–"
-    jd "When I get my hands on him..!"
+    ks "When I get my hands on him..!"
 
     show ah happy
 
-    jd "Oho~ Kaito-Kun~ I can practically see your hair graying by the second! Please, calm yourself~"
+    ah "Oho~ Kaito-Kun~ I can practically see your hair graying by the second! Please, calm yourself~"
+
+    $ k_name = 'Kaito'
+
     ks "You’re not helping."
     
     show ah owo
 
-    jd "Ah~ Would you rather me join in your rage?"
+    ah "Ah~ Would you rather me join in your rage?"
 
     show ah twt
 
-    ah "Ahem. I, Haruka Amari, shall swear vengeance on the one foolish 
-    enough to oppose YuraYura’s student council!"
+    $ a_name = 'Amari'
+
+    ah "Ahem. I, Haruka Amari, shall swear vengeance on the one foolish enough to oppose YuraYura’s student council!"
+    
     "Before you’ve the chance to leave, you find yourself cornered by the louder of the two people."
     
     show ah shine
@@ -214,7 +219,7 @@ label Chapter1_Cont_NearbyClass:
     # *Some clattering sound effects could be heard*
     ks "I said MOVE!"
     show ah owo
-    call Music_kill
+    stop music fadeout 1.0
     ah "Oh dear…there he goes again~"
     ah "I shouldn’t leave poor Kaito-Kun alone too long."
     ah "May we cross paths once more in the near future! My beloved [p]~!"
@@ -258,8 +263,9 @@ label Chapter1_Cont_NearbyClass:
     # *A CG of Mikael with [SB] in their hold shows up. They both are looking 
     # towards the MC. Mikael appears to be grinning while [SB] looks like they’re currently fearing for their life.*
     # *Mikael’s theme plays.*
-    call Music_maTheme
-    scene CG C1 mahug
+    $ renpy.music.play("audio/Music/Mikael2_Intro.ogg", fadein=1.0)
+    $ renpy.music.queue("audio/Music/Mikael2_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
+    scene CG C1 mahug with dissolve
     sb "Uhh…is it really necessary to be this close?"
     sb "You know, personal space is a thing."
     p "You’re one to talk."
@@ -283,9 +289,13 @@ label Chapter1_Cont_NearbyClass:
             call Chap1_PraiseMikael
     ############################################################
     scene BG Classroom
+    show sb oh at left
+    show ma happy at right
+    with dissolve
     ma "So, about that ice cream~"
     ma "How ‘Bout I whip y’all up some as an apology for Sakuraba’s bitchiness?"
     sb "Doesn’t that require less baking and more, uh, freezing?"
+    show ma wink2
     ma "Well. Yeah. But."
     "You visibly notice Mikael fluster."
     "It almost brings a smile to your face."
@@ -383,6 +393,6 @@ label Chapter1_Cont_NearbyClass:
     ma "All I ask, is that you keep Sakuraba busy until Friday’s festival."
     scene black
     call situTriggerReset
-    call Music_kill
+    stop music fadeout 1.0
     jump Chapter2
     return

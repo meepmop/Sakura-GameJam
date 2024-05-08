@@ -14,13 +14,13 @@ label loveNotification:
     # only one person liked it
     if loveStateTotal == 1:
         if sbLoveState == 1:
-            $ renpy.notify("[sb] liked that")
+            $ renpy.notify("{color=#ffa6f5}[sb] liked that{/color}")
         if ksLoveState == 1:
-            $ renpy.notify("[ks] liked that")
+            $ renpy.notify("{color=#61f288}[ks] liked that{/color}")
         if ahLoveState == 1:
-            $ renpy.notify("[ah] liked that")
+            $ renpy.notify("{color=#618ff2}[ah] liked that{/color}")
         if maLoveState == 1:
-            $ renpy.notify("[ma] liked that")
+            $ renpy.notify("{color=#ff6363}[ma] liked that{/color}")
     # only one person did not like that or 2 ppl liked it
     elif loveStateTotal == 2:
         # sb ###################################################
@@ -35,29 +35,29 @@ label loveNotification:
             $ notices.append("[sb] liked that")
         # ks ###################################################
         if ksLoveState == 2:
-            $ renpy.notify("[ks] disliked that")
+            $ renpy.notify("{color=#61f288}[ks] disliked that{/color}")
         if ksLoveState == 1:
             $ loveStateTotal = loveStateTotal - ksLoveState
             if loveStateTotal == 0:
-                $ notify_me("[ks] liked that")
+                $ notify_me("{color=#61f288}[ks] liked that{/color}")
             elif loveStateTotal >= 1:
-                $ notices.append("[ks] liked that")
+                $ notices.append("{color=#61f288}[ks] liked that{/color}")
         # ah ###################################################
         if ahLoveState == 2:
-            $ renpy.notify("[ah] disliked that")
+            $ renpy.notify("{color=#618ff2}[ah] disliked that{/color}")
         if ahLoveState == 1:
             $ loveStateTotal = loveStateTotal - ahLoveState
             if loveStateTotal == 0:
-                $ notify_me("[ah] liked that")
+                $ notify_me("{color=#618ff2}[ah] liked that{/color}")
             elif loveStateTotal >= 1:
-                $ notices.append("[ah] liked that")
+                $ notices.append("{color=#618ff2}[ah] liked that{/color}")
         # ma ###################################################
         if maLoveState == 2:
-            $ renpy.notify("[ma] disliked that")
+            $ renpy.notify("{color=#ff6363}[ma] disliked that{/color}")
         if maLoveState == 1:
             $ loveStateTotal = loveStateTotal - maLoveState
             if loveStateTotal == 0:
-                $ notify_me("[ma] liked that")
+                $ notify_me("{color=#ff6363}[ma] liked that{/color}")
     # if multiple people are disliking and liking
     elif loveStateTotal >= 3:
         # sb ###################################################
@@ -78,37 +78,37 @@ label loveNotification:
             $ loveStateTotal = loveStateTotal - ksLoveState
             # if that is the end of the line -- end of the line message
             if loveStateTotal == 0:
-                $ notify_me("[ks] disliked that")
+                $ notify_me("{color=#61f288}[ks] disliked that{/color}")
             # if not, continue along
-            $ notices.append("[ks] disliked that")
+            $ notices.append("{color=#61f288}[ks] disliked that{/color}")
         if ksLoveState == 1:
             $ loveStateTotal = loveStateTotal - ksLoveState
             # if that is the end of the line -- end of the line message
             if loveStateTotal == 0:
-                $ notify_me("[ks] liked that")
+                $ notify_me("{color=#61f288}[ks] liked that{/color}")
             # if not, continue along
             elif loveStateTotal >= 1:
-                $ notices.append("[ks] liked that")
+                $ notices.append("{color=#61f288}[ks] liked that{/color}")
         # ah ###################################################
         if ahLoveState == 2:
             $ loveStateTotal = loveStateTotal - ahLoveState
             if loveStateTotal == 0:
-                $ notify_me("[ah] disliked that")
+                $ notify_me("{color=#618ff2}[ah] disliked that{/color}")
             elif loveStateTotal >= 1:
-                $ notices.append("[ah] disliked that")
+                $ notices.append("{color=#618ff2}[ah] disliked that{/color}")
         if ahLoveState == 1:
             $ loveStateTotal = loveStateTotal - ahLoveState
             if loveStateTotal == 0:
-                $ notify_me("[ah] liked that")
+                $ notify_me("{color=#618ff2}[ah] liked that{/color}")
             elif loveStateTotal >= 1:
-                $ notices.append("[ah] liked that")
+                $ notices.append("{color=#618ff2}[ah] liked that{/color}")
         # ma ###################################################
         if maLoveState == 2:
             $ loveStateTotal = loveStateTotal - maLoveState
-            $ notify_me("[ma] disliked that")
+            $ notify_me("{color=#ff6363}[ma] disliked that{/color}")
         if maLoveState == 1:
             $ loveStateTotal = loveStateTotal - maLoveState
-            $ notify_me("[ma] liked that")
+            $ notify_me("{color=#ff6363}[ma] liked that{/color}")
     # reset the numbers
     $ sbLoveState = 0
     $ ksLoveState = 0

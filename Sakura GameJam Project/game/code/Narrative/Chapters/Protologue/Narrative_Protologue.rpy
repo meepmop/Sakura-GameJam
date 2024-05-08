@@ -12,7 +12,8 @@ label Protologue:
     ############################################################
     # game actually starts
     # *Open with a black screen, and soft, hopeful music playing.*
-    call Music_dayBegin
+    $ renpy.music.play("audio/Music/DayBegins_Intro.ogg", fadein=1.0)
+    $ renpy.music.queue("audio/Music/DayBegins_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
     p "It seems like this year's bloom will be even better than the last."
     p "{i}Sigh{/i}"
     
@@ -21,23 +22,21 @@ label Protologue:
     
     "While this marks only my second year at YuraYura Academy, it will also serve 
     as my 21st anniversary of being officially maidenless."
-    "Or…in plain terms. Lacking a Partner."
-    "I was never really interested in the whole 'Dating' thing." 
+    "Or…in plain terms: lacking a partner."
+    "I was never really interested in the whole \"dating\" thing." 
     "It honestly never seemed like a big deal to me."
-    "At first, while my family approved of my partnerless lifestyle, it seems 
-    as though with a flip of a switch they've gone from 'Focus on your studies!' 
-    to 'Have you found someone who could give us grandchildren yet?' "
+    "At first, while my family approved of my partnerless lifestyle, it seems as though with a flip of a switch they've gone from \"Focus on your studies!\" 
+    to \"Have you found someone who could give us grandchildren yet?\""
     "First of all, I don't even know why they want someone like me to produce offspring."
     "If they took just one look at my spending habits, they'd realize there'd be 
     no room for a mini-me anywhere in that equation."
-    "Though, of course I couldn't tell my dear mom about that. That'd have to be 
-    a conversation for another day."
+    "Though, of course I couldn't tell my dear mom about that. That'd have to be a conversation for another day."
     "Speaking of days, I've spent the majority of it just waiting here."
-    "Waiting…{w} Waiting…"
+    "Waiting...{w} Waiting..."
     "Sitting here in the hopes that the person my mom told me about would just 
     show the hell up already."
     p "It's no wonder everyone's acting all lovey dovey."
-    p "Holding hands, sharing Boba…"
+    p "Holding hands, sharing boba…"
     p "If it weren't for the fact mom didn't promise me front row tickets to that 
     virtual idol concert, I'd honestly be none the wiser."
     
@@ -56,7 +55,7 @@ label Protologue:
     p "If the guy mom set up for me hasn't shown up in the last 5 hours, I doubt 
     they're gonna–"
     
-    call Music_kill
+    stop music fadeout 1.0
     # add a little shake
     scene BG YYFront with hpunch
     
@@ -65,13 +64,14 @@ label Protologue:
     scene black
     sb "Ow, ow, ow..!!"
     # *A shuffling sound effect plays, and the screen fades back into the image of sbwith their hair down looking all baby girl.*
-    scene BG YYFront with Fade(0.0,0.0,1.0)
+    scene BG YYFront
     show sb ouch
-    sb "My head…"
+    with Fade(0.0,0.0,1.0)
+    $ renpy.music.play("audio/Music/Sakura_Intro.ogg", fadein=1.0)
+    $ renpy.music.queue("audio/Music/Sakura_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
     ############################################################
-    call Music_sbTheme
     menu MyHead:
-        sb "My head…"
+        sb "My head..."
         "Stay Quiet":
             call Proto_StayQuiet
         "Ask if they're okay":
@@ -159,6 +159,6 @@ label Protologue:
     ############################################################
     call situTriggerReset
     scene black with fade
-    call Music_kill
+    stop music fadeout 1.0
     jump Chapter1
     return
