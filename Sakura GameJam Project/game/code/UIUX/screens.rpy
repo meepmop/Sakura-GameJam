@@ -295,7 +295,7 @@ screen navigation():
             xalign 0.5
             yalign 0.9
 
-            spacing 40
+            spacing 20
 
             if main_menu:
 
@@ -326,12 +326,19 @@ screen navigation():
 
                 textbutton _("Main Menu") action MainMenu()
 
-            textbutton _("About") action ShowMenu("about")
+            imagebutton:
+                auto "gui/button/about_%s.png"
+                action ShowMenu("about")
+
+            ##textbutton _("About") action ShowMenu("about")
 
             if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
                 ## Help isn't necessary or relevant to mobile devices.
-                textbutton _("Help") action ShowMenu("help")
+                imagebutton:
+                    auto "gui/button/help_%s.png"
+                    action ShowMenu("help")
+                ##textbutton _("Help") action ShowMenu("help")
 
             if renpy.variant("pc"):
 
