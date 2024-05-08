@@ -1,6 +1,11 @@
 ﻿# The script of the game goes in this file.
 # The game starts here.
 
+init:
+    $ k_name = '???'
+    $ a_name = '???'
+    $ m_name = '???'
+
 label start:
     
     menu levelSelect:

@@ -295,7 +295,7 @@ screen navigation():
             xalign 0.5
             yalign 0.9
 
-            spacing 40
+            spacing 20
 
             if main_menu:
 
@@ -303,6 +303,8 @@ screen navigation():
                 imagebutton:
                     auto "gui/button/start_%s.png"
                     action Start()
+                    activate_sound "audio/gui/select.mp3"
+                    hover_sound "audio/gui/hover.mp3"
 
             else:
 
@@ -313,10 +315,15 @@ screen navigation():
             imagebutton:
                 auto "gui/button/load_%s.png"
                 action ShowMenu("load")
+                activate_sound "audio/gui/select.mp3"
+                hover_sound "audio/gui/hover.mp3"
+                
 
             imagebutton:
                 auto "gui/button/options_%s.png"
                 action ShowMenu("preferences")
+                activate_sound "audio/gui/select.mp3"
+                hover_sound "audio/gui/hover.mp3"
 
             if _in_replay:
 
@@ -326,12 +333,23 @@ screen navigation():
 
                 textbutton _("Main Menu") action MainMenu()
 
-            textbutton _("About") action ShowMenu("about")
+            imagebutton:
+                auto "gui/button/about_%s.png"
+                action ShowMenu("about")
+                activate_sound "audio/gui/select.mp3"
+                hover_sound "audio/gui/hover.mp3"
+
+            ##textbutton _("About") action ShowMenu("about")
 
             if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
                 ## Help isn't necessary or relevant to mobile devices.
-                textbutton _("Help") action ShowMenu("help")
+                imagebutton:
+                    auto "gui/button/help_%s.png"
+                    action ShowMenu("help")
+                    activate_sound "audio/gui/select.mp3"
+                    hover_sound "audio/gui/hover.mp3"
+                ##textbutton _("Help") action ShowMenu("help")
 
             if renpy.variant("pc"):
 
@@ -340,6 +358,7 @@ screen navigation():
                 imagebutton:
                     auto "gui/button/quit_%s.png"
                     action Quit(confirm=not main_menu)
+                    hover_sound "audio/gui/hover.mp3"
     else:
         vbox:
             style_prefix "navigation"

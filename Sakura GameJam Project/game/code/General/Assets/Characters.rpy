@@ -31,18 +31,18 @@ label Capitalization:
 
     menu:
         "Is [userInput] the name you wish?"
-        "yes":
+        "Yes":
             return
-        "no":
+        "No":
             jump InsertName
     return
 
 label ConfirmIdentity:
     menu YouSureAboutIdentity:
         "Do you wish to be [p] with the pronouns of [pSub]/[pOb]?"
-        "yes":
+        "Yes":
             return
-        "no":
+        "No":
             $ specifiedName = playerName
             call InsertName
             $ playerName = userInput
@@ -54,7 +54,7 @@ label ConfirmIdentity:
 # Player name
 ############################################################
 default playerName = "Kiku"
-define p = Character("[playerName]")
+define p = Character("[playerName]", who_color="#df78ff")
 # Player pronouns
 default pSub = "he"
 default pCon = "he's"
@@ -145,15 +145,15 @@ label NewPronounConfirm:
 # Sakura name
 ############################################################
 default sakuraName = "???"
-define sb = Character("[sakuraName]", color="#ff5173")
+define sb = Character("[sakuraName]", who_color="#ffa6f5", callback = name_callback, cb_name = "sakura")
 ############################################################
 # General Characters
 ############################################################
 # John doe -- aka any character we idk
 define jd = Character("???")
-define ks = Character ("Kaito", color = "#006400")
-define ah = Character("Amari" ,color = "#5227c9")
-define ma = Character("Mikael", color = "#8B0000")
+define ks = DynamicCharacter("k_name", who_color="#61f288", callback = name_callback, cb_name = "kaito") #Kaito
+define ah = DynamicCharacter("a_name",  who_color="#618ff2", callback = name_callback, cb_name = "amari") #amari
+define ma = DynamicCharacter("m_name", who_color="#ff6363", callback = name_callback, cb_name = "mikael") #mikael
 
 ############################################################
 # Mob Characters

@@ -57,12 +57,12 @@ label Chap1_BranchHair:
 label Chap1_SearchChoice:
     menu whereTheyGo:
         "Knowing there’s only so many places they could be, you decide the following:"
-        "Check the Nearby Classrooms.":
+        "Check the nearby classrooms.":
             # reset any trigs used
             call situTriggerReset
             jump Chapter1_Cont_NearbyClass
         # player can only check the supply closet once
-        "Check the Supply Closet" if not choice1Chosen:
+        "Check the supply closet" if not choice1Chosen:
             jump Chap1_SuppyCloset
         # game will end here if they choose this
         "Cut your losses and just leave.":
@@ -70,7 +70,7 @@ label Chap1_SearchChoice:
     return
 label Chap1_SuppyCloset:
     $ choice1Chosen = True 
-    "Figuring that perhaps there would be some spare decorations inside, you make your way to the Supply Closet located at the end of the hall."
+    "Figuring that perhaps there would be some spare decorations inside, you make your way to the supply closet located at the end of the hall."
     "You’re surprised to see how upon arrival, it was already torn through in a way which you could hardly imagine [sb] doing."
     "You frown, seeing the replica sakura petals so carelessly dirtied and stepped upon."
     "You also can’t help but spot the powered white streaks which coat areas of the now ruined decorations."
@@ -82,7 +82,7 @@ label Chap1_JustLeave:
     "There seems to be a new event about to start."
     "One which seemed far more interesting than whatever the Hell was taking place here."
     "You decide to walk in the direction opposite to [sb], letting fate take its course."
-    "It wasn’t your problem anyways."
+    "It wasn't your problem anyways."
     return
 ############################################################
 # tellMeFiend
@@ -91,7 +91,7 @@ label Chap1_Scream:
     call ahLoveIncrease
     call loveNotification
     p "What the Hell!? G-Get your hands off of me!!"
-    "Amari’s lips seem to curl into a full on grin at your discontent."
+    "Amari's lips seem to curl into a full on grin at your discontent."
 
     show ah vhappy
 
@@ -238,7 +238,8 @@ label Chap1_IgnoreVoice:
     "It irritates you to the point that when you finally decide to direct your 
     attention towards the source of said voice, your face is ice cold."
     show sb happy
-    call Music_sbTheme
+    $ renpy.music.play("audio/Music/Sakura_Intro.ogg", fadein=1.0)
+    $ renpy.music.queue("audio/Music/Sakura_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
     sb "[p]?? It’s me– I…just wanted to check back in with you, haha~"
 
     return
@@ -248,7 +249,8 @@ label Chap1_TurnHead:
     call loveNotification
     "Despite how utterly crazy these last few days have been, you figure it 
     can’t possibly get any worse and begrudgingly turn towards the source of the voice."
-    call Music_sbTheme
+    $ renpy.music.play("audio/Music/Sakura_Intro.ogg", fadein=1.0)
+    $ renpy.music.queue("audio/Music/Sakura_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
     show sb neutral
     sb "Are you alright..?"
     show sb happy
@@ -272,6 +274,9 @@ label Chap1_WhoHellYou:
     though that despite the other’s excitement, it’d be best not to get on their bad side."
     show ma vhappy
     jd "Who the Hell am I?"
+
+    $ m_name = 'Mikael'
+
     ma "Why, I’m the one and Mikael Amoris! Current President of YuraYura’s Baking Club as 
     well as the one and only flour bomber~"
     return
@@ -378,10 +383,12 @@ label Chap1_Cookies:
     # + Affection (SB)
     call sbLoveIncrease
     call loveNotification
+    show sb ouch
     p "What ever happened to those Sakura cookies, [sb]?"
     "Just as you ask this, you see [sb]'s face darken, and you are met with a rather sheepish smile."
     sb "I…uh…traded them for that ice cream~"
     sb "Though, I guess that’s out the window now, huh?"
+    show ma vhappy
     ma "My offer still stands, ya know!"
 
     return
