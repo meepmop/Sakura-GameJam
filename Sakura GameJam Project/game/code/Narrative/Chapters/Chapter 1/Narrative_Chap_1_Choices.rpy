@@ -481,5 +481,5 @@ label Chap1_AndThatIs:
     "Mikael lets out a hearty laugh at the assumption."
     "They seem to say something which you cannot fully comprehend."
     "However, as someone with a grand total of 1 year of elementary English Skills, you assume 
-    it was something along the lines of ‘Kitten’."
+    it was something along the lines of \"Kitten.\""
     return

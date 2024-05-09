@@ -12,9 +12,9 @@ label Chapter1:
     menu familiarSakura:
         "As Cherry Blossoms continue to litter the streets with their iconic Sakura Pink hue, you can’t help but admire their beauty."
         "The petals remind me of…":
-            call Chap1_Familiar from _call_Chap1_Familiar
+            call Chap1_Familiar
         "Focus your attention back to your phone.":
-            call Chap1_FocusPhone from _call_Chap1_FocusPhone
+            call Chap1_FocusPhone
     ############################################################
     sb "Oiii~ [p]!"
     sb "Oi, Oiiiii! Over here~!"
@@ -32,11 +32,11 @@ label Chapter1:
     menu ourClasses:
         sb "Are you ready for our classes?"
         "Our?":
-            call Chap1_OurClasses from _call_Chap1_OurClasses
+            call Chap1_OurClasses
         "What about your memories?":
-            call Chap1_YourMemories from _call_Chap1_YourMemories
+            call Chap1_YourMemories
         "Is that a branch in your hair?":
-            call Chap1_BranchHair from _call_Chap1_BranchHair
+            call Chap1_BranchHair
     ############################################################
     "After [sb]’s mention of cookies, you decide to walk past them and in the 
     direction of YuraYura Academy."
@@ -138,17 +138,17 @@ label Chapter1_Cont_NearbyClass:
     menu tellMeFiend:
         ah "Tell me, have you seen the fiend responsible for this tragedy!?!"
         "Scream":
-            call Chap1_Scream from _call_Chap1_Scream
+            call Chap1_Scream
         "Yank your hands away":
-            call Chap1_YankHand from _call_Chap1_YankHand
+            call Chap1_YankHand
         "Remain still":
-            call Chap1_StayStill from _call_Chap1_StayStill
+            call Chap1_StayStill
     ############################################################
     show ks neutral
     ks "Enough."
     # *A CG of both Amari and Kaito standing side by side appears. Kaito looks less than impressed while Amari is seen striking a pose.*
     # *Kaito’s theme will now play.*
-    call Music_ksTheme from _call_Music_ksTheme
+    call Music_ksTheme
     show ah owo
     ah "Aww...you’re no fun~!"
     "Now moving back to Kaito’s side, Amari strikes a pose."
@@ -162,11 +162,11 @@ label Chapter1_Cont_NearbyClass:
     menu excuseMePathethic:
         ks "Pathetic."
         "Pathetic?!":
-            call Chap1_Pathetic from _call_Chap1_Pathetic
+            call Chap1_Pathetic
         "I’ll show you pathetic..!":
-            call Chap1_IllShowYou from _call_Chap1_IllShowYou
+            call Chap1_IllShowYou
         "Well actually…":
-            call Chap1_WellActually from _call_Chap1_WellActually
+            call Chap1_WellActually
     ############################################################
     "Taking the time to adjust his vest, Kaito makes his way towards the 
     opposite end of the classroom."
@@ -196,11 +196,11 @@ label Chapter1_Cont_NearbyClass:
         ks "Typically they opt to target one of our councilmen and not some 
         obscure classroom."
         "Who is this guy?":
-            call Chap1_WhoThatGuy from _call_Chap1_WhoThatGuy
+            call Chap1_WhoThatGuy
         "Is that…flour?":
-            call Chap1_IsThatFlour from _call_Chap1_IsThatFlour
+            call Chap1_IsThatFlour
         "Remain Quiet":
-            call Chap1_RemainQuiet from _call_Chap1_RemainQuiet
+            call Chap1_RemainQuiet
     ############################################################
     show ks neutral
     show ah neutral
@@ -232,9 +232,9 @@ label Chapter1_Cont_NearbyClass:
     menu turnToTheVoice:
         jd "Um…[p]?"
         "Ignore the voice":
-            call Chap1_IgnoreVoice from _call_Chap1_IgnoreVoice
+            call Chap1_IgnoreVoice
         "Turn your head":
-            call Chap1_TurnHead from _call_Chap1_TurnHead
+            call Chap1_TurnHead
     ############################################################
     sb "You know, I had originally planned on giving you this ice cream as a 
     form of apology…"
@@ -254,11 +254,11 @@ label Chapter1_Cont_NearbyClass:
         "However, following a moment of thought, [sb] quickly tenses, and you can feel 
         your eyes widening."
         "Who the hell are you?!":
-            call Chap1_WhoHellYou from _call_Chap1_WhoHellYou
+            call Chap1_WhoHellYou
         "Not another one…":
-            call Chap1_NotAnother from _call_Chap1_NotAnother
+            call Chap1_NotAnother
         "I think I’m done for the day.":
-            call Chap1_IDoneDay from _call_Chap1_IDoneDay
+            call Chap1_IDoneDay
     ############################################################
     # *A CG of Mikael with [SB] in their hold shows up. They both are looking 
     # towards the MC. Mikael appears to be grinning while [SB] looks like they’re currently fearing for their life.*
@@ -273,6 +273,9 @@ label Chapter1_Cont_NearbyClass:
     ma "What do you mean you don’t know me?!"
     ma "I had just taken the time to give my whole introduction and everythin’!!"
     "Mikael can be seen pouting as he moves to grab at [sb]'s chin and yank it in his direction."
+
+    $ m_name = 'Mikael'
+
     ma "I. Am. Mikael. Amoris."
     ma "Are you sayin’ my Japanese hasn’t gotten’ better these past few years??"
     sb "W-Well…I would not have known you prior to this exchange–so–"
@@ -282,11 +285,11 @@ label Chapter1_Cont_NearbyClass:
     menu littleHelp:
         sb "A little help here?"
         "Offer Assistance":
-            call Chap1_OfferAssist from _call_Chap1_OfferAssist
+            call Chap1_OfferAssist
         "Shrug":
-            call Chap1_Shrug from _call_Chap1_Shrug
+            call Chap1_Shrug
         "Praise Mikael":
-            call Chap1_PraiseMikael from _call_Chap1_PraiseMikael
+            call Chap1_PraiseMikael
     ############################################################
     scene BG Classroom
     show sb oh at left
@@ -306,11 +309,11 @@ label Chapter1_Cont_NearbyClass:
     menu clearThroatDecide:
         "Clearing your throat, you decide to ask the following:"
         "Who’s Sakuraba?":
-            call Chap1_Sakuraba from _call_Chap1_Sakuraba
+            call Chap1_Sakuraba
         "Shouldn’t you be cleaning?":
-            call Chap1_BeCleaning from _call_Chap1_BeCleaning
+            call Chap1_BeCleaning
         "Didn’t you just have those cookies?":
-            call Chap1_Cookies from _call_Chap1_Cookies
+            call Chap1_Cookies
     ############################################################
     ma "Hey…now that I think about it."
     ma "I never got your name."
@@ -322,11 +325,11 @@ label Chapter1_Cont_NearbyClass:
     menu almostUnnerving:
         "It’s almost unnerving."
         "Remain quiet":
-            call Chap1_RemainQuietAgain from _call_Chap1_RemainQuietAgain
+            call Chap1_RemainQuietAgain
         "Introduce yourself":
-            call Chap1_IntroduceSelf from _call_Chap1_IntroduceSelf
+            call Chap1_IntroduceSelf
         "Introduce yourself!!!":
-            call Chap1_IntroduceSelfWithConfidence from _call_Chap1_IntroduceSelfWithConfidence
+            call Chap1_IntroduceSelfWithConfidence
     ############################################################
     ma "Now, with introductions out the way."
     ma "Would you mind tellin’ me what you two are doin’ here anyways?"
@@ -350,9 +353,9 @@ label Chapter1_Cont_NearbyClass:
     menu michaelTenses:
         "You quickly see Mikael’s body tense as he cuts himself off mid sentence."
         "What about him":
-            call Chap1_WhatAboutHim from _call_Chap1_WhatAboutHim
+            call Chap1_WhatAboutHim
         "Switch Subjects":
-            call Chap1_SwitchSubject from _call_Chap1_SwitchSubject
+            call Chap1_SwitchSubject
     ############################################################
     "After a few moments of prolonged silence, [sb] decides to break it by stepping 
     in between both yourself and Mikael."
@@ -385,14 +388,17 @@ label Chapter1_Cont_NearbyClass:
     menu whatDoYouNeedInReturn:
         ma "Though…I’ll need somethin’ in turn~"
         "Absolutely not":
-            call Chap1_AbsolutelyNo from _call_Chap1_AbsolutelyNo
+            call Chap1_AbsolutelyNo
         "And that is…?":
-            call Chap1_AndThatIs from _call_Chap1_AndThatIs
+            call Chap1_AndThatIs
     ############################################################
     ma "Of course not~"
     ma "All I ask, is that you keep Sakuraba busy until Friday’s festival."
-    scene black
-    call situTriggerReset from _call_situTriggerReset
+    $ quick_menu = False
+    window auto hide
+    scene black with dissolve
+    call situTriggerReset
     stop music fadeout 1.0
+    pause 2.0
     jump Chapter2
     return

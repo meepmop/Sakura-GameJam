@@ -216,8 +216,7 @@ label Chap2_TakeAmariHand:
     call ahLoveIncrease from _call_ahLoveIncrease_9
     call loveNotification from _call_loveNotification_40
     "Considering Amari had a point, you reach out your hand for the other to take."
-    "Surprisingly, despite the slender appearance, you find both you and [sb] are 
-    easily lifted onto their steed."
+    "Surprisingly, despite the slender appearance, you find both you and [sb] are easily lifted onto their steed."
     return
 label Chap2_StandStill:
     # - Affection (Amari) + Affection (SB)

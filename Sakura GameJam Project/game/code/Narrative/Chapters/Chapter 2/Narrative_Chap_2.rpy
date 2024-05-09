@@ -23,9 +23,9 @@ label Chapter2:
     menu lastChat:
         sb "I’m to assume you’ve had your head wrapped around Mikael’s ever since our last ‘chat’?"
         "Well–":
-            call Chap2_Well from _call_Chap2_Well
+            call Chap2_Well
         "Remain quiet":
-            call Chap2_RemainQuiet from _call_Chap2_RemainQuiet
+            call Chap2_RemainQuiet
     ############################################################
     "Deciding to put an end to this conversation, you gesture towards the room 
     marked ‘Student Council Office’." 
@@ -49,9 +49,9 @@ label Chapter2:
     menu letsDoThis:
         sb "So…let’s do this!"
         "Reach for the door":
-            call Chap2_ReachDoor from _call_Chap2_ReachDoor
+            call Chap2_ReachDoor
         "Knock":
-            call Chap2_Knock from _call_Chap2_Knock
+            call Chap2_Knock
     ############################################################
     "Kaito takes a moment to survey the area."
     "When he notices it seems to be just you two here, you see him step aside 
@@ -60,7 +60,7 @@ label Chapter2:
     # *The Background changes to the student council office. It has papers scattered everywhere 
     # and looks rather messy.*
     # *Kaito’s Theme Plays*
-    call Music_ksTheme from _call_Music_ksTheme_1
+    call Music_ksTheme
     ks "I’m assuming Amoris is up to something yet again?"
     ks "He must be reaching the bottom of the barrel if he’s enlisting the help of not only 
     a wallflower, but a complete stranger nonetheless."
@@ -69,11 +69,11 @@ label Chapter2:
         ks "He must be reaching the bottom of the barrel if he’s enlisting the help of not only 
         a wallflower, but a complete stranger nonetheless."
         "For the last time…":
-            call Chap2_ForLastTime from _call_Chap2_ForLastTime
+            call Chap2_ForLastTime
         "This room is a mess.":
-            call Chap2_RoomMess from _call_Chap2_RoomMess
+            call Chap2_RoomMess
         "You’re a mess.":
-            call Chap2_YouMess from _call_Chap2_YouMess
+            call Chap2_YouMess
     ############################################################
     "Letting out an irritated huff, you take another look at your phone."
     "Almost 1."
@@ -84,9 +84,9 @@ label Chapter2:
     menu sbSendMichievous:
         "It’s then you catch a glimpse of the slightly mischievous grin which [sb] casts your way."
         "Say Something":
-            call Chap2_SaySomething from _call_Chap2_SaySomething
+            call Chap2_SaySomething
         "Remain Quiet.":
-            call Chap2_RemainQuietAgain from _call_Chap2_RemainQuietAgain
+            call Chap2_RemainQuietAgain
     ############################################################
     sb "Hey."
     sb "Kaito Sakuraba…was it?"
@@ -120,9 +120,9 @@ label Chapter2:
     menu greaterThorn:
         ks "Truly, you’re a greater thorn in my side than I initially thought."
         "Uh…":
-            call Chap2_Uhh from _call_Chap2_Uhh
+            call Chap2_Uhh
         "Further push Kaito":
-            call Chap2_FutherPush from _call_Chap2_FutherPush
+            call Chap2_FutherPush
     ############################################################
     sb "Oh dear."
     "Judging from the ominous tone of Kaito’s voice, you quickly reached to grab at [sb]'s arm."
@@ -151,9 +151,9 @@ label Chapter2:
     menu cherryBlossomEscape:
         sb "Perhaps the Cherry Blossoms shall serve as our guide towards escape~"
         "Listen to [sb]":
-            call Chap2_ListenToSakura from _call_Chap2_ListenToSakura
+            call Chap2_ListenToSakura
         "Ignore them":
-            call Chap2_Ignore from _call_Chap2_Ignore
+            call Chap2_Ignore
     ############################################################
     ah "Make way, make way~!"
     ah "Your beloved Amari is here, dawning a chariot befitting that of a 
@@ -164,7 +164,7 @@ label Chapter2:
     # *Insert CG of Amari on horseback extending their hand out towards you. 
     # Don’t ask how they got an entire horse both on Campus and inside the building, 
     # just roll with it.*
-    call Music_ahTheme from _call_Music_ahTheme
+    #call Music_ahTheme
     $ renpy.music.play("audio/Music/Amari_Intro.ogg", fadein=1.0)
     $ renpy.music.queue("audio/Music/Amari_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
     ah "Care for a lift~?"
@@ -174,9 +174,9 @@ label Chapter2:
     menu sufferHands:
         ah "Not unless you wish to suffer at the hands of my one and only best friend~"
         "Take Amari’s hand":
-            call Chap2_TakeAmariHand from _call_Chap2_TakeAmariHand
+            call Chap2_TakeAmariHand
         "Stand still":
-            call Chap2_StandStill from _call_Chap2_StandStill
+            call Chap2_StandStill
         "Accept your fate":
             jump Chap2_AcceptFate
     ############################################################
@@ -195,9 +195,9 @@ label Chapter2:
     menu partOfShow:
         ah "Consider this just part of the show~!"
         "Warn Kaito":
-            call Chap2_WarnKaito from _call_Chap2_WarnKaito
+            call Chap2_WarnKaito
         "Taunt Kaito":
-            call Chap2_TauntKaito from _call_Chap2_TauntKaito
+            call Chap2_TauntKaito
     ############################################################
     scene black
     "Fortunately enough for Kaito, it seemed as though luck was on his side."
@@ -221,9 +221,9 @@ label Chapter2:
         "Deciding to join them on the comfort which was the ground, you notice that [sb] appears 
         to be struggling."
         "Help them":
-            call Chap2_HelpThem from _call_Chap2_HelpThem
+            call Chap2_HelpThem
         "They can handle it":
-            call Chap2_HandleIt from _call_Chap2_HandleIt
+            call Chap2_HandleIt
     ############################################################
     ah "You know, dramatics aside, I am beyond happy to finally have you both to myself~"
     ah "I simply must know. Just what have you done to cause my best friend to ‘start swinging’ 
@@ -233,9 +233,9 @@ label Chapter2:
         ah "I simply must know. Just what have you done to cause my best friend to ‘start swinging’ 
         as the youth say~"
         "We bullied him.":
-            call Chap2_WeBully from _call_Chap2_WeBully
+            call Chap2_WeBully
         "[sb] bullied him":
-            call Chap2_SakuraBully from _call_Chap2_SakuraBully
+            call Chap2_SakuraBully
     ############################################################
     ah "I see…"
     "Clapping their hands together, with a spark of burning passion, Amari takes [sb]’s 
@@ -247,9 +247,9 @@ label Chapter2:
     menu sparkTheFire:
         sb "?!?!"
         "Nudge [sb]":
-            call Chap2_NudgeSB from _call_Chap2_NudgeSB
+            call Chap2_NudgeSB
         "Stand there awkwardly":
-            call Chap2_StandAwkward from _call_Chap2_StandAwkward
+            call Chap2_StandAwkward
     ############################################################
     sb "Alright, alright!"
     sb "You just have to promise. No trying to hurt me or [p]. Don’t shoot the messenger!"
@@ -260,7 +260,7 @@ label Chapter2:
     "It was as if they were silently asking for your support."
     sb "When I look at you, it’s almost like I see someone that’s constantly changing."
     sb "Judging from how dramatic you are…I’m assuming that’s in character."
-    call Music_cryTheme from _call_Music_cryTheme
+    call Music_cryTheme
     scene CG C2 ahpray
     sb "But, it’s kind of funny. That this spot you took us to, also once served as 
     the beginning for said character in the first place."
@@ -275,10 +275,10 @@ label Chapter2:
         the beginning for said character in the first place."
         "Stay Quiet":
             scene black
-            call Chap2_StayQuiet from _call_Chap2_StayQuiet
+            call Chap2_StayQuiet
         "Speak up":
             scene black
-            call Chap2_SpeakUp from _call_Chap2_SpeakUp
+            call Chap2_SpeakUp
     ############################################################
     ah "Tell me more~"
     sb "W-Wouldn’t you already know all this stuff anyways??"
@@ -298,9 +298,9 @@ label Chapter2:
     menu wouldntAgree:
         ah "Wouldn’t you agree, [p]?"
         "T-Touching…":
-            call Chap2_Touching from _call_Chap2_Touching
+            call Chap2_Touching
         "The only thing that’s ‘tragic’ is…":
-            call Chap2_OnlyTragic from _call_Chap2_OnlyTragic
+            call Chap2_OnlyTragic
     ############################################################
     "Humming out a small tune, Amari releases their hold on you."
     "Rather than pay mind to your feelings on the matter, they instead focus 
@@ -315,11 +315,11 @@ label Chapter2:
     menu accomplishFriday:
         ah "I’d love to see what you’re able to accomplish come Friday~"
         "Mention Mikael":
-            call Chap2_MentionMikael from _call_Chap2_MentionMikael
+            call Chap2_MentionMikael
         "Mention Kaito":
-            call Chap2_MentionKaito from _call_Chap2_MentionKaito
+            call Chap2_MentionKaito
         "Mention your Idol Tickets":
-            call Chap2_MentionIdol from _call_Chap2_MentionIdol
+            call Chap2_MentionIdol
     ############################################################
     ah "Everything shall fall in place soon enough~!"
     ah "Just trust in the blossom of fate, and she shall deliver!"
