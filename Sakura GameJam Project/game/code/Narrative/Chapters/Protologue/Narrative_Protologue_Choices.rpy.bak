@@ -23,8 +23,8 @@ label Proto_TheyOk:
     # makes sure that the choice will give a happy emote when exit
     $ sbTrig = True
     # 1+ Attraction
-    call sbLoveIncrease from _call_sbLoveIncrease_21
-    call loveNotification from _call_loveNotification_57
+    call sbLoveIncrease
+    call loveNotification
     p "Are you alright?"
     p "You're not hurt, are you?"
     p "I don't particularly feel like dragging anyone to the hospital today."
@@ -40,8 +40,8 @@ label Proto_TheyOk:
 
 label Proto_Insult:
     # -1 Attraction
-    call sbLoveDecrease from _call_sbLoveDecrease_13
-    call loveNotification from _call_loveNotification_58
+    call sbLoveDecrease
+    call loveNotification
 
     show sb line
 
@@ -111,5 +111,5 @@ label Proto_Ridiculous:
 
 label Proto_No:
     p "No."
-    call situTriggerReset from _call_situTriggerReset_3
+    call situTriggerReset
     return

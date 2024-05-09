@@ -44,10 +44,10 @@ label ConfirmIdentity:
             return
         "No":
             $ specifiedName = playerName
-            call InsertName from _call_InsertName
+            call InsertName
             $ playerName = userInput
             # name has been established
-            call ChoosePronoun from _call_ChoosePronoun
+            call ChoosePronoun
             jump ConfirmIdentity
 
 ############################################################
@@ -91,7 +91,7 @@ label ChoosePronoun:
             $ pRef = "themselves"
             return
         "Make your own":
-            call NewPronoun from _call_NewPronoun
+            call NewPronoun
             return
 
 label NewPronoun:
