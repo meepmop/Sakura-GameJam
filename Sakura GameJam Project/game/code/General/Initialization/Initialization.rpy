@@ -5,6 +5,9 @@ init:
     $ k_name = '???'
     $ a_name = '???'
     $ m_name = '???'
+    default foodstalls = False
+    default games = False
+    default sbdecide = False
 
 label start:
     
@@ -19,7 +22,17 @@ label start:
         "Chapter 2":
             # for debugging
             $ sb = "Sakura"
+            $ k_name = "Kaito"
+            $ a_name = "Amari"
+            $ m_name = "Mikael"
             jump Chapter2
+        "Chapter 3":
+            # for debugging
+            $ sb = "Sakura"
+            $ k_name = "Kaito"
+            $ a_name = "Amari"
+            $ m_name = "Mikael"
+            jump chapter3
     
     # jump Protologue
     return

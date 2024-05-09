@@ -273,6 +273,9 @@ label Chapter1_Cont_NearbyClass:
     ma "What do you mean you don’t know me?!"
     ma "I had just taken the time to give my whole introduction and everythin’!!"
     "Mikael can be seen pouting as he moves to grab at [sb]'s chin and yank it in his direction."
+
+    $ m_name = 'Mikael'
+
     ma "I. Am. Mikael. Amoris."
     ma "Are you sayin’ my Japanese hasn’t gotten’ better these past few years??"
     sb "W-Well…I would not have known you prior to this exchange–so–"
@@ -391,8 +394,11 @@ label Chapter1_Cont_NearbyClass:
     ############################################################
     ma "Of course not~"
     ma "All I ask, is that you keep Sakuraba busy until Friday’s festival."
-    scene black
+    $ quick_menu = False
+    window auto hide
+    scene black with dissolve
     call situTriggerReset
     stop music fadeout 1.0
+    pause 2.0
     jump Chapter2
     return

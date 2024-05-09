@@ -145,7 +145,7 @@ label NewPronounConfirm:
 # Sakura name
 ############################################################
 default sakuraName = "???"
-define sb = Character("[sakuraName]", who_color="#ffa6f5", callback = name_callback, cb_name = "sakura")
+define sb = Character("[sakuraName]", who_color="#fab9f3", callback = name_callback, cb_name = "sakura")
 ############################################################
 # General Characters
 ############################################################
@@ -161,3 +161,6 @@ define ma = DynamicCharacter("m_name", who_color="#ff6363", callback = name_call
 define sta = Character("Student A")
 define stb = Character("Student B")
 define stc = Character("Student C")
+define ven = Character("Vendor")
+define gm = Character("Game Master")
+define lonb = Character("Loner B")

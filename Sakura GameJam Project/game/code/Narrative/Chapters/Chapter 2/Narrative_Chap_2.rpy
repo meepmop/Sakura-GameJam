@@ -164,7 +164,7 @@ label Chapter2:
     # *Insert CG of Amari on horseback extending their hand out towards you. 
     # Don’t ask how they got an entire horse both on Campus and inside the building, 
     # just roll with it.*
-    call Music_ahTheme
+    #call Music_ahTheme
     $ renpy.music.play("audio/Music/Amari_Intro.ogg", fadein=1.0)
     $ renpy.music.queue("audio/Music/Amari_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
     ah "Care for a lift~?"
