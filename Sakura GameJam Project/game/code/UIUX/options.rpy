@@ -57,7 +57,7 @@ define config.has_voice = False
 # define config.sample_sound = "sample-sound.ogg"
 # define config.sample_voice = "sample-voice.ogg"
 
-define config.default_music_volume = 0.85
+define config.default_music_volume = 0.65
 define config.default_sfx_volume = 0.95
 
 
@@ -65,7 +65,7 @@ define config.default_sfx_volume = 0.95
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-# define config.main_menu_music = "main-menu-theme.ogg"
+define config.main_menu_music = "audio/Music/MCBlossom_Theme_Non-Loopable.ogg"
 
 
 ## Transitions #################################################################

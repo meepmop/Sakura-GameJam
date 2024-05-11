@@ -18,8 +18,7 @@ label Chapter1:
     ############################################################
     sb "Oiii~ [p]!"
     sb "Oi, Oiiiii! Over here~!"
-    "You quickly shift your gaze towards the direction which the voice is coming from.
-    However, you can’t help but feel your brow twitch at the display."
+    "You quickly shift your gaze towards the direction which the voice is coming from. However, you can’t help but feel your brow twitch at the display."
     scene CG C1 sbrunning
     # *Insert Picture of [sb] waving with their hair now tied up, a 
     # cherry blossom tree branch sticking out to neatly keep it in place. 
@@ -103,7 +102,7 @@ label Chapter1_Cont_NearbyClass:
 
     ks "Unbelievable!!"
     p "Huh–"
-    ks "When I get my hands on him..!"
+    ks "When I get my hands on him...!"
 
     show ah happy
 
@@ -148,7 +147,8 @@ label Chapter1_Cont_NearbyClass:
     ks "Enough."
     # *A CG of both Amari and Kaito standing side by side appears. Kaito looks less than impressed while Amari is seen striking a pose.*
     # *Kaito’s theme will now play.*
-    call Music_ksTheme
+    $ renpy.music.play("audio/Music/Kaito_FleetingBlossoms_Intro.ogg", fadein=1.0,loop=True)
+    $ renpy.music.queue("audio/Music/Kaito_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
     show ah owo
     ah "Aww...you’re no fun~!"
     "Now moving back to Kaito’s side, Amari strikes a pose."
@@ -247,12 +247,10 @@ label Chapter1_Cont_NearbyClass:
     "[sb]’s lips curl into a warm smile." 
     show sb oh at left
     show ma happy at right
-    "However, following a moment of thought, [sb] quickly tenses, and you can feel 
-    your eyes widening."
+    with dissolve
     ############################################################
     menu newCharacter:
-        "However, following a moment of thought, [sb] quickly tenses, and you can feel 
-        your eyes widening."
+        "However, following a moment of thought, [sb] quickly tenses, and you can feel your eyes widening."
         "Who the hell are you?!":
             call Chap1_WhoHellYou
         "Not another one…":
@@ -273,9 +271,6 @@ label Chapter1_Cont_NearbyClass:
     ma "What do you mean you don’t know me?!"
     ma "I had just taken the time to give my whole introduction and everythin’!!"
     "Mikael can be seen pouting as he moves to grab at [sb]'s chin and yank it in his direction."
-
-    $ m_name = 'Mikael'
-
     ma "I. Am. Mikael. Amoris."
     ma "Are you sayin’ my Japanese hasn’t gotten’ better these past few years??"
     sb "W-Well…I would not have known you prior to this exchange–so–"
@@ -315,12 +310,12 @@ label Chapter1_Cont_NearbyClass:
         "Didn’t you just have those cookies?":
             call Chap1_Cookies
     ############################################################
+    show ma basic
     ma "Hey…now that I think about it."
     ma "I never got your name."
     "Mikael extends his hand out to you."
     "It’s huge in comparison to yours."
     "In fact, you can only compare it to the ‘Yaoi’ hands you see in your idol game."
-    "It’s almost unnerving."
     ############################################################
     menu almostUnnerving:
         "It’s almost unnerving."
@@ -344,11 +339,13 @@ label Chapter1_Cont_NearbyClass:
     "However, judging from how the man before you was scratching their chin, you 
     feared that still might be the case."
     ma "So you’re sayin’ they just fell from some tree?!"
+    show ma happy
     ma "Talk about cool!!"
+    show sb ouch
     sb "It was rather painful, you see~"
     ma "Oh, I bet!"
+    show ma wink1
     ma "You see, one time Kaito ‘n I–"
-    "You quickly see Mikael’s body tense as he cuts himself off mid sentence."
     ############################################################
     menu michaelTenses:
         "You quickly see Mikael’s body tense as he cuts himself off mid sentence."
@@ -361,11 +358,13 @@ label Chapter1_Cont_NearbyClass:
     in between both yourself and Mikael."
     "Now clasping their hands together, you feel as though that they were about to 
     turn this supposedly one off interaction into a recurring occurrence."
+    show sb thinking
     sb "Say…Mikael."
+    show ma basic
     ma "That’s my name~"
     sb "You know…"
-    sb "Despite your hand in wreaking havoc in this school, I feel as though I can 
-    trust you."
+    sb "Despite your hand in wreaking havoc in this school, I feel as though I can trust you."
+    show sb neutral
     sb "Those eyes of yours, I can sense the lingering sorrow behind them."
     sb "You’re seeking answers as well."
     sb "That's why you’ve taken up the mantle of being YuraYura’s ‘Flour Bomber’, yes?"
@@ -373,17 +372,19 @@ label Chapter1_Cont_NearbyClass:
     p "You can’t just go saying stuff like that!"
     p "What if he targets us next?!"
     p "You’ll never get your memories back if I have to send you to the damn hospital–!"
+    show ma wink2
     ma "Heh. I knew I knew somethin’ was off about ya."
     "Mikael cards his fingers through his hair."
     "Shaking his head, you can tell that the redhead was more impressed if anything 
     that someone had called him out on his feelings."
+    show ma basic
     ma "Yeah. I want answers."
     ma "In fact, I want lots more than that."
     ma "That bastard of a President didn’t always make me wanna punch his face in."
     ma "But, that’s a story for another day~"
     ma "Tell ya what."
     ma "From now on, whatever weird memory thing y'all got goin’. I’m gonna help!"
-    ma "Though…I’ll need somethin’ in turn~"
+    show ma wink1
     ############################################################
     menu whatDoYouNeedInReturn:
         ma "Though…I’ll need somethin’ in turn~"

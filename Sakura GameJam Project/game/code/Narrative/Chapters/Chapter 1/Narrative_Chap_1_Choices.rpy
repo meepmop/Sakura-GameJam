@@ -273,7 +273,7 @@ label Chap1_WhoHellYou:
     "Now resting their chin against [sb]'s shoulder blade, both you and them can feel as 
     though that despite the other’s excitement, it’d be best not to get on their bad side."
     show ma vhappy
-    jd "Who the Hell am I?"
+    ma "Who the Hell am I?"
 
     $ m_name = 'Mikael'
 
@@ -284,15 +284,15 @@ label Chap1_NotAnother:
     # ~ Affection (Mikael)
     p "How many more people are gonna just randomly appear today?"
     "You can visibly see the man before you’s face twitch from discontent."
-    jd "You know…"
+    ma "You know…"
     "Their lips part into a wide grin, and they pull [sb] close into their embrace."
     "It causes both you and [sb] to further tense, and part of you wishes you 
     hadn’t spoken up at all."
     "Now resting their chin against [sb]'s shoulder blade, both of you can only wait to see 
     what this lunatic’s next moves were."
     show ma vhappy
-    ma "If anyone were to appear before you, you’d best be glad that it was YuraYura’s very own 
-    Mikael Amoris, current President of the infamous Baking Club~"
+    $ m_name = 'Mikael'
+    ma "If anyone were to appear before you, you’d best be glad that it was YuraYura’s very own Mikael Amoris, current President of the infamous Baking Club~"
 
     return
 label Chap1_IDoneDay:
@@ -305,12 +305,11 @@ label Chap1_IDoneDay:
     "About to turn on your heels and leave this mess of a day behind, you can see [sb]'s eyes glisten."
     "It was almost as if they had asked you not to leave."
     "Not like that mattered to you anyways."
-    jd "Ya know, maybe you and Sakuraba ain’t so different after all."
-    "Now pulling [sb] closer to him, the mysterious man opts to rest their face against 
-    his prey’s shoulder blade."
+    ma "Ya know, maybe you and Sakuraba ain’t so different after all."
+    "Now pulling [sb] closer to him, the mysterious man opts to rest their face against his prey’s shoulder blade."
     show ma vhappy
-    ma "Be careful abandoning your friends, lest I, Mikael Amoris, current President of the 
-    infamous Baking Club, set you as my next target!"
+    $ m_name = 'Mikael'
+    ma "Be careful abandoning your friends, lest I, Mikael Amoris, current President of the infamous Baking Club, set you as my next target!"
 
     return
 ############################################################
@@ -404,6 +403,7 @@ label Chap1_RemainQuietAgain:
     "You blink. Once. Twice."
     "Trying to recall what they said, you’re about to shamefully ask Mikael to repeat himself."
     sb "Oh, I can answer this~ [pCon] [p]!"
+    show sb happy
     sb "[pCon] helping me recover my memories~"
     return
 label Chap1_IntroduceSelf:
@@ -413,6 +413,7 @@ label Chap1_IntroduceSelf:
     "So much so that you nearly stumble over your bland introduction."
     p "[p]..."
     p "I’m…[p]."
+    show ma wink2
     ma "Oh wow…you really are a wallflower!"
     return
 label Chap1_IntroduceSelfWithConfidence:
@@ -424,6 +425,7 @@ label Chap1_IntroduceSelfWithConfidence:
     "Briefly closing your eyes, you snap them open once more with a cheesy at best 
     grin and clasp Mikael’s hand into your own."
     p "I am [p]! And I am not a wallflower!!!"
+    show ma vhappy
     ma "That’s the spirit!!!"
     return
 ############################################################
