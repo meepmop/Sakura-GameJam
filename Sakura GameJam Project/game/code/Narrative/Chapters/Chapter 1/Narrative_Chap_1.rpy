@@ -102,7 +102,7 @@ label Chapter1_Cont_NearbyClass:
 
     ks "Unbelievable!!"
     p "Huh–"
-    ks "When I get my hands on him..!"
+    ks "When I get my hands on him...!"
 
     show ah happy
 
@@ -147,7 +147,8 @@ label Chapter1_Cont_NearbyClass:
     ks "Enough."
     # *A CG of both Amari and Kaito standing side by side appears. Kaito looks less than impressed while Amari is seen striking a pose.*
     # *Kaito’s theme will now play.*
-    call Music_ksTheme
+    $ renpy.music.play("audio/Music/Kaito_FleetingBlossoms_Intro.ogg", fadein=1.0,loop=True)
+    $ renpy.music.queue("audio/Music/Kaito_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
     show ah owo
     ah "Aww...you’re no fun~!"
     "Now moving back to Kaito’s side, Amari strikes a pose."
