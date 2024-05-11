@@ -267,7 +267,7 @@ label festivalactivities:
 
             $ renpy.music.play("audio/Music/Kaito_FleetingBlossoms_Intro.ogg", fadein=1.0,loop=True)
             $ renpy.music.queue("audio/Music/Kaito_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
-            
+
             show sb at left
             show ks oh at right
             with dissolve
@@ -414,7 +414,7 @@ label festivalactivities:
             with dissolve
             $ renpy.music.play("audio/Music/Festival_FleetingBlossoms_V1.mp3", fadein=1.0,loop=True)
 
-            if sbdeice and foodstalls and games == True:
+            if sbdecide and foodstalls and games == True:
                 jump epilogue
             else:
                 jump festivalactivities
