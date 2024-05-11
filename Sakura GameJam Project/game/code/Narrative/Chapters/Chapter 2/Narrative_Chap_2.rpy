@@ -2,13 +2,21 @@ label Chapter2:
     # Open up with asset of the school Hallway*
     # General lighthearted music is playing.*
     # A slightly transparent sprite of Mikael is used*
-    scene BG YYInside
+    scene BG Classroom:
+        matrixcolor SepiaMatrix(tint=u'#ffeec2', desat=(0.2126, 0.7152, 0.0722))
     $ renpy.music.play("audio/Music/DayBegins_Intro.ogg", fadein=1.0)
     $ renpy.music.queue("audio/Music/DayBegins_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
+    show ma basic at center:
+        matrixcolor SepiaMatrix(tint=u'#ffeec2', desat=(0.2126, 0.7152, 0.0722))
+        alpha 0.9
+    with Dissolve(0.6)
     ma "It’s simple, really~"
     ma "Ya just gotta keep him busy, butter him up, smooze him. Ya know?"
     ma "If ya do, ya got my word. Both you and Flower Boy over there won’t be gettin’ any of 
     my white stuff on ya~"
+    scene BG YYInside
+    show sb neutral at center
+    with Dissolve(0.6)
     "You can’t help but hang your head low at the redhead’s choice of wording."
     "Though, given the circumstances, both you and [sb] had nothing better to do while on 
     your quest to help recall their memories."
@@ -16,35 +24,42 @@ label Chapter2:
     "If he even had one, that is."
     "Now walking side by side [sb], you passively direct your gaze up from your phone and 
     towards them."
-    p "What does ‘smooze’ even mean??"
+    p "What does \"smooze\" even mean??"
+    show sb thinking
     sb "I believe it’s a term more commonly used abroad~"
-    sb "I’m to assume you’ve had your head wrapped around Mikael’s ever since our last ‘chat’?"
+    show sb line
     ############################################################
     menu lastChat:
-        sb "I’m to assume you’ve had your head wrapped around Mikael’s ever since our last ‘chat’?"
+        sb "I’m to assume you’ve had your head wrapped around Mikael’s ever since our last \"chat?\""
         "Well–":
             call Chap2_Well
         "Remain quiet":
             call Chap2_RemainQuiet
     ############################################################
-    "Deciding to put an end to this conversation, you gesture towards the room 
-    marked ‘Student Council Office’." 
-    "Unlike the rest of the Campus, this particular part of it was lacking any sort of 
-    festive flair." 
+    "Deciding to put an end to this conversation, you gesture towards the room marked \"Student Council Office.\"" 
+    "Unlike the rest of the Campus, this particular part of it was lacking any sort of festive flair."
+    scene BG Classroom:
+        matrixcolor SepiaMatrix(tint=u'#ffeec2', desat=(0.2126, 0.7152, 0.0722))
+    show ma wink2 at center:
+        matrixcolor SepiaMatrix(tint=u'#ffeec2', desat=(0.2126, 0.7152, 0.0722))
+        alpha 0.9
+    with Dissolve(0.6)
     # *When Mikael is talking here once more, he’s still transparent to convey that this 
     # conversation took place in the past.*
     ma "Just keep him busy for a bit!"
     ma "On Wednesday, I’ve got some errands to run, so if ya can, make sure he doesn’t leave his 
     office until at least 1:30."
     ma "I’m sure with Flower boy here, it’ll be a piece of cake!"
+    scene BG YYInside
+    show sb oh at center
+    with Dissolve(0.6)
     "Briefly taking a look back at your phone, you see that the current time is 12:45."
-    "From what you recall Mikael saying, you know that Kaito typically leaves for his 1 PM 
-    ‘rounds’ at this time."
+    "From what you recall Mikael saying, you know that Kaito typically leaves for his 1 PM \"rounds\" at this time."
     "Whatever that means."
     sb "You ready?" 
     sb "Remember, we’ve just gotta prevent the guy from leaving until the time Mikael said."
     sb "If anything, I’ve got a few ‘tricks’ up my sleeve~"
-    sb "So…let’s do this!"
+    sb "So...let’s do this!"
     ############################################################
     menu letsDoThis:
         sb "So…let’s do this!"
@@ -54,20 +69,21 @@ label Chapter2:
             call Chap2_Knock
     ############################################################
     "Kaito takes a moment to survey the area."
-    "When he notices it seems to be just you two here, you see him step aside 
-    to gesture for you both to step inside."
-    scene BG Classroom
+    "When he notices it seems to be just you two here, you see him step aside to gesture for you both to step inside."
+    $ renpy.music.play("audio/Music/Kaito_FleetingBlossoms_Intro.ogg", fadein=1.0,loop=True)
+    $ renpy.music.queue("audio/Music/Kaito_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
+    scene BG Classroom 
+    show sb neutral at right
+    show ks angry at left
+    with dissolve
     # *The Background changes to the student council office. It has papers scattered everywhere 
     # and looks rather messy.*
     # *Kaito’s Theme Plays*
-    call Music_ksTheme
     ks "I’m assuming Amoris is up to something yet again?"
-    ks "He must be reaching the bottom of the barrel if he’s enlisting the help of not only 
-    a wallflower, but a complete stranger nonetheless."
+    show sb ouch
     ############################################################
     menu wallflowerStranger:
-        ks "He must be reaching the bottom of the barrel if he’s enlisting the help of not only 
-        a wallflower, but a complete stranger nonetheless."
+        ks "He must be reaching the bottom of the barrel if he’s enlisting the help of not only a wallflower, but a complete stranger nonetheless."
         "For the last time…":
             call Chap2_ForLastTime
         "This room is a mess.":
@@ -79,7 +95,7 @@ label Chapter2:
     "Almost 1."
     "You had no idea how you were going to last another half hour with this man."
     "After all, just a few minutes with him had already made you want to punch him."
-    "It’s then you catch a glimpse of the slightly mischievous grin which [sb] casts your way."
+    show sb happy
     ############################################################
     menu sbSendMichievous:
         "It’s then you catch a glimpse of the slightly mischievous grin which [sb] casts your way."
@@ -89,6 +105,7 @@ label Chapter2:
             call Chap2_RemainQuietAgain
     ############################################################
     sb "Hey."
+    show sb thinking
     sb "Kaito Sakuraba…was it?"
     sb "You know, for some reason, now that I actually think about it, that name sounds familiar."
     sb "You and that Mikael guy would always have lunch at the nearby park~"
@@ -204,7 +221,7 @@ label Chapter2:
     "Having taken a leap of faith, Kaito had just barely in the knick of time 
     dodged the impending doom which was Amari."
     "Though, judging from how excited the eccentric was despite nearly trampling his 
-    supposed ‘best friend’, something told you that this wasn’t too out of the norm for them."
+    supposed \"best friend\", something told you that this wasn’t too out of the norm for them."
     stop music fadeout 1.0
     # *The scene shifts to the Campus’ Cherry Blossom tree. It’s the same spot where you first 
     # met [SB].*
@@ -259,9 +276,11 @@ label Chapter2:
     "They press their fingers together, and glance towards you."
     "It was as if they were silently asking for your support."
     sb "When I look at you, it’s almost like I see someone that’s constantly changing."
-    sb "Judging from how dramatic you are…I’m assuming that’s in character."
-    call Music_cryTheme
-    scene CG C2 ahpray
+    stop music fadeout 1.0
+    sb "Judging from how dramatic you are...I’m assuming that’s in character."
+    $ renpy.music.play("audio/Music/Melancholy_FleetingBlossoms_Intro.ogg", fadein=1.0)
+    $ renpy.music.queue("audio/Music/Melancholy_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
+    scene CG C2 ahpray with dissolve
     sb "But, it’s kind of funny. That this spot you took us to, also once served as 
     the beginning for said character in the first place."
     
@@ -324,6 +343,10 @@ label Chapter2:
     ah "Everything shall fall in place soon enough~!"
     ah "Just trust in the blossom of fate, and she shall deliver!"
     ah "You have my word!"
-    stop music fadeout 1.0
-    return
+    window auto hide
+    $ quick_menu = False 
+    scene black with fade
+    stop music fadeout 2.0
+    pause 2.0
+    jump chapter3
 

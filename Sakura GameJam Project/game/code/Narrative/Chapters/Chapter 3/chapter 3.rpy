@@ -1,7 +1,7 @@
 label chapter3:
     $ quick_menu = True
-    $ renpy.music.play("audio/Music/DayBegins_Intro.ogg", fadein=1.0,fadeout=1.0)
-    $ renpy.music.queue("audio/Music/DayBegins_Loop.ogg", clear_queue=False,loop=True,fadein=1.0,fadeout=1.0)
+    $ renpy.music.play("audio/Music/DayBegins_Intro.ogg", fadein=1.0)
+    $ renpy.music.queue("audio/Music/DayBegins_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
     scene BG YYFront with fade
     "It's already Friday."
     "Time passes quickly when you're dealing with crazy."
@@ -126,7 +126,8 @@ label chapter3:
     sb "After all, if my memories don't resurface by then, I'm not sure they ever will."
     #*The scene shifts to outside of YuraYura. Once again, couples are everywhere. Stalls are set up with all sorts of vendors, and it seems like everything is going smoothly.
     #*A peaceful yet uplifting festival theme is playing*
-    $ renpy.music.play("audio/Music/Festival_FleetingBlossoms_V1.mp3", fadein=1.0, loop=True) #placeholder
+    $ renpy.music.play("audio/Music/Festival_FleetingBlossoms_Intro.ogg", fadein=1.0, loop=True)
+    $ renpy.music.queue("audio/Music/Festival_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
     scene BG YYFront
     show sb happy at right
     show ma basic at left 
@@ -264,8 +265,9 @@ label festivalactivities:
 
             sb "Really??"
 
-
-            $ renpy.music.play("audio/Music/Kaito_FleetingBlossoms_V1.mp3", fadein=1.0,loop=True)
+            $ renpy.music.play("audio/Music/Kaito_FleetingBlossoms_Intro.ogg", fadein=1.0,loop=True)
+            $ renpy.music.queue("audio/Music/Kaito_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
+            
             show sb at left
             show ks oh at right
             with dissolve

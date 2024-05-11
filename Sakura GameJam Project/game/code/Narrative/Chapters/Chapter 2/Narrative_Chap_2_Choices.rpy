@@ -20,9 +20,11 @@ label Chap2_RemainQuiet:
     call ksLoveIncrease
     call loveNotification
     "Feeling your face begin to redden, you quickly look away from [sb]."
+    show sb ouch
     "However, glancing back to check their reaction, you notice the slight frown which 
     tugs at their lips."
     sb "I must admit, he is a rather dashing fellow."
+    show sb neutral
     sb "Perhaps he can be the one to share those tickets with~"
     return
 ############################################################
@@ -38,6 +40,9 @@ label Chap2_ReachDoor:
     "However, right before you can turn it, you are met with a rather…unpleasant 
     looking face standing in the doorway."
     "What there even was of one, at least."
+    show ks angry at right
+    show sb oh at left
+    with dissolve
     ks "I could hear you both from down the hall."
     ks "Just how stupid do you think I am?"
     return
@@ -49,11 +54,12 @@ label Chap2_Knock:
     "Rationalizing that it would be stupid to suddenly enter one’s office 
     without at the very least knocking, you close your eyes to brace yourself on 
     telling the Councilman of your presence."
+    show ks oh
     ks "Um. Excuse me."
     p "?!?"
     ks "What are you doing here?"
     ks "While I appreciate the effort to formally make yourselves known, you both 
-    were rather loud when disclosing your so-called ‘Plan’."
+    were rather loud when disclosing your so-called \"plan.\""
     return
 ############################################################
 # wallflowerStranger
@@ -65,15 +71,15 @@ label Chap2_ForLastTime:
     call maLoveIncrease
     call loveNotification
     p "You know what."
+    show sb ouch
+    show ks oh
     sb "[p]!"
     p "If you’re gonna keep insulting me, at least have the decency to do so face 
     to face!"
     sb "Wait–!"
     "Feeling your brow twitch, you let your anger get the better of you."
-    "Reaching to yank the man’s mask off, were it not for Kaito’s reflexes, 
-    you would have gotten a one way ticket to the Dean’s office."
-    "Instead, you’re met with yourself pathetically tumbling forward at what 
-    was the only neatly organized stack of papers in the room."
+    "Reaching to yank the man’s mask off, were it not for Kaito’s reflexes, you would have gotten a one way ticket to the Dean’s office."
+    "Instead, you’re met with yourself pathetically tumbling forward at what was the only neatly organized stack of papers in the room."
     return
 label Chap2_RoomMess:
     # + Affection (SB) + Affection (Amari)
@@ -88,9 +94,10 @@ label Chap2_RoomMess:
     "And the person within it, clearly worse for wear."
     "Not that that mattered much to you anyways."
     p "You know I’d be focusing on other things were I in your shoes."
-    p "For someone that’s always enforcing the rules, clearly you need to brush up 
-    on whatever handbook you wrote."
+    p "For someone that’s always enforcing the rules, clearly you need to brush up on whatever handbook you wrote."
+    show sb happy
     sb "Oooo~"
+    show sb oh
     sb "I-I mean–! Ooo…oo…h my."
     return
 label Chap2_YouMess:
@@ -105,6 +112,7 @@ label Chap2_YouMess:
     p "You know, a mask can’t hide everything."
     p "When was the last time you even took a break?"
     p "Shouldn’t that dramatic looking guy be the one asking you these things??"
+    show ks oh
     ks "Well…they’re…"
     p "Not here. Exactly."
     return
@@ -117,10 +125,8 @@ label Chap2_SaySomething:
     call ksLoveIncrease
     call maLoveIncrease
     call loveNotification
-    "Taking notice of [sb]'s sudden look of excitement, you try and pick up 
-    the conversation from where it left off."
-    "Unfortunately, before you can get a word out, [sb] quickly asserts their 
-    vocal dominance upon you."
+    "Taking notice of [sb]'s sudden look of excitement, you try and pick up the conversation from where it left off."
+    "Unfortunately, before you can get a word out, [sb] quickly asserts their vocal dominance upon you."
     "They almost seem like they enjoy it, too."
     return
 label Chap2_RemainQuietAgain:
@@ -138,9 +144,7 @@ label Chap2_Uhh:
     call ksLoveIncrease
     call ahLoveIncrease
     call loveNotification
-    "As much as you’d love to tear into Kaito yourself, judging from the genuine 
-    hurt which laced the man’s voice, you gathered that [sb]'s words hit a bit too 
-    close to home."
+    "As much as you’d love to tear into Kaito yourself, judging from the genuine hurt which laced the man’s voice, you gathered that [sb]'s words hit a bit too close to home."
     "In fact, you noticed how rather than sit there and take [sb]'s wrath, 
     Kaito was beginning to roll up his sleeves."
     p "Uh…[sb]?"
