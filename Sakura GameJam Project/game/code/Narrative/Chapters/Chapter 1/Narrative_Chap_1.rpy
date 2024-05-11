@@ -97,7 +97,9 @@ label Chapter1_Cont_NearbyClass:
     # It holds hints of the upcoming festival within it.*
     show ah neutral at left:
         xzoom -1.0
-    show ks angry at right
+        subpixel True matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(0.0)*BrightnessMatrix(-1.58)*HueMatrix(0.0) 
+    show ks angry at right:
+        subpixel True matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(0.0)*BrightnessMatrix(-1.58)*HueMatrix(0.0) 
     with dissolve
 
     ks "Unbelievable!!"
@@ -110,6 +112,9 @@ label Chapter1_Cont_NearbyClass:
 
     $ k_name = 'Kaito'
 
+    show ks angry at right with dissolve:
+        subpixel True matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0) 
+
     ks "You’re not helping."
     
     show ah owo
@@ -119,6 +124,9 @@ label Chapter1_Cont_NearbyClass:
     show ah twt
 
     $ a_name = 'Amari'
+
+    show ah vhappy with dissolve:
+        subpixel True matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0) 
 
     ah "Ahem. I, Haruka Amari, shall swear vengeance on the one foolish enough to oppose YuraYura’s student council!"
     
@@ -132,7 +140,6 @@ label Chapter1_Cont_NearbyClass:
     show ah twt
 
     ah "You!!"
-    ah "Tell me, have you seen the fiend responsible for this tragedy!?!"
     ############################################################
     menu tellMeFiend:
         ah "Tell me, have you seen the fiend responsible for this tragedy!?!"
