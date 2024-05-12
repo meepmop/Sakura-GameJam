@@ -149,7 +149,7 @@ label chapter3:
             call maLoveDecrease
             call loveNotification
             p "Are you kidding me?"
-            show ma normal
+            show ma angry
             "Mikael pouts at your less than thrilled response."
             ma "Do I gotta repeat myself?"
             ma "Ya know...I even toned down the accent and everythin'!"
@@ -200,7 +200,7 @@ label chapter3:
 
             show sb ouch
 
-            sb "Y-You wouldn't kill me would you?"
+            sb "Y-You wouldn't kill me, would you?"
             sb "I just need to last the rest of today so–"
 
             show ma happy
@@ -274,6 +274,7 @@ label festivalactivities:
 
             "Hearing [sb]'s gasp, you turn and are met with a familiar face."
             "...or lack thereof."
+            show ks blush
             ks "Consider it an apology."
             "You notice a slight tinge of pink coating the Councilman’s cheeks."
             menu:
@@ -540,6 +541,9 @@ label festivalactivities:
                     show ah bored
 
                     ah "I’m assuming they just analyzed the pattern of the disks you’ve already upturned."
+
+                    show ah annoyed
+
                     ah "How boring~"
                 "Scoop!!!":
                     call sbLoveDecrease
@@ -642,6 +646,13 @@ label festivalactivities:
 
 
         "Let [sb] decide." if sbdecide == False:
+            if foodstalls or games == False:
+                menu:
+                    "Selecting this choice will advance the story. Are you sure you want to hang out with [sb] before doing the other activites?"
+                    "Continue":
+                        pass
+                    "Complete other activites first.":
+                        jump festivalactivities
             stop music fadeout 1.0
             $ sbdecide = True
             $ renpy.music.play("audio/Music/Sakura_Intro.ogg", fadein=1.0)
@@ -649,6 +660,7 @@ label festivalactivities:
             call sbLoveIncrease
             call loveNotification
             "Seeing little point in dragging this out any longer than necessary, you let [sb] take the lead."
+            show sb blush
             "Clasping your hand firmly in their own, for the first time you notice that it’s much colder than before."
             sb "We’re going to get you those concert tickets."
 
