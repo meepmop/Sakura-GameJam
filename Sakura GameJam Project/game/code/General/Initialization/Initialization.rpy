@@ -10,8 +10,6 @@ init:
     default sbdecide = False
 
 label start:
-
-    scene black with fade
     
     jump Protologue
     
