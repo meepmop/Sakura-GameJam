@@ -13,8 +13,8 @@ label chapter3:
 
     menu:
         "Question the voice":
-            call sbLoveDecrease from _call_sbLoveDecrease_16
-            call loveNotification from _call_loveNotification_64
+            call sbLoveDecrease
+            call loveNotification
             p "Listen [sb], if you have nothing productive to say then you're better off not saying it at all–"
             show ma neutral at center with vpunch
             ma "[sb]. [sb]?!?!"
@@ -22,16 +22,16 @@ label chapter3:
             ma "It's me, Mikael Amoris~ President of YuraYura's—"
             p "...Baking Club I got it."
         "Ignore the voice":
-            call maLoveDecrease from _call_maLoveDecrease_7
-            call loveNotification from _call_loveNotification_65
+            call maLoveDecrease
+            call loveNotification
             "Too enamored by the movements of your idol game, you brush right past the source of the voice."
             "However, right as you do so, you find a firm grasp on your shoulder."
             show ma neutral at center with dissolve
             "Finally turning to face it, your body stiffens at the sight of a less than pleased Mikael."
             ma "Ya know. I ain't exactly the type to like bein' ignored."
         "Defend yourself":
-            call maLoveIncrease from _call_maLoveIncrease_15
-            call loveNotification from _call_loveNotification_66
+            call maLoveIncrease
+            call loveNotification
             p "Well it's not like I have anything better to look at!"
             show ma wink1 at center with hpunch
             "Immediately upon saying this, you're met with a boisterous laugh and a firm hand on your shoulder."
@@ -44,21 +44,21 @@ label chapter3:
 
     menu:
         "Good way?":
-            call maLoveIncrease from _call_maLoveIncrease_16
-            call loveNotification from _call_loveNotification_67
+            call maLoveIncrease
+            call loveNotification
             p "There's a…good way?"
             show ma neutral
             ma "Well, I doubt it'd be now, with how much of a prick he's been as of late."
             p "..."
         "Sure.":
-            call maLoveIncrease from _call_maLoveIncrease_17
-            call loveNotification from _call_loveNotification_68
+            call maLoveIncrease
+            call loveNotification
             p "Yeah, yeah."
             p "Honestly, I”m just hoping we can find some answers today."
             p "If not, Amari might appear with {i}two{/i} horses this time."
         "You didn't tell us...":
-            call maLoveDecrease from _call_maLoveDecrease_8
-            call loveNotification from _call_loveNotification_69
+            call maLoveDecrease
+            call loveNotification
             show ma neutral
             p "You didn't tell us the guy was jacked!"
             p "Were it not for Amari and their damn horse, I'm pretty sure [sb]'s memories would be worse than they already were!"
@@ -79,9 +79,9 @@ label chapter3:
     
     menu:
         "What happened?":
-            call maLoveIncrease from _call_maLoveIncrease_18
-            call sbLoveIncrease from _call_sbLoveIncrease_25
-            call loveNotification from _call_loveNotification_70
+            call maLoveIncrease
+            call sbLoveIncrease
+            call loveNotification
 
             p "You're sounding like it's been awhile since you last went."
             p "Is there a reason for that?"
@@ -95,8 +95,8 @@ label chapter3:
             ma "Now, I could always just plan ahead. But I only do that when I'm feelin' extra mischievous~"
 
         "You didn't steal them, did you?":
-            call maLoveDecrease from _call_maLoveDecrease_9
-            call loveNotification from _call_loveNotification_71
+            call maLoveDecrease
+            call loveNotification
             p "Don't tell me you took from that poor old lady–"
 
             show ma neutral with hpunch
@@ -105,8 +105,8 @@ label chapter3:
             ma "Still am, from time to time~"
 
         "We should all go sometime.":
-            call maLoveIncrease from _call_maLoveIncrease_19
-            call loveNotification from _call_loveNotification_72
+            call maLoveIncrease
+            call loveNotification
             p "If that's the case, maybe I can drag you along sometime."
             p "That is...as long as we can get [sb]'s whole memory situation figured out."
     sb "Oiiii!"
@@ -145,9 +145,9 @@ label chapter3:
 
     menu:
         "What?":
-            call sbLoveDecrease from _call_sbLoveDecrease_17
-            call maLoveDecrease from _call_maLoveDecrease_10
-            call loveNotification from _call_loveNotification_73
+            call sbLoveDecrease
+            call maLoveDecrease
+            call loveNotification
             p "Are you kidding me?"
             show ma angry
             "Mikael pouts at your less than thrilled response."
@@ -155,9 +155,9 @@ label chapter3:
             ma "Ya know...I even toned down the accent and everythin'!"
             ma "You and [sb], Flower Boy, are gonna be lovers for the day!"
         "?!?!":
-            call sbLoveIncrease from _call_sbLoveIncrease_26
-            call maLoveIncrease from _call_maLoveIncrease_20
-            call loveNotification from _call_loveNotification_74
+            call sbLoveIncrease
+            call maLoveIncrease
+            call loveNotification
             p "D-Don't tell me we're gonna have to be like...{w}{i}lovers{/i}."
             "You feel your face heating up at the idea of romance."
             "Not to mention, you certainly didn't have the funds to pay for it."
@@ -183,9 +183,9 @@ label chapter3:
 
     menu:
         "Ask what it is.":
-            call maLoveDecrease from _call_maLoveDecrease_11
-            call sbLoveIncrease from _call_sbLoveIncrease_27
-            call loveNotification from _call_loveNotification_75
+            call maLoveDecrease
+            call sbLoveIncrease
+            call loveNotification
             p "Don't tell me you're gonna ruin a perfectly good festival with flour..."
             p "If [sb] and I have to date, I'd rather it be far, far away from whatever it is you're planning."
 
@@ -234,8 +234,8 @@ label festivalactivities:
         "Now, with the day to yourselves, you decide to do the following:"
         "Check out the food stalls." if foodstalls == False:
             $ foodstalls = True
-            call ksLoveIncrease from _call_ksLoveIncrease_13
-            call loveNotification from _call_loveNotification_76
+            call ksLoveIncrease
+            call loveNotification
 
             "With the scent of savory meat filling the air, you goad [sb] closer to its source."
             sb "Wow~ Look at all those hot dogs~"
@@ -244,16 +244,16 @@ label festivalactivities:
 
             menu:
                 "I'm broke.":
-                    call sbLoveDecrease from _call_sbLoveDecrease_18
-                    call loveNotification from _call_loveNotification_77
+                    call sbLoveDecrease
+                    call loveNotification
                     p "I don't exactly have any cash on me..."
 
                     show sb annoyed
 
                     sb "Oh...how disappointing..."
                 "Sure.":
-                    call sbLoveIncrease from _call_sbLoveIncrease_28
-                    call loveNotification from _call_loveNotification_78
+                    call sbLoveIncrease
+                    call loveNotification
                     "Knowing full well you have absolutely zero cash to your name, you put up a front of confidence to order one of the cute treats."
                     p "One octopus hot dog please."
                     ven "Of course~ That will will be 5–"
@@ -279,9 +279,9 @@ label festivalactivities:
             "You notice a slight tinge of pink coating the Councilman’s cheeks."
             menu:
                 "Call him out.":
-                    call ksLoveDecrease from _call_ksLoveDecrease_9
-                    call sbLoveDecrease from _call_sbLoveDecrease_19
-                    call loveNotification from _call_loveNotification_79
+                    call ksLoveDecrease
+                    call sbLoveDecrease
+                    call loveNotification
                     p "For nearly sending us to the hospital?"
                     p "I’ll take your money, but you’re gonna have to do a lot more than that to–"
 
@@ -296,9 +296,9 @@ label festivalactivities:
                     p "Are you kidding me..."
 
                 "Thank him.":
-                    call ksLoveIncrease from _call_ksLoveIncrease_14
-                    call sbLoveIncrease from _call_sbLoveIncrease_29
-                    call loveNotification from _call_loveNotification_80
+                    call ksLoveIncrease
+                    call sbLoveIncrease
+                    call loveNotification
 
                     "Cautiously reaching for the treat, you admire its cuteness before popping it into your mouth."
 
@@ -319,8 +319,8 @@ label festivalactivities:
           
             menu:
                 "What about us?":
-                    call ksLoveIncrease from _call_ksLoveIncrease_15
-                    call loveNotification from _call_loveNotification_81
+                    call ksLoveIncrease
+                    call loveNotification
                     p "“It wasn’t just Mikael you had to deal with."
                     sb "Yeah...you nearly killed us, haha~"
                     "Kaito rolls his eyes at your and [sb]'s antics."
@@ -336,8 +336,8 @@ label festivalactivities:
                     ks "He’s afraid of the \"Hundred years bad luck\" it’s said to bring, fufufu~"
 
                 "What about him?":
-                    call ksLoveDecrease from _call_ksLoveDecrease_10
-                    call loveNotification from _call_loveNotification_82
+                    call ksLoveDecrease
+                    call loveNotification
                     p "He’s been acting pretty strange from the start."
                     p "Overly touchy…always thinking about you..."
                     p "I wouldn’t be surprised if he went ahead and drenched this place in flour just so you’d look his way."
@@ -374,9 +374,9 @@ label festivalactivities:
 
             menu:
                 "Demand answers.":
-                    call ksLoveDecrease from _call_ksLoveDecrease_11
-                    call sbLoveIncrease from _call_sbLoveIncrease_30
-                    call loveNotification from _call_loveNotification_83
+                    call ksLoveDecrease
+                    call sbLoveIncrease
+                    call loveNotification
 
                     show ks angry
                     show sb neutral
@@ -391,9 +391,9 @@ label festivalactivities:
                     sb "I don’t think he’s gonna budge~"
 
                 "Let sleeping dogs lie.":
-                    call sbLoveDecrease from _call_sbLoveDecrease_20
-                    call ksLoveIncrease from _call_ksLoveIncrease_16
-                    call loveNotification from _call_loveNotification_84
+                    call sbLoveDecrease
+                    call ksLoveIncrease
+                    call loveNotification
 
                     show sb oh
                     show ks neutral
@@ -421,8 +421,8 @@ label festivalactivities:
 
         "Play some games." if games == False:
             $ games = True
-            call ahLoveIncrease from _call_ahLoveIncrease_18
-            call loveNotification from _call_loveNotification_85
+            call ahLoveIncrease
+            call loveNotification
             show sb neutral
             "Taking notice of a giant Mochi-Themed plush which passes you by, make your way towards its source."
             gm "Come one, come all!"
@@ -434,8 +434,8 @@ label festivalactivities:
 
             menu:
                 "Search for the money.":
-                    call sbLoveIncrease from _call_sbLoveIncrease_31
-                    call loveNotification from _call_loveNotification_86
+                    call sbLoveIncrease
+                    call loveNotification
                     "You let out a defeated sigh."
                     "Knowing full well you have no cash to your name, you make an attempt to \"search\" for some in your pocket."
 
@@ -444,8 +444,8 @@ label festivalactivities:
                     "However, right before you can inform [sb] of your brokenness, you’re met with the screams of a few nearby people."
                 
                 "I'm broke.":
-                    call sbLoveDecrease from _call_sbLoveDecrease_21
-                    call loveNotification from _call_loveNotification_87
+                    call sbLoveDecrease
+                    call loveNotification
                     p "500 Yen?!"
                     p "You people here are acting like I actually have money!"
                     show sb annoyed
@@ -481,8 +481,8 @@ label festivalactivities:
 
             menu:
                 "What the...":
-                    call ahLoveIncrease from _call_ahLoveIncrease_19
-                    call loveNotification from _call_loveNotification_88
+                    call ahLoveIncrease
+                    call loveNotification
                     p "What the fuck!?"
                     p "I-Is that–"
 
@@ -492,8 +492,8 @@ label festivalactivities:
                     ah "And with the mention of games...I just knew I would find my beautiful blossom here~"
 
                 "Go away.":
-                    call ahLoveDecrease from _call_ahLoveDecrease_11
-                    call loveNotification from _call_loveNotification_89
+                    call ahLoveDecrease
+                    call loveNotification
                     p "Oh no. Absolutely not. Get the Hell away from us!"
 
                     show ah annoyed
@@ -523,9 +523,9 @@ label festivalactivities:
 
             menu:
                 "Scoop.":
-                    call sbLoveIncrease from _call_sbLoveIncrease_32
-                    call ahLoveDecrease from _call_ahLoveDecrease_12
-                    call loveNotification from _call_loveNotification_90
+                    call sbLoveIncrease
+                    call ahLoveDecrease
+                    call loveNotification
                     "Furrowing your brows, you carefully watch as the floating disks gradually make their way through the water."
                     "Not wanting to make too many \"attempts,\" you wait until just the right moment to strike."
                     p "Here!"
@@ -546,9 +546,9 @@ label festivalactivities:
 
                     ah "How boring~"
                 "Scoop!!!":
-                    call sbLoveDecrease from _call_sbLoveDecrease_22
-                    call ahLoveIncrease from _call_ahLoveIncrease_20
-                    call loveNotification from _call_loveNotification_91
+                    call sbLoveDecrease
+                    call ahLoveIncrease
+                    call loveNotification
                     "Seeing how [sb] was already twelve steps ahead of you, you decide to match their passion for scooping by going twice as fast."
 
                     show ah owo
@@ -579,9 +579,9 @@ label festivalactivities:
 
             menu:
                 "How so?":
-                    call ahLoveDecrease from _call_ahLoveDecrease_13
-                    call sbLoveIncrease from _call_sbLoveIncrease_33
-                    call loveNotification from _call_loveNotification_92
+                    call ahLoveDecrease
+                    call sbLoveIncrease
+                    call loveNotification
                     show sb oh
                     p "I’m not following."
 
@@ -601,9 +601,9 @@ label festivalactivities:
                     ah "Playing a role far better suited to a soft soul such as his~"
                     ah "Just seeing how utterly joyous my best friend was...I want to preserve it for the rest of eternity~!"
                 "Is it because...":
-                    call ahLoveIncrease from _call_ahLoveIncrease_21
-                    call sbLoveDecrease from _call_sbLoveDecrease_23
-                    call loveNotification from _call_loveNotification_93
+                    call ahLoveIncrease
+                    call sbLoveDecrease
+                    call loveNotification
 
                     p "I’m assuming it’s because of the whole \"New Beginnings\" thing."
 
@@ -654,8 +654,8 @@ label festivalactivities:
             stop music fadeout 1.0
             $ renpy.music.play("audio/Music/Sakura_Intro.ogg", fadein=1.0)
             $ renpy.music.queue("audio/Music/Sakura_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
-            call sbLoveIncrease from _call_sbLoveIncrease_34
-            call loveNotification from _call_loveNotification_94
+            call sbLoveIncrease
+            call loveNotification
             "Seeing little point in dragging this out any longer than necessary, you let [sb] take the lead."
             show sb blush
             "Clasping your hand firmly in their own, for the first time you notice that it’s much colder than before."
@@ -663,8 +663,8 @@ label festivalactivities:
 
             menu:
                 "Question [sb]":
-                    call sbLoveDecrease from _call_sbLoveDecrease_24
-                    call loveNotification from _call_loveNotification_95
+                    call sbLoveDecrease
+                    call loveNotification
                     p "You’re rather serious all of a sudden."
                     p "You know, even if we can’t figure out your whole memory thing today, we still have next week."
                     "[sb] smiles at your optimism."
@@ -673,8 +673,8 @@ label festivalactivities:
                     sb "I’m sure your mom would love to meet your suitor sooner rather than later, yeah~?"
                 
                 "Smile.":
-                    call sbLoveIncrease from _call_sbLoveIncrease_35
-                    call loveNotification from _call_loveNotification_96
+                    call sbLoveIncrease
+                    call loveNotification
                     "Your lips curl into a soft smile at [sb]'s determination."
                     "You decide to squeeze their hand."
                     p "You can cut with the face. We’ll get there eventually."
@@ -703,8 +703,8 @@ label festivalactivities:
 
             menu:
                 "Agree with them.":
-                    call sbLoveIncrease from _call_sbLoveIncrease_36
-                    call loveNotification from _call_loveNotification_97
+                    call sbLoveIncrease
+                    call loveNotification
 
                     p "It’s not everyday some lunatic nearly crushes me and then claims to have no memories."
                     p "Not to mention, being roped into this whole \"Flour-Bomber\" deal."
@@ -715,8 +715,8 @@ label festivalactivities:
                     "You see [sb] try not to laugh at your explanation of things."
 
                 "Shrug.":
-                    call sbLoveDecrease from _call_sbLoveDecrease_25
-                    call loveNotification from _call_loveNotification_98
+                    call sbLoveDecrease
+                    call loveNotification
 
                     "You let out an exhausted sigh."
                     p "At this point, I just want this week to end..."
@@ -742,14 +742,14 @@ label festivalactivities:
 
             menu:
                 "[sb]...?":
-                    call sbLoveIncrease from _call_sbLoveIncrease_37
-                    call loveNotification from _call_loveNotification_99
+                    call sbLoveIncrease
+                    call loveNotification
                     p "Hey…you’re not…crying..are you?"
                     p "You were so happy earlier today."
                     p "You know I was joking about the whole you being a bother thing–"
                 "You're being dramatic.":
-                    call sbLoveDecrease from _call_sbLoveDecrease_26
-                    call loveNotification from _call_loveNotification_100
+                    call sbLoveDecrease
+                    call loveNotification
                     p "You’re acting like you’re going to die or something."
                     p "Cut it out. I don’t like other people crying..."
                     p "We still have time. And even then–"

@@ -4,11 +4,11 @@ label Protologue:
     # put the name of the character
     $ targetPerson = 0
     $ specifiedName = playerName
-    call InsertName
+    call InsertName from _call_InsertName_1
     $ playerName = userInput
     # name has been established
-    call ChoosePronoun
-    call ConfirmIdentity
+    call ChoosePronoun from _call_ChoosePronoun_1
+    call ConfirmIdentity from _call_ConfirmIdentity
     ############################################################
     # game actually starts
     # *Open with a black screen, and soft, hopeful music playing.*
@@ -75,11 +75,11 @@ label Protologue:
     menu MyHead:
         sb "My head..."
         "Stay Quiet":
-            call Proto_StayQuiet
+            call Proto_StayQuiet from _call_Proto_StayQuiet
         "Ask if they're okay":
-            call Proto_TheyOk
+            call Proto_TheyOk from _call_Proto_TheyOk
         "Insult them":
-            call Proto_Insult
+            call Proto_Insult from _call_Proto_Insult
     ############################################################
     sb "Uhm..anyways!"
     # *Depending on the choice made, SB will have their face in the CG image change from ^-^ to a more ^-^;;; expression.*
@@ -94,10 +94,10 @@ label Protologue:
         sb "It is uh, nice to...meet you? Haha~"
         "Ask if they're the person your mom sent":
             show sb neutral
-            call Proto_MomSent
+            call Proto_MomSent from _call_Proto_MomSent
         "Why are you late?":
             show sb neutral
-            call Proto_WhyLate
+            call Proto_WhyLate from _call_Proto_WhyLate
 
     ############################################################
     show sb neutral
@@ -111,7 +111,7 @@ label Protologue:
     # put the name of the character
     $ targetPerson = 1
     $ specifiedName = "Sakura"
-    call InsertName
+    call InsertName from _call_InsertName_2
     # name has been established
     ############################################################
     show sb thinking
@@ -155,12 +155,12 @@ label Protologue:
         sb "If you do, you have my word that those concert tickets will be ours~!"
         "This is ridiculous–":
             show sb neutral
-            call Proto_Ridiculous
+            call Proto_Ridiculous from _call_Proto_Ridiculous
         "No.":
             # game ends prematurely
             jump Proto_No
     ############################################################
-    call situTriggerReset
+    call situTriggerReset from _call_situTriggerReset_2
     $ quick_menu = False
     window auto hide
     scene black with fade

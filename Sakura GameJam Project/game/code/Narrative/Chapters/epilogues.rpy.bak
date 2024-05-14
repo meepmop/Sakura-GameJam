@@ -6,7 +6,7 @@ label epilogues:
     menu:
         "Sensing that this could be important, you decide the following:"
         "Look for [sb].":
-            call sbLoveIncrease from _call_sbLoveIncrease_38
+            call sbLoveIncrease
             p "W-Where the Hell did they go!?"
             "Quickly scrambling to find where [sb] went, you check the spots which you knew were of interest to them."
             scene BG YYFront:

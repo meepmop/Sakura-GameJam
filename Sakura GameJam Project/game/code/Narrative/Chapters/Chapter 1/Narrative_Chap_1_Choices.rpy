@@ -2,8 +2,8 @@
 # familiarSakura
 ############################################################
 label Chap1_Familiar:
-    call sbLoveIncrease
-    call loveNotification
+    call sbLoveIncrease from _call_sbLoveIncrease
+    call loveNotification from _call_loveNotification
     p "It’s strange."
     p "The more I look. The more they seem to remind me of…"
     return
@@ -18,8 +18,8 @@ label Chap1_FocusPhone:
 # Our classes?
 ############################################################
 label Chap1_OurClasses:
-    call sbLoveDecrease
-    call loveNotification
+    call sbLoveDecrease from _call_sbLoveDecrease
+    call loveNotification from _call_loveNotification_1
     p "What do you mean our classes?"
     p "Didn’t you say something about not having any memories or anything?"
     "You can’t help but glance off to the side with a huff."
@@ -38,8 +38,8 @@ label Chap1_YourMemories:
 
     return
 label Chap1_BranchHair:
-    call sbLoveIncrease
-    call loveNotification
+    call sbLoveIncrease from _call_sbLoveIncrease_1
+    call loveNotification from _call_loveNotification_2
     p "I almost regret asking this, but, is that an entire branch in your hair?"
     sb "Why, yes it is."
     "You instantly notice the almost prideful tone [sb] takes upon answering."
@@ -59,7 +59,7 @@ label Chap1_SearchChoice:
         "Knowing there’s only so many places they could be, you decide the following:"
         "Check the nearby classrooms.":
             # reset any trigs used
-            call situTriggerReset
+            call situTriggerReset from _call_situTriggerReset_1
             jump Chapter1_Cont_NearbyClass
         # player can only check the supply closet once
         "Check the supply closet." if not choice1Chosen:
@@ -88,8 +88,8 @@ label Chap1_JustLeave:
 # tellMeFiend
 ############################################################
 label Chap1_Scream:
-    call ahLoveIncrease
-    call loveNotification
+    call ahLoveIncrease from _call_ahLoveIncrease
+    call loveNotification from _call_loveNotification_3
     p "What the Hell!? G-Get your hands off of me!!"
     "Amari's lips seem to curl into a full on grin at your discontent."
 
@@ -110,8 +110,8 @@ label Chap1_YankHand:
 
     return
 label Chap1_StayStill:
-    call ahLoveDecrease
-    call loveNotification
+    call ahLoveDecrease from _call_ahLoveDecrease
+    call loveNotification from _call_loveNotification_4
     "You remain still as a statue."
     show ah neutral
     "Unmoving, you can only lazily direct your gaze to the equally unimpressed man behind them."
@@ -124,8 +124,8 @@ label Chap1_StayStill:
 ############################################################
 label Chap1_Pathetic:
     # Amari liked that
-    call ahLoveIncrease
-    call loveNotification
+    call ahLoveIncrease from _call_ahLoveIncrease_1
+    call loveNotification from _call_loveNotification_5
     p "Who’re you calling pathetic?!"
     "You feel a mix of embarrassment and rage swell up in your chest."
     "You don’t know why, but for some reason just looking at this guy 
@@ -145,8 +145,8 @@ label Chap1_Pathetic:
     return
 label Chap1_IllShowYou:
     # kaito did not like that
-    call ksLoveDecrease
-    call loveNotification
+    call ksLoveDecrease from _call_ksLoveDecrease
+    call loveNotification from _call_loveNotification_6
     "Deciding not to let this insult stand, you find yourself rolling up one of your sleeves."
     "After all, a little well earned violence never hurt no one."
     p "Oh yeah? I’ll show you pathetic..!"
@@ -162,10 +162,10 @@ label Chap1_IllShowYou:
     return
 label Chap1_WellActually:
     # kaito liked that
-    call ksLoveIncrease
+    call ksLoveIncrease from _call_ksLoveIncrease
     # amari did not like that
-    call ahLoveDecrease
-    call loveNotification
+    call ahLoveDecrease from _call_ahLoveDecrease_1
+    call loveNotification from _call_loveNotification_7
     "Feeling yourself deflate, you hang your head low at the other’s insults."
     "Doing so, out of the corner of your eye, you catch the slight creasing of Kaito’s eyes."
     show ah angry
@@ -180,9 +180,9 @@ label Chap1_WellActually:
 ############################################################
 label Chap1_WhoThatGuy:
     # - Affection Kaito + Affection (Amari) 
-    call ksLoveDecrease
-    call ahLoveIncrease
-    call loveNotification
+    call ksLoveDecrease from _call_ksLoveDecrease_1
+    call ahLoveIncrease from _call_ahLoveIncrease_2
+    call loveNotification from _call_loveNotification_8
     p "Uh. Can I ask who this guy even is?"
     "As soon as the question leaves your lips, you instantly feel Kaito’s growing animosity."
     
@@ -201,8 +201,8 @@ label Chap1_WhoThatGuy:
     return
 label Chap1_IsThatFlour:
     # ~ Affection (Kaito) - Affection (Amari)
-    call ahLoveDecrease
-    call loveNotification
+    call ahLoveDecrease from _call_ahLoveDecrease_2
+    call loveNotification from _call_loveNotification_9
     p "That white stuff. Is that..?"
     show ks bashful
     ks "Perfectly good flour."
@@ -215,8 +215,8 @@ label Chap1_IsThatFlour:
     return
 label Chap1_RemainQuiet:
     # + Affection (Kaito) ~ Affection (Amari)
-    call ksLoveIncrease
-    call loveNotification
+    call ksLoveIncrease from _call_ksLoveIncrease_1
+    call loveNotification from _call_loveNotification_10
     "You decide to keep your mouth shut and instead mentally investigate 
     the scene taking place before you."
     "Judging from how the room was practically white, it seems as though someone had a 
@@ -230,8 +230,8 @@ label Chap1_RemainQuiet:
 ############################################################
 label Chap1_IgnoreVoice:
     # - Affection (SB)
-    call sbLoveDecrease
-    call loveNotification
+    call sbLoveDecrease from _call_sbLoveDecrease_1
+    call loveNotification from _call_loveNotification_11
     "Fixated on the sheer chaos that has been the past couple of days, 
     you barely pay mind to your surroundings."
     "In fact, you can feel quite the headache coming on."
@@ -245,8 +245,8 @@ label Chap1_IgnoreVoice:
     return
 label Chap1_TurnHead:
     # + Affection (SB)
-    call sbLoveIncrease
-    call loveNotification
+    call sbLoveIncrease from _call_sbLoveIncrease_2
+    call loveNotification from _call_loveNotification_12
     "Despite how utterly crazy these last few days have been, you figure it 
     can’t possibly get any worse and begrudgingly turn towards the source of the voice."
     $ renpy.music.play("audio/Music/Sakura_Intro.ogg", fadein=1.0)
@@ -261,8 +261,8 @@ label Chap1_TurnHead:
 ############################################################
 label Chap1_WhoHellYou:
     # + Affection (Mikael)
-    call maLoveIncrease
-    call loveNotification
+    call maLoveIncrease from _call_maLoveIncrease
+    call loveNotification from _call_loveNotification_13
     p "Who the Hell are you?!"
     p "Don’t tell me you’re with the masked guy!"
     p "I’m not looking to get my character insulted twice in one day!!"
@@ -296,9 +296,9 @@ label Chap1_NotAnother:
     return
 label Chap1_IDoneDay:
     # - Affection (Mikael) - (SB)
-    call maLoveDecrease
-    call sbLoveDecrease
-    call loveNotification
+    call maLoveDecrease from _call_maLoveDecrease
+    call sbLoveDecrease from _call_sbLoveDecrease_2
+    call loveNotification from _call_loveNotification_14
     p "I think I’ve had enough."
     show sb annoyed
     "About to turn on your heels and leave this mess of a day behind, you can see [sb]'s eyes glisten."
@@ -316,8 +316,8 @@ label Chap1_IDoneDay:
 ############################################################
 label Chap1_OfferAssist:
     # + Affection (SB)
-    call sbLoveIncrease
-    call loveNotification
+    call sbLoveIncrease from _call_sbLoveIncrease_3
+    call loveNotification from _call_loveNotification_15
     p "Would you mind letting go of my friend here?"
     "You instantly notice how [sb]'s face lights up at your acceptance of your friendship."
     "However, before they can say anything to further embarrass you, Mikael reluctantly 
@@ -326,8 +326,8 @@ label Chap1_OfferAssist:
     return
 label Chap1_Shrug:
     # - Affection (SB)
-    call sbLoveDecrease
-    call loveNotification
+    call sbLoveDecrease from _call_sbLoveDecrease_3
+    call loveNotification from _call_loveNotification_16
     "You shrug."
     "Not knowing what exactly to do, you watch helplessly as Mikael further interrogates your 
     so-called companion."
@@ -337,8 +337,8 @@ label Chap1_Shrug:
     return
 label Chap1_PraiseMikael:
     # + Affection (Mikael)
-    call maLoveIncrease
-    call loveNotification
+    call maLoveIncrease from _call_maLoveIncrease_1
+    call loveNotification from _call_loveNotification_17
     p "If it means anything…I understood you perfectly."
     p "Were it not for your accent, I’d have thought it was your native language."
     "Instantly, you can see Mikael’s expression brighten as he almost excitedly 
@@ -350,8 +350,8 @@ label Chap1_PraiseMikael:
 ############################################################
 label Chap1_Sakuraba:
     # + Affection (Mikael)
-    call maLoveIncrease
-    call loveNotification
+    call maLoveIncrease from _call_maLoveIncrease_2
+    call loveNotification from _call_loveNotification_18
     p "It sounds like you and that Sakuraba guy don’t really get along."
     p "Did he make you drop your ice cream too?"
     "Mikael reaches to scratch at the back of his head."
@@ -364,9 +364,9 @@ label Chap1_Sakuraba:
     return
 label Chap1_BeCleaning:
     # - Affection (Mikael) + Affection (Kaito)
-    call maLoveDecrease
-    call ksLoveIncrease
-    call loveNotification
+    call maLoveDecrease from _call_maLoveDecrease_1
+    call ksLoveIncrease from _call_ksLoveIncrease_2
+    call loveNotification from _call_loveNotification_19
     p "If you’re the one responsible for this, shouldn’t you be the one to clean it up?"
     p "You know, I can bet the custodial staff aren't too thrilled either."
     p "Surely if you’ve got some sort of grudge, it can be held without involving others in 
@@ -379,8 +379,8 @@ label Chap1_BeCleaning:
     return
 label Chap1_Cookies:
     # + Affection (SB)
-    call sbLoveIncrease
-    call loveNotification
+    call sbLoveIncrease from _call_sbLoveIncrease_4
+    call loveNotification from _call_loveNotification_20
     show sb annoyed
     p "What ever happened to those Sakura cookies, [sb]?"
     "Just as you ask this, you see [sb]'s face darken, and you are met with a rather sheepish smile."
@@ -395,8 +395,8 @@ label Chap1_Cookies:
 ############################################################
 label Chap1_RemainQuietAgain:
     # + Affection (SB)
-    call sbLoveIncrease
-    call loveNotification
+    call sbLoveIncrease from _call_sbLoveIncrease_5
+    call loveNotification from _call_loveNotification_21
     "Seemingly lost in the thought of the other’s rather large hands, 
     you’re unable to catch their question."
     "You blink. Once. Twice."
@@ -417,9 +417,9 @@ label Chap1_IntroduceSelf:
     return
 label Chap1_IntroduceSelfWithConfidence:
     # + Affection (Mikael, Amari)
-    call ahLoveIncrease
-    call maLoveIncrease
-    call loveNotification
+    call ahLoveIncrease from _call_ahLoveIncrease_3
+    call maLoveIncrease from _call_maLoveIncrease_3
+    call loveNotification from _call_loveNotification_22
     "Figuring you’d try and take a page from Amari’s book, you steady yourself."
     "Briefly closing your eyes, you snap them open once more with a cheesy at best 
     grin and clasp Mikael’s hand into your own."
@@ -432,8 +432,8 @@ label Chap1_IntroduceSelfWithConfidence:
 ############################################################
 label Chap1_WhatAboutHim:
     # - Affection (Mikael)
-    call maLoveDecrease
-    call loveNotification
+    call maLoveDecrease from _call_maLoveDecrease_2
+    call loveNotification from _call_loveNotification_23
     p "You..?"
     show ma angry
     "You’re met with a heavy sigh from the redhead before you."
@@ -443,9 +443,9 @@ label Chap1_WhatAboutHim:
     return
 label Chap1_SwitchSubject:
     # + Affection (Mikael) + Affection (SB)
-    call maLoveIncrease
-    call sbLoveIncrease
-    call loveNotification
+    call maLoveIncrease from _call_maLoveIncrease_4
+    call sbLoveIncrease from _call_sbLoveIncrease_6
+    call loveNotification from _call_loveNotification_24
     "You fumble with your phone, awkwardly pulling up your idol game to show 
     off one of your virtual ‘husbandos’."
     "They look strikingly similar to Kaito."
@@ -463,9 +463,9 @@ label Chap1_SwitchSubject:
 ############################################################
 label Chap1_AbsolutelyNo:
     # - Affection (Mikael) + Affection (Kaito)
-    call maLoveDecrease
-    call ksLoveIncrease
-    call loveNotification
+    call maLoveDecrease from _call_maLoveDecrease_3
+    call ksLoveIncrease from _call_ksLoveIncrease_3
+    call loveNotification from _call_loveNotification_25
     p "Listen. As much as I appreciate just how unbelievable these past few days have been…"
     p "I’m pretty sure teaming up with the infamous Flour Bomber will make getting [sb]'s 
     memories back even more difficult."
@@ -478,9 +478,9 @@ label Chap1_AbsolutelyNo:
     return
 label Chap1_AndThatIs:
     # + Affection (Mikael) + Affection (SB)
-    call maLoveIncrease
-    call sbLoveIncrease
-    call loveNotification
+    call maLoveIncrease from _call_maLoveIncrease_5
+    call sbLoveIncrease from _call_sbLoveIncrease_7
+    call loveNotification from _call_loveNotification_26
     p "You’re not gonna make us flour someone, are you?"
     "Mikael lets out a hearty laugh at the assumption."
     "They seem to say something which you cannot fully comprehend."
