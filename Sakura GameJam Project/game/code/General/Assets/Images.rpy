@@ -2,41 +2,44 @@
 ################################################################################
 image BG YYFront = "BG/Placeholder/bg_SchoolFront.png"
 image BG YYInside = "BG/Placeholder/bg_SchoolInside.png"
+image BG YYInsideThirdFloor = "BG/Placeholder/Class_Hallway_Empty2.png"
 image BG Classroom = "BG/Placeholder/bg_Classroom.png"
 ################################################################################
 # defined characters
 ################################################################################
 # Sakura Boy
-image sb neutral = At("Characters/Sakura/SB_Smile_P1_Basic.png", sprite_highlight('sakura'))
-image sb happy = At("Characters/Sakura/SB_Smile_P1_Basic.png", sprite_highlight('sakura'))
-image sb thinking = At("Characters/Sakura/SB_Smile_P2.png", sprite_highlight('sakura'))
-image sb ouch = At("Characters/Sakura/SB_Frown_P1.png", sprite_highlight('sakura'))
-image sb oh = At("Characters/Sakura/SB_Frown_P2.png", sprite_highlight('sakura'))
-image sb line = At("Characters/Sakura/SB_Smile_P1_Basic.png", sprite_highlight('sakura'))
+image sb angry = At("Characters/Sakura/SB_Angry.png", sprite_highlight('sakura'))
+image sb annoyed = At("Characters/Sakura/SB_Annoyed.png", sprite_highlight('sakura'))
+image sb blush = At("Characters/Sakura/SB_Blush.png", sprite_highlight('sakura'))
+image sb neutral = At("Characters/Sakura/SB_Neutral.png", sprite_highlight('sakura'))
+image sb thinking = At("Characters/Sakura/SB_Thinking.png", sprite_highlight('sakura'))
+image sb oh = At("Characters/Sakura/SB_Oh.png", sprite_highlight('sakura'))
+image sb excited = At("Characters/Sakura/SB_Excited.png", sprite_highlight('sakura'))
 ################################################################################
 # Kaito
-image ks neutral = At("Characters/Kaito/KS_BasicPose_P1.png", sprite_highlight('kaito'))
-image ks angry = At("Characters/Kaito/KS_EyesClosed_P1.png", sprite_highlight('kaito'))
-image ks shine = At("Characters/Kaito/KS_Bashful_P2.png", sprite_highlight('kaito'))
-image ks thinking = At("Characters/Kaito/KS_EyesClosed_P1.png", sprite_highlight('kaito'))
-image ks sad = At("Characters/Kaito/KS_Nervous_P2.png", sprite_highlight('kaito'))
-image ks oh = At("Characters/Kaito/KS_EyebrowsRaised_P1.png", sprite_highlight('kaito'))
+image ks angry = At("Characters/Kaito/KS_Angry.png", sprite_highlight('kaito'))
+image ks bashful = At("Characters/Kaito/KS_Bashful.png", sprite_highlight('kaito'))
+image ks blush = At("Characters/Kaito/KS_Blush.png", sprite_highlight('kaito'))
+image ks happy = At("Characters/Kaito/KS_Happy.png", sprite_highlight('kaito'))
+image ks neutral = At("Characters/Kaito/KS_Neutral.png", sprite_highlight('kaito'))
 
 ################################################################################
 # Amari
-image ah neutral = At("Characters/Amari/AH_OpenSmile_P1_Basic.png", sprite_highlight('amari'))
-image ah happy = At("Characters/Amari/AH_EyesOpenSmile_P2.png", sprite_highlight('amari'))
+image ah annoyed = At("Characters/Amari/AH_Angry.png", sprite_highlight('amari'))
+image ah angry = At("Characters/Amari/AH_Angry.png", sprite_highlight('amari'))
+image ah blush = At("Characters/Amari/AH_Blush.png", sprite_highlight('amari'))
+image ah dramatic = At("Characters/Amari/AH_Dramatic.png", sprite_highlight('amari'))
+image ah happy = At("Characters/Amari/AH_Happy.png", sprite_highlight('amari'))
 image ah owo = At("Characters/Amari/AH_OhSideGlance_P1.png", sprite_highlight('amari'))
 image ah twt = At("Characters/Amari/AH_OhSideGlance_P1.png", sprite_highlight('amari'))
-image ah shine = At("Characters/Amari/AH_EyesOpenSmile_P2.png", sprite_highlight('amari'))
-image ah vhappy = At("Characters/Amari/AH_EyesClosedSmile_P2.png", sprite_highlight('amari'))
-image ah bored = At("Characters/Amari/AH_OpenSmile_P1_Basic.png", sprite_highlight('amari'))
+image ah neutral = At("Characters/Amari/AH_Neutral.png", sprite_highlight('amari'))
 
 ################################################################################
 # Michael
-image ma happy = At("Characters/Michael/MA_SmileBasic_P1.png", sprite_highlight('mikael'))
-image ma vhappy = At("Characters/Michael/MA_Smile_P2.png", sprite_highlight('mikael'))
-image ma basic = At("Characters/Michael/MA_SmileBasic_P1.png", sprite_highlight('mikael'))
+image ma neutral = At("Characters/Michael/MA_Neutral.png", sprite_highlight('mikael'))
+image ma neutral2 = At("Characters/Michael/MA_Neutral_P2.png", sprite_highlight('mikael'))
+image ma blush = At("Characters/Michael/MA_Blush.png", sprite_highlight('mikael'))
+image ma angry = At("Characters/Michael/MA_Angry.png", sprite_highlight('mikael'))
 image ma wink1 = At("Characters/Michael/MA_Wink_P1.png", sprite_highlight('mikael'))
 image ma wink2 = At("Characters/Michael/MA_Wink_P2.png", sprite_highlight('mikael'))
 ################################################################################

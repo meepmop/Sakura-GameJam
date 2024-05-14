@@ -578,9 +578,9 @@ screen about():
 
         vbox:
 
-            label "[config.name!t]"
+            label "Fleeting Blossoms"
             ## Credits
-            text _("Producer: Hailey Rojas \nProgrammer: Giovanna Gowmez \nLogo Designer: Mika Dilig \n")
+            text _("Producer: Hailey Rojas \nProgrammers: Giovanna Gowmez, Kristi Jimenez\nSprites: Des\nBackgrounds, Logo Designer: Mika Dilig\nGUI Artist: Taylor Dinh\nComposer: sfeldman\n")
             text _("Version [config.version!t]\n")
 
             ## gui.about is usually set in options.rpy.

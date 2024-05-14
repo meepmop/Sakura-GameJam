@@ -4,11 +4,11 @@ label Protologue:
     # put the name of the character
     $ targetPerson = 0
     $ specifiedName = playerName
-    call InsertName from _call_InsertName_1
+    call InsertName
     $ playerName = userInput
     # name has been established
-    call ChoosePronoun from _call_ChoosePronoun_1
-    call ConfirmIdentity from _call_ConfirmIdentity
+    call ChoosePronoun
+    call ConfirmIdentity
     ############################################################
     # game actually starts
     # *Open with a black screen, and soft, hopeful music playing.*
@@ -41,7 +41,7 @@ label Protologue:
     virtual idol concert, I'd honestly be none the wiser."
     
     # *A small icon of MCs phone with a virtual idol game appears briefly.*
-    show IT PlayerPhone at centerMiddle
+    show IT PlayerPhone at centerMiddle with easeinbottom
 
     p "Who even needs love anyways when I already have it at the touch of my fingertips?"
     p "Ah~ My beloveds~"
@@ -55,17 +55,19 @@ label Protologue:
     p "If the guy mom set up for me hasn't shown up in the last 5 hours, I doubt 
     they're gonna–"
     
+    play sound "audio/branch-shake.mp3"
     stop music fadeout 1.0
     # add a little shake
     scene BG YYFront with hpunch
     
     p "?!?!"
     # *The music cuts off and a loud thud plays while the screen goes black.*
-    scene black
+    play sound "audio/body-fall.mp3"
+    scene black with hpunch
     sb "Ow, ow, ow..!!"
     # *A shuffling sound effect plays, and the screen fades back into the image of sbwith their hair down looking all baby girl.*
     scene BG YYFront
-    show sb ouch
+    show sb annoyed
     with Fade(0.0,0.0,1.0)
     $ renpy.music.play("audio/Music/Sakura_Intro.ogg", fadein=1.0)
     $ renpy.music.queue("audio/Music/Sakura_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
@@ -73,17 +75,17 @@ label Protologue:
     menu MyHead:
         sb "My head..."
         "Stay Quiet":
-            call Proto_StayQuiet from _call_Proto_StayQuiet
+            call Proto_StayQuiet
         "Ask if they're okay":
-            call Proto_TheyOk from _call_Proto_TheyOk
+            call Proto_TheyOk
         "Insult them":
-            call Proto_Insult from _call_Proto_Insult
+            call Proto_Insult
     ############################################################
     sb "Uhm..anyways!"
     # *Depending on the choice made, SB will have their face in the CG image change from ^-^ to a more ^-^;;; expression.*
     # if specific choice is chosen to trigger different emote
     if sbTrig == True:
-        show sb happy
+        show sb neutral
     else:
         show sb neutral
     sb "It is uh, nice to...meet you? Haha~"
@@ -92,10 +94,10 @@ label Protologue:
         sb "It is uh, nice to...meet you? Haha~"
         "Ask if they're the person your mom sent":
             show sb neutral
-            call Proto_MomSent from _call_Proto_MomSent
+            call Proto_MomSent
         "Why are you late?":
             show sb neutral
-            call Proto_WhyLate from _call_Proto_WhyLate
+            call Proto_WhyLate
 
     ############################################################
     show sb neutral
@@ -109,7 +111,7 @@ label Protologue:
     # put the name of the character
     $ targetPerson = 1
     $ specifiedName = "Sakura"
-    call InsertName from _call_InsertName_2
+    call InsertName
     # name has been established
     ############################################################
     show sb thinking
@@ -120,7 +122,7 @@ label Protologue:
     $ sakuraName = userInput
 
     # *A picture of Sakura Boi taking MC's hands into their own all excited “:D" appears.*
-    show sb happy
+    show sb neutral
     sb "While I am not a fan of outright abandonment, that sounds like quite the 
     exquisite name!"
     p "Eh?!?!"
@@ -128,7 +130,7 @@ label Protologue:
     p "Don't you have a name of your own?! Don't go taking other people's–!"
     sb "How am I to take what never even bothered to show up in the first place~?"
 
-    show sb happy
+    show sb neutral
 
     sb "If anything, consider it that person's 'tax' for failing to accompany you."
     sb "Besides~ It's not like I could come up with a name of my own."
@@ -143,8 +145,9 @@ label Protologue:
     show sb thinking
     sb "uhm… What's your name again?"
     p "...[p]"
-    show sb happy
+    show sb neutral
     sb "Simply Divine. [p].~ I will cherish that name for the rest of my days."
+    show sb excited
     sb "Tell me, will you help recover my lost memories?"
     sb "If you do, you have my word that those concert tickets will be ours~!"
     ############################################################
@@ -152,13 +155,16 @@ label Protologue:
         sb "If you do, you have my word that those concert tickets will be ours~!"
         "This is ridiculous–":
             show sb neutral
-            call Proto_Ridiculous from _call_Proto_Ridiculous
+            call Proto_Ridiculous
         "No.":
             # game ends prematurely
             jump Proto_No
     ############################################################
-    call situTriggerReset from _call_situTriggerReset_2
+    call situTriggerReset
+    $ quick_menu = False
+    window auto hide
     scene black with fade
-    stop music fadeout 1.0
+    stop music fadeout 1.5
+    pause 2.0
     jump Chapter1
     return

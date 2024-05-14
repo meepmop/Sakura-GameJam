@@ -16,7 +16,7 @@ label chapter3:
             call sbLoveDecrease
             call loveNotification
             p "Listen [sb], if you have nothing productive to say then you're better off not saying it at all–"
-            show ma basic at center with vpunch
+            show ma neutral at center with vpunch
             ma "[sb]. [sb]?!?!"
             ma "Need I introduce myself once more?!"
             ma "It's me, Mikael Amoris~ President of YuraYura's—"
@@ -26,7 +26,7 @@ label chapter3:
             call loveNotification
             "Too enamored by the movements of your idol game, you brush right past the source of the voice."
             "However, right as you do so, you find a firm grasp on your shoulder."
-            show ma basic at center with dissolve
+            show ma neutral at center with dissolve
             "Finally turning to face it, your body stiffens at the sight of a less than pleased Mikael."
             ma "Ya know. I ain't exactly the type to like bein' ignored."
         "Defend yourself":
@@ -36,7 +36,7 @@ label chapter3:
             show ma wink1 at center with hpunch
             "Immediately upon saying this, you're met with a boisterous laugh and a firm hand on your shoulder."
             ma "Where have I heard that one before~"
-    show ma vhappy
+    show ma neutral
     ma "So [playerName]. Are ya ready for today~?"
     ma "I know we haven't had much of a chance to chat. But I just wanted to say thanks~"
     show ma wink2
@@ -47,7 +47,7 @@ label chapter3:
             call maLoveIncrease
             call loveNotification
             p "There's a…good way?"
-            show ma basic
+            show ma neutral
             ma "Well, I doubt it'd be now, with how much of a prick he's been as of late."
             p "..."
         "Sure.":
@@ -59,20 +59,20 @@ label chapter3:
         "You didn't tell us...":
             call maLoveDecrease
             call loveNotification
-            show ma basic
+            show ma neutral
             p "You didn't tell us the guy was jacked!"
             p "Were it not for Amari and their damn horse, I'm pretty sure [sb]'s memories would be worse than they already were!"
             ma "So the Princess brought out her valiant steed now, did she?"
             ma "Interesting..."
 
-    show ma basic
+    show ma neutral
 
     ma "Say, where is Flower Boy anyways?"
     ma "Judging from how happy you looked right before I got here, I'm assuming ya haven't met up with ‘em yet."
     p "Well, they were... stopping to get us some breakfast."
     p "That old lady who runs the nearby sweet stand's apparently been giving them cookies all week."
 
-    show ma happy
+    show ma neutral
 
     ma "Ohhh! Miss Ayaka!"
     ma "She's the best!"
@@ -85,7 +85,7 @@ label chapter3:
 
             p "You're sounding like it's been awhile since you last went."
             p "Is there a reason for that?"
-            show ma basic
+            show ma neutral
 
             "Mikael glances away with a sheepish look to him."
             ma "Let's just say a certain someone always beats me to my favorite sweets."
@@ -99,7 +99,7 @@ label chapter3:
             call loveNotification
             p "Don't tell me you took from that poor old lady–"
 
-            show ma basic with hpunch
+            show ma neutral with hpunch
             ma "Oh God no!"
             ma "In fact, I was one of her best customers!!!"
             ma "Still am, from time to time~"
@@ -129,12 +129,12 @@ label chapter3:
     $ renpy.music.play("audio/Music/Festival_FleetingBlossoms_Intro.ogg", fadein=1.0, loop=True)
     $ renpy.music.queue("audio/Music/Festival_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
     scene BG YYFront
-    show sb happy at right
-    show ma basic at left 
+    show sb neutral at right
+    show ma neutral at left 
     with dissolve
     ma "Alright, alright, alright...~"
     hide sb with dissolve
-    show ma happy at center with move
+    show ma neutral at center with move
     "Clapping his hands together, Mikael makes their way in front of you."
     "Much to [sb]'s' delight, you're met with a bundle of excitement in the form of a poorly drawn \"Battle Plan.\""
     ma "So!"
@@ -149,7 +149,7 @@ label chapter3:
             call maLoveDecrease
             call loveNotification
             p "Are you kidding me?"
-            show ma normal
+            show ma angry
             "Mikael pouts at your less than thrilled response."
             ma "Do I gotta repeat myself?"
             ma "Ya know...I even toned down the accent and everythin'!"
@@ -164,13 +164,13 @@ label chapter3:
             "Boba...drinks...those stupid rigged carnival games..."
             "You just knew that [sb] would be an absolute sucker for it."
 
-    show ma happy
+    show ma neutral
 
     ma "If it makes ya feel better, I'm only sayin' this so you can keep Sakuraba busy a bit longer."
     ma "Guy's a sucker for stickin' his nose where it ain't belong."
     ma "Especially when it comes to people who've been gettin' on his bad side~"
 
-    show ma happy at left
+    show ma neutral at left
     show sb thinking at right
     with dissolve
 
@@ -194,16 +194,16 @@ label chapter3:
             ma "Aw~ Ya don't gotta worry ‘bout that."
             ma "What I'm plannin' specifically revolves around Sakuraba and his lackeys."
 
-            show ma basic
+            show ma neutral
 
             ma "But if I told ya what it was exactly, I'd have to kill ya."
 
-            show sb ouch
+            show sb annoyed
 
-            sb "Y-You wouldn't kill me would you?"
+            sb "Y-You wouldn't kill me, would you?"
             sb "I just need to last the rest of today so–"
 
-            show ma happy
+            show ma neutral
 
             ma "Of course not~"
             ma "We're friends now, I know I can trust you."
@@ -212,7 +212,7 @@ label chapter3:
             p "So...[sb]."
             p "How about one date?"
 
-            show sb happy
+            show sb neutral
 
             "You force yourself to reach out and allow [sb] to eagerly grab hold of your hand."
             "It's cold, yet still somewhat comforting."
@@ -224,7 +224,7 @@ label chapter3:
     ma "I've got some Mikael-in' to do!"
 
     hide ma 
-    show sb happy at center
+    show sb neutral at center
     with dissolve
 
     "You see Mikael laughing as they saunter away."
@@ -248,7 +248,7 @@ label festivalactivities:
                     call loveNotification
                     p "I don't exactly have any cash on me..."
 
-                    show sb ouch
+                    show sb annoyed
 
                     sb "Oh...how disappointing..."
                 "Sure.":
@@ -269,11 +269,12 @@ label festivalactivities:
             $ renpy.music.queue("audio/Music/Kaito_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
 
             show sb at left
-            show ks oh at right
+            show ks neutral at right
             with dissolve
 
             "Hearing [sb]'s gasp, you turn and are met with a familiar face."
             "...or lack thereof."
+            show ks blush
             ks "Consider it an apology."
             "You notice a slight tinge of pink coating the Councilman’s cheeks."
             menu:
@@ -284,7 +285,7 @@ label festivalactivities:
                     p "For nearly sending us to the hospital?"
                     p "I’ll take your money, but you’re gonna have to do a lot more than that to–"
 
-                    show sb happy
+                    show sb neutral
 
                     "Before you can finish your sentence, you see [sb] having already stuffed their face with the other’s bribe."
                     sb "Hot, hot, hot!!"
@@ -301,12 +302,12 @@ label festivalactivities:
 
                     "Cautiously reaching for the treat, you admire its cuteness before popping it into your mouth."
 
-                    show sb happy
+                    show sb neutral
 
                     "Out of the corner of your eye, you also see [sb] nearly choke on their own, making it hard for you to not laugh at the display."
 
                     p "Thanks..."
-            show ks thinking
+            show ks neutral
 
             ks "They’re tasty, are they not?"
             ks "And rather cute, too."
@@ -330,7 +331,7 @@ label festivalactivities:
                     ks "If it means I can enjoy myself for a day, then so be it~"
                     ks "Besides, judging from what Amari has told me, Mikael would never ruin such a traditional festival."
 
-                    show ks shine
+                    show ks happy
 
                     ks "He’s afraid of the \"Hundred years bad luck\" it’s said to bring, fufufu~"
 
@@ -358,12 +359,12 @@ label festivalactivities:
 
             sb "Not really."
 
-            show ks oh
+            show ks neutral
 
             ks "..."
             sb "All you did was pay for some snacks!"
 
-            show sb ouch
+            show sb annoyed
 
             sb "Shouldn’t you like, let us get some super secret insider Kaito Sakuraba knowledge or something?!"
             sb "Like…why do you even hide your face anyways?!"
@@ -378,13 +379,13 @@ label festivalactivities:
                     call loveNotification
 
                     show ks angry
-                    show sb happy
+                    show sb neutral
 
                     p "I’m kind of with [sb] here."
                     p "You did nearly kick our asses, you know."
                     p "One report to the Dean, and I’m sure you’d have your title as President revoked~"
 
-                    show sb happy
+                    show sb neutral
 
                     "Seeing Kaito’s less than pleased expression, [sb] lets out an awkward laugh."
                     sb "I don’t think he’s gonna budge~"
@@ -412,22 +413,22 @@ label festivalactivities:
             hide ks
             show sb at center
             with dissolve
-            $ renpy.music.play("audio/Music/Festival_FleetingBlossoms_V1.mp3", fadein=1.0,loop=True)
+            $ renpy.music.play("audio/Music/Festival_FleetingBlossoms_Intro.ogg", fadein=1.0, loop=True)
+            $ renpy.music.queue("audio/Music/Festival_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
 
-            if sbdecide and foodstalls and games == True:
-                jump epilogue
-            else:
-                jump festivalactivities
+            jump festivalactivities
 
 
         "Play some games." if games == False:
             $ games = True
             call ahLoveIncrease
             call loveNotification
+            show sb neutral
             "Taking notice of a giant Mochi-Themed plush which passes you by, make your way towards its source."
             gm "Come one, come all!"
             gm "Scoop a Sakura Petal, and win a prize~"
             gm "It’ll only cost ya 500 Yen~"
+            show sb excited
             sb "Oh~ We’d love to!"
             sb "Isn’t that right, [playerName]?"
 
@@ -447,10 +448,10 @@ label festivalactivities:
                     call loveNotification
                     p "500 Yen?!"
                     p "You people here are acting like I actually have money!"
-                    show sb ouch
+                    show sb annoyed
                     sb "... Do you not have some form of job?"
 
-                    show sb happy
+                    show sb neutral
 
                     sb "I guess not, considering you’ve been helping me all week, haha~"
                     
@@ -464,14 +465,14 @@ label festivalactivities:
             jd "Ahahahaha...~!"
             jd "Ahahahahahaha~!"
 
-            show sb happy
+            show sb neutral
 
             sb "I recognize that laugh!"
             "[sb]’s lips curl into a wide smile."
             $ renpy.music.play("audio/Music/Amari_Intro.ogg", fadein=1.0)
             $ renpy.music.queue("audio/Music/Amari_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
-            show ah shine at right
-            show sb happy at left
+            show ah dramatic at right
+            show sb neutral at left
             with dissolve
             "Emerging from the crowd of frantic couples, you’re met with Amari.
             However, rather than bring their trusted stallion, they’ve instead opted to come bursting in on the back of a raging bull."
@@ -495,7 +496,7 @@ label festivalactivities:
                     call loveNotification
                     p "Oh no. Absolutely not. Get the Hell away from us!"
 
-                    show ah bored
+                    show ah annoyed
 
                     ah "Unfortunately, once Bushi has set her sights on something, she's \"locked in!\""
 
@@ -509,7 +510,7 @@ label festivalactivities:
             gm "Try as many times as your hearts desire~"
             p "This isn’t some scam is it–"
 
-            show sb ouch
+            show sb angry
 
             sb "Come on!!!"
             sb "Not it. Not it–Another dud!!"
@@ -533,13 +534,16 @@ label festivalactivities:
 
                     gm "Well done~"
 
-                    show sb happy
+                    show sb neutral
 
                     sb "Woah!!! How’d you do that?!"
 
-                    show ah bored
+                    show ah annoyed
 
                     ah "I’m assuming they just analyzed the pattern of the disks you’ve already upturned."
+
+                    show ah annoyed
+
                     ah "How boring~"
                 "Scoop!!!":
                     call sbLoveDecrease
@@ -559,12 +563,12 @@ label festivalactivities:
                     #*A disk with a sakura petal on it is shown*
                     gm "Ding! Ding! Ding!! One grand prize, coming right up~"
 
-                    show sb happy
+                    show sb neutral
 
                     sb "I take my anger back– Good job, [playerName]!!!"
             gm "I think this one best suits your friend over there."
 
-            show ah vhappy
+            show ah dramatic
 
             ah "How adorable!"
 
@@ -616,7 +620,7 @@ label festivalactivities:
                     ah "Yes. This year’s festival is to serve as my dear Kaito-Kun’s \"Fresh Start.\""
                     ah "A year where going forward…he will either choose to mend or permanently leave behind his past."
 
-                    show ah shine
+                    show ah dramatic
 
                     ah "I’m rather excited for it, you see~"
 
@@ -628,27 +632,32 @@ label festivalactivities:
 
             stop music fadeout 1.0
             hide ah
-            show sb happy at center
+            show sb neutral at center
             with dissolve
 
             "As Amari rides away on their stallion, [sb] takes your hand into their own."
             "You aren’t exactly a fan of the sudden touching, but you figured for the sake of your \"date,\" you’d allow it."
-            $ renpy.music.play("audio/Music/Festival_FleetingBlossoms_V1.mp3", fadein=1.0,loop=True)
+            $ renpy.music.play("audio/Music/Festival_FleetingBlossoms_Intro.ogg", fadein=1.0, loop=True)
+            $ renpy.music.queue("audio/Music/Festival_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
 
-            if sbdecide and foodstalls and games == True:
-                jump epilogue
-            else:
-                jump festivalactivities
+            jump festivalactivities
 
 
         "Let [sb] decide." if sbdecide == False:
+            if foodstalls == False or games == False:
+                menu:
+                    "Selecting this choice will advance the story. Are you sure you want to hang out with [sb] before doing the other activites?"
+                    "Continue!":
+                        pass
+                    "Complete the remaining activites first.":
+                        jump festivalactivities
             stop music fadeout 1.0
-            $ sbdecide = True
             $ renpy.music.play("audio/Music/Sakura_Intro.ogg", fadein=1.0)
             $ renpy.music.queue("audio/Music/Sakura_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
             call sbLoveIncrease
             call loveNotification
             "Seeing little point in dragging this out any longer than necessary, you let [sb] take the lead."
+            show sb blush
             "Clasping your hand firmly in their own, for the first time you notice that it’s much colder than before."
             sb "We’re going to get you those concert tickets."
 
@@ -701,7 +710,7 @@ label festivalactivities:
                     p "Not to mention, being roped into this whole \"Flour-Bomber\" deal."
                     p "Oh. And how could we forget about the horse?!"
 
-                    show sb happy
+                    show sb neutral
 
                     "You see [sb] try not to laugh at your explanation of things."
 
@@ -713,7 +722,7 @@ label festivalactivities:
                     p "At this point, I just want this week to end..."
                     p "That way once this festival is over and done with, I can focus on one psycho instead of...three, was it?"
 
-                    show sb ouch
+                    show sb annoyed
 
                     "Shrugging your shoulders, you see [sb]'s face sour."
 
@@ -722,12 +731,12 @@ label festivalactivities:
             p "I doubt she’ll be going anywhere anytime soon."
             p "Even once cherry blossoms go out of season, she usually switches to next season’s flavor–"
 
-            show sb line
+            show sb excited
 
             sb "O-Or Mikael. With his whole flour spheal..."
             sb "A-And…even if they were a bit unhinged, I quite liked Kaito and Amari as well."
 
-            show sb ouch
+            show sb annoyed
 
             sb "Everyone I met…I really hope they don’t forget..."
 
@@ -745,6 +754,9 @@ label festivalactivities:
                     p "Cut it out. I don’t like other people crying..."
                     p "We still have time. And even then–"
             stop music fadeout 1.0
+            show sb angry
+            $ renpy.music.play("audio/Music/Melancholy_FleetingBlossoms_Intro.ogg", fadein=1.0)
+            $ renpy.music.queue("audio/Music/Melancholy_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
             sb "It doesn’t matter anymore!"
             #*A CG Of SB smacking away the MC’s hand can be seen. They look frantic as tears stream down their cheeks.*
             p "?!?!"
@@ -753,7 +765,7 @@ label festivalactivities:
             sb "I’m just…I’m…!"
             "A series of loud bangs can be heard radiating through the area."
             "You instinctively turn your head towards its source."
-            hide sb
+            hide sb with dissolve
             "However, when glancing back to check on [sb], you see that they’ve disappeared."
             "Seeing the disgruntled crowd of nearby people beginning to panic."
 

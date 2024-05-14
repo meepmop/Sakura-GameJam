@@ -1,16 +1,17 @@
 label Chapter1:
-    show text "Day: Monday\n\nSetting: Streets of Tokyo leading towards YuraYura Academy\n\nTime:Morning" with dissolve
+    show text "Day: Monday\n\nSetting: Streets of Tokyo leading towards YuraYura Academy\n\nTime: Morning" with dissolve
     pause 3.0
     hide text with dissolve
     
-    # *There would be casual/’lighthearted’ musical beats happening here.*
+    # *There would be casual/'lighthearted' musical beats happening here.*
     $ renpy.music.play("audio/Music/DayBegins_Intro.ogg", fadein=1.0)
     $ renpy.music.queue("audio/Music/DayBegins_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
     scene BG YYFront with fade
+    $ quick_menu = True
     "The weekend passes by just as quickly as it came."
     ############################################################
     menu familiarSakura:
-        "As Cherry Blossoms continue to litter the streets with their iconic Sakura Pink hue, you can’t help but admire their beauty."
+        "As Cherry Blossoms continue to litter the streets with their iconic Sakura Pink hue, you can't help but admire their beauty."
         "The petals remind me of…":
             call Chap1_Familiar
         "Focus your attention back to your phone.":
@@ -18,7 +19,7 @@ label Chapter1:
     ############################################################
     sb "Oiii~ [p]!"
     sb "Oi, Oiiiii! Over here~!"
-    "You quickly shift your gaze towards the direction which the voice is coming from. However, you can’t help but feel your brow twitch at the display."
+    "You quickly shift your gaze towards the direction which the voice is coming from. However, you can't help but feel your brow twitch at the display."
     scene CG C1 sbrunning
     # *Insert Picture of [sb] waving with their hair now tied up, a 
     # cherry blossom tree branch sticking out to neatly keep it in place. 
@@ -37,10 +38,10 @@ label Chapter1:
         "Is that a branch in your hair?":
             call Chap1_BranchHair
     ############################################################
-    "After [sb]’s mention of cookies, you decide to walk past them and in the 
+    "After [sb]'s mention of cookies, you decide to walk past them and in the 
     direction of YuraYura Academy."
     "They eagerly follow, face alit with an unmatchable passion."
-    "Part of you honestly couldn’t believe you were even in this situation in the first place."
+    "Part of you honestly couldn't believe you were even in this situation in the first place."
     "However, as your mom always would say. Everything happens for a reason."
     "And if you wanted to attend that Idol Concert, you had to accept it."
     # *The scene transitions to the inside of one of the class buildings of YuraYura. 
@@ -49,33 +50,33 @@ label Chapter1:
     # ranging from posters in the background to decorative flowers hung up all 
     # around the hall.*
     show sb neutral
+    with dissolve
 
     p "Here we are."
-    p "This is where we’ll start, I guess."
+    p "This is where we'll start, I guess."
 
     show sb oh
 
     sb "Woooow~! How pretty..~!"
-    sb "It’s as though nature itself has reflected itself in this very hallway..!"
+    sb "It's as though nature itself has reflected itself in this very hallway..!"
 
-    show sb happy
+    show sb neutral
 
     sb "I simply must see more of it!!"
     p "We can but–"
 
-    hide sb
+    hide sb with easeoutleft
 
     "Before you can properly finish your sentence, [sb] takes it upon themselves 
     to go ahead and rush ahead of you."
-    "It isn’t long before you lose sight of them and their noises of pure excitement 
+    "It isn't long before you lose sight of them and their noises of pure excitement 
     become muffled in the crowd of students making their way to their next class."
-    p "I can’t believe this."
-    p "I’m beginning to question whether or not I really want those Idol tickets."
-    p "I mean…maybe I can bribe someone else from the Anime Club to just pretend to be my partner…"
-    p "Though last I heard. They’ve all been hauled off somewhere binge watching Two Piece."
-    p "I probably won’t see any of them until at least next Semester…"
+    p "I can't believe this."
+    p "I'm beginning to question whether or not I really want those Idol tickets."
+    p "I mean...maybe I can bribe someone else from the Anime Club to just pretend to be my partner…"
+    p "Though last I heard. They've all been hauled off somewhere binge watching Two Piece."
+    p "I probably won't see any of them until at least next Semester…"
     "Cutting your losses, you decide to follow in [sb]'s trail."
-    "Knowing there’s only so many places they could be, you decide the following:"
     ############################################################
     # will jump to a search choice in the choices script and return back when chosen correctly
     jump Chap1_SearchChoice
@@ -83,14 +84,14 @@ label Chapter1:
 
 # had to break it in two so I can go back to the Search Choice and end the game prematurely
 label Chapter1_Cont_NearbyClass:
-    "Recalling that your friend’s class had planned to rehearse some aspects of 
-    Friday’s festival, you decide to see if [sb] would be naturally drawn to its 
+    "Recalling that your friend's class had planned to rehearse some aspects of 
+    Friday's festival, you decide to see if [sb] would be naturally drawn to its 
     alluring presence."
     "You quickly make your way through the hallways, passing by many groups of 
     lovers in the process."
     "More hand holding. More Boba. More cheesy words of adoration."
     "How did love come so easy to these people?"
-    "Why couldn’t it be that way for you?"
+    "Why couldn't it be that way for you?"
     "It honestly makes your chest tighten."
     # *The Scene now changes to that of a traditional Japanese Classroom. 
     scene BG Classroom
@@ -101,6 +102,8 @@ label Chapter1_Cont_NearbyClass:
     show ks angry at right:
         subpixel True matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(0.0)*BrightnessMatrix(-1.58)*HueMatrix(0.0) 
     with dissolve
+    $ renpy.music.play("audio/Music/Amari_Intro.ogg", fadein=1.0,loop=True)
+    $ renpy.music.queue("audio/Music/Amari_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
 
     ks "Unbelievable!!"
     p "Huh–"
@@ -115,7 +118,7 @@ label Chapter1_Cont_NearbyClass:
     show ks angry at right with dissolve:
         subpixel True matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0) 
 
-    ks "You’re not helping."
+    ks "You're not helping."
     
     show ah owo
 
@@ -125,15 +128,15 @@ label Chapter1_Cont_NearbyClass:
 
     $ a_name = 'Amari'
 
-    show ah vhappy with dissolve:
+    show ah dramatic with dissolve:
         subpixel True matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0) 
 
-    ah "Ahem. I, Haruka Amari, shall swear vengeance on the one foolish enough to oppose YuraYura’s student council!"
+    ah "Ahem. I, Haruka Amari, shall swear vengeance on the one foolish enough to oppose YuraYura's student council!"
     
-    "Before you’ve the chance to leave, you find yourself cornered by the louder of the two people."
+    "Before you've the chance to leave, you find yourself cornered by the louder of the two people."
     
-    show ah shine
-    show ks shine
+    show ah dramatic
+    show ks happy
 
     "Their eyes glisten with a manic fire as they firmly take your hands into their own."
 
@@ -151,26 +154,27 @@ label Chapter1_Cont_NearbyClass:
             call Chap1_StayStill
     ############################################################
     show ks neutral
+    stop music fadeout 1.0
     ks "Enough."
     # *A CG of both Amari and Kaito standing side by side appears. Kaito looks less than impressed while Amari is seen striking a pose.*
-    # *Kaito’s theme will now play.*
+    # *Kaito's theme will now play.*
     $ renpy.music.play("audio/Music/Kaito_FleetingBlossoms_Intro.ogg", fadein=1.0,loop=True)
     $ renpy.music.queue("audio/Music/Kaito_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
     show ah owo
-    ah "Aww...you’re no fun~!"
-    "Now moving back to Kaito’s side, Amari strikes a pose."
-    "Or rather…a few poses. Much to Kaito’s displeasure."
-    ks "It’s obvious that [pSub] got nothing to do with him."
+    ah "Aww...you're no fun~!"
+    "Now moving back to Kaito's side, Amari strikes a pose."
+    "Or rather…a few poses. Much to Kaito's displeasure."
+    ks "It's obvious that [pSub] got nothing to do with him."
     ks "I mean…just look at how utterly clueless [pSub] seem."
     ks "In fact, if I recall correctly, [pPosAd] files mention that outside of classes, 
-    they’ve hardly any involvement in the student-life here."
+    they've hardly any involvement in the student-life here."
     ks "Pathetic."
     ############################################################
     menu excuseMePathethic:
         ks "Pathetic."
         "Pathetic?!":
             call Chap1_Pathetic
-        "I’ll show you pathetic..!":
+        "I'll show you pathetic..!":
             call Chap1_IllShowYou
         "Well actually…":
             call Chap1_WellActually
@@ -178,11 +182,11 @@ label Chapter1_Cont_NearbyClass:
     "Taking the time to adjust his vest, Kaito makes his way towards the 
     opposite end of the classroom."
 
-    show ks sad
+    show ks bashful
     
     "Running his fingers across the powdered white substance which coats the 
     desk in front of him, you notice the glint of sorrow which lingers behind his mask."
-    ks "There’s no doubt about it. This is his work."
+    ks "There's no doubt about it. This is his work."
     
     show ah neutral
     
@@ -195,7 +199,7 @@ label Chapter1_Cont_NearbyClass:
     
     show ks neutral
 
-    ks "Though…it’s rather strange."
+    ks "Though…it's rather strange."
     ks "Typically they opt to target one of our councilmen and not some 
     obscure classroom."
     ############################################################
@@ -214,13 +218,13 @@ label Chapter1_Cont_NearbyClass:
 
     "Suddenly, before another word can be spoken, a loud scream can be 
     heard coming from outside of the classroom."
-    sta "HELP ME! PRESIDENT-SAMA!! IT’S EVERYWHERE!!!!"
+    sta "HELP ME! PRESIDENT-SAMA!! IT'S EVERYWHERE!!!!"
     stb "The flour bomber is back again! Run!!"
-    stc "My eyes!! They’re so dry!!!!"
-    show ks oh
+    stc "My eyes!! They're so dry!!!!"
+    show ks neutral
     ks "..!"
     ks "Mikael!!!"
-    hide ks
+    hide ks with dissolve
     "Without skipping a beat, Kaito can be seen bolting out of the area."
     ks "Out of my way!"
     # *Some clattering sound effects could be heard*
@@ -228,12 +232,12 @@ label Chapter1_Cont_NearbyClass:
     show ah owo
     stop music fadeout 1.0
     ah "Oh dear…there he goes again~"
-    ah "I shouldn’t leave poor Kaito-Kun alone too long."
+    ah "I shouldn't leave poor Kaito-Kun alone too long."
     ah "May we cross paths once more in the near future! My beloved [p]~!"
-    hide ah
+    hide ah with dissolve
     "With a dramatic twirl, Amari decides to take their leave, leaving you alone 
     in the room just as, if not, even more confused than when you had entered it."
-    "Once finally alone, you can’t help but let out a heavy sigh."
+    "Once finally alone, you can't help but let out a heavy sigh."
     jd "Um…[p]?"
     ############################################################
     menu turnToTheVoice:
@@ -247,13 +251,14 @@ label Chapter1_Cont_NearbyClass:
     form of apology…"
     sb "However, that rather scary looking guy with the mask went ahead and knocked 
     it right from my hands!"
-    sb "Talk about a bummer. Huh..~?"
-    jd "If you’d like, I can get you somethin’ even better~"
-    sb "Oh. That’d be wonderful~"
+    sb "Talk about a bummer. Huh...~?"
+    ma "If you'd like, I can get you somethin' even better~"
     show sb neutral
-    "[sb]’s lips curl into a warm smile." 
+    sb "Oh. That'd be wonderful~"
+    show sb excited
+    "[sb]'s lips curl into a warm smile." 
     show sb oh at left
-    show ma happy at right
+    show ma neutral at right
     with dissolve
     ############################################################
     menu newCharacter:
@@ -262,24 +267,24 @@ label Chapter1_Cont_NearbyClass:
             call Chap1_WhoHellYou
         "Not another one…":
             call Chap1_NotAnother
-        "I think I’m done for the day.":
+        "I think I'm done for the day.":
             call Chap1_IDoneDay
     ############################################################
     # *A CG of Mikael with [SB] in their hold shows up. They both are looking 
-    # towards the MC. Mikael appears to be grinning while [SB] looks like they’re currently fearing for their life.*
-    # *Mikael’s theme plays.*
+    # towards the MC. Mikael appears to be grinning while [SB] looks like they're currently fearing for their life.*
+    # *Mikael's theme plays.*
     $ renpy.music.play("audio/Music/Mikael2_Intro.ogg", fadein=1.0)
     $ renpy.music.queue("audio/Music/Mikael2_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
     scene CG C1 mahug with dissolve
     sb "Uhh…is it really necessary to be this close?"
     sb "You know, personal space is a thing."
-    p "You’re one to talk."
-    sb "W-Well! This is different! I don’t even know this person!"
-    ma "What do you mean you don’t know me?!"
-    ma "I had just taken the time to give my whole introduction and everythin’!!"
+    p "You're one to talk."
+    sb "W-Well! This is different! I don't even know this person!"
+    ma "What do you mean you don't know me?!"
+    ma "I had just taken the time to give my whole introduction and everythin'!!"
     "Mikael can be seen pouting as he moves to grab at [sb]'s chin and yank it in his direction."
     ma "I. Am. Mikael. Amoris."
-    ma "Are you sayin’ my Japanese hasn’t gotten’ better these past few years??"
+    ma "Are you sayin' my Japanese hasn't gotten' better these past few years??"
     sb "W-Well…I would not have known you prior to this exchange–so–"
     "[sb] casts a worried glance your way."
     sb "A little help here?"
@@ -295,11 +300,11 @@ label Chapter1_Cont_NearbyClass:
     ############################################################
     scene BG Classroom
     show sb oh at left
-    show ma happy at right
+    show ma neutral at right
     with dissolve
     ma "So, about that ice cream~"
-    ma "How ‘Bout I whip y’all up some as an apology for Sakuraba’s bitchiness?"
-    sb "Doesn’t that require less baking and more, uh, freezing?"
+    ma "How ‘Bout I whip y'all up some as an apology for Sakuraba's bitchiness?"
+    sb "Doesn't that require less baking and more, uh, freezing?"
     show ma wink2
     ma "Well. Yeah. But."
     "You visibly notice Mikael fluster."
@@ -310,22 +315,22 @@ label Chapter1_Cont_NearbyClass:
     ############################################################
     menu clearThroatDecide:
         "Clearing your throat, you decide to ask the following:"
-        "Who’s Sakuraba?":
+        "Who's Sakuraba?":
             call Chap1_Sakuraba
-        "Shouldn’t you be cleaning?":
+        "Shouldn't you be cleaning?":
             call Chap1_BeCleaning
-        "Didn’t you just have those cookies?":
+        "Didn't you just have those cookies?":
             call Chap1_Cookies
     ############################################################
-    show ma basic
+    show ma neutral
     ma "Hey…now that I think about it."
     ma "I never got your name."
     "Mikael extends his hand out to you."
-    "It’s huge in comparison to yours."
-    "In fact, you can only compare it to the ‘Yaoi’ hands you see in your idol game."
+    "It's huge in comparison to yours."
+    "In fact, you can only compare it to the ‘Yaoi' hands you see in your idol game."
     ############################################################
     menu almostUnnerving:
-        "It’s almost unnerving."
+        "It's almost unnerving."
         "Remain quiet":
             call Chap1_RemainQuietAgain
         "Introduce yourself":
@@ -334,28 +339,28 @@ label Chapter1_Cont_NearbyClass:
             call Chap1_IntroduceSelfWithConfidence
     ############################################################
     ma "Now, with introductions out the way."
-    ma "Would you mind tellin’ me what you two are doin’ here anyways?"
-    ma "While I somewhat recognize your face, I know for sure I haven’t seen flower 
+    ma "Would you mind tellin' me what you two are doin' here anyways?"
+    ma "While I somewhat recognize your face, I know for sure I haven't seen flower 
     boy over here before."
     "You quickly cast a glance [sb]'s way, taking notice of how embarrassed they look 
-    at Mikael’s makeshift 'title'."
-    p "Well, apparently they don’t remember who they are."
-    "You sigh heavily while pulling out your phone and flashing it Mikael’s way."
-    "On it, it shows your interpretation of what’s happened so far."
-    "You figured it’d be best to write it all down in the event someone called you crazy."
+    at Mikael's makeshift 'title'."
+    p "Well, apparently they don't remember who they are."
+    "You sigh heavily while pulling out your phone and flashing it Mikael's way."
+    "On it, it shows your interpretation of what's happened so far."
+    "You figured it'd be best to write it all down in the event someone called you crazy."
     "However, judging from how the man before you was scratching their chin, you 
     feared that still might be the case."
-    ma "So you’re sayin’ they just fell from some tree?!"
-    show ma happy
+    ma "So you're sayin' they just fell from some tree?!"
+    show ma neutral
     ma "Talk about cool!!"
-    show sb ouch
+    show sb annoyed
     sb "It was rather painful, you see~"
+    show ma angry
     ma "Oh, I bet!"
-    show ma wink1
     ma "You see, one time Kaito ‘n I–"
     ############################################################
     menu michaelTenses:
-        "You quickly see Mikael’s body tense as he cuts himself off mid sentence."
+        "You quickly see Mikael's body tense as he cuts himself off mid sentence."
         "What about him":
             call Chap1_WhatAboutHim
         "Switch Subjects":
@@ -367,41 +372,41 @@ label Chapter1_Cont_NearbyClass:
     turn this supposedly one off interaction into a recurring occurrence."
     show sb thinking
     sb "Say…Mikael."
-    show ma basic
-    ma "That’s my name~"
+    show ma neutral
+    ma "That's my name~"
     sb "You know…"
     sb "Despite your hand in wreaking havoc in this school, I feel as though I can trust you."
     show sb neutral
     sb "Those eyes of yours, I can sense the lingering sorrow behind them."
-    sb "You’re seeking answers as well."
-    sb "That's why you’ve taken up the mantle of being YuraYura’s ‘Flour Bomber’, yes?"
+    sb "You're seeking answers as well."
+    sb "That's why you've taken up the mantle of being YuraYura's ‘Flour Bomber', yes?"
     p "?!?!"
-    p "You can’t just go saying stuff like that!"
+    p "You can't just go saying stuff like that!"
     p "What if he targets us next?!"
-    p "You’ll never get your memories back if I have to send you to the damn hospital–!"
+    p "You'll never get your memories back if I have to send you to the damn hospital–!"
     show ma wink2
-    ma "Heh. I knew I knew somethin’ was off about ya."
+    ma "Heh. I knew I knew somethin' was off about ya."
     "Mikael cards his fingers through his hair."
     "Shaking his head, you can tell that the redhead was more impressed if anything 
     that someone had called him out on his feelings."
-    show ma basic
+    show ma neutral
     ma "Yeah. I want answers."
     ma "In fact, I want lots more than that."
-    ma "That bastard of a President didn’t always make me wanna punch his face in."
-    ma "But, that’s a story for another day~"
+    ma "That bastard of a President didn't always make me wanna punch his face in."
+    ma "But, that's a story for another day~"
     ma "Tell ya what."
-    ma "From now on, whatever weird memory thing y'all got goin’. I’m gonna help!"
+    ma "From now on, whatever weird memory thing y'all got goin'. I'm gonna help!"
     show ma wink1
     ############################################################
     menu whatDoYouNeedInReturn:
-        ma "Though…I’ll need somethin’ in turn~"
+        ma "Though…I'll need somethin' in turn~"
         "Absolutely not":
             call Chap1_AbsolutelyNo
         "And that is…?":
             call Chap1_AndThatIs
     ############################################################
     ma "Of course not~"
-    ma "All I ask, is that you keep Sakuraba busy until Friday’s festival."
+    ma "All I ask, is that you keep Sakuraba busy until Friday's festival."
     $ quick_menu = False
     window auto hide
     scene black with dissolve

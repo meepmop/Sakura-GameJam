@@ -30,18 +30,18 @@ define gui.text_outlines = [(2, "#000", 0, 0)]
 define gui.accent_color = '#df78ff'
 
 ## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = '#707070'
+define gui.idle_color = '#fff'
 
 ## The small color is used for small text, which needs to be brighter/darker to
 ## achieve the same effect.
-define gui.idle_small_color = '#919191'
+define gui.idle_small_color = '#fff'
 
 ## The color that is used for buttons and bars that are hovered.
 define gui.hover_color = '#f569af'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
-define gui.selected_color = '#555555'
+define gui.selected_color = '#df78ff'
 
 ## The color used for a text button when it cannot be selected.
 define gui.insensitive_color = '#7070707f'
@@ -53,7 +53,7 @@ define gui.hover_muted_color = '#ea99c1'
 
 ## The colors used for dialogue and menu choice text.
 define gui.text_color = '#fff'
-define gui.interface_text_color = '#ffa6f5'
+define gui.interface_text_color = '#fff'
 
 
 ## Fonts and Font Sizes ########################################################
