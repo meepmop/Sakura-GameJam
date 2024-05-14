@@ -20,7 +20,7 @@ label Chap2_RemainQuiet:
     call ksLoveIncrease
     call loveNotification
     "Feeling your face begin to redden, you quickly look away from [sb]."
-    show sb ouch
+    show sb annoyed
     "However, glancing back to check their reaction, you notice the slight frown which 
     tugs at their lips."
     sb "I must admit, he is a rather dashing fellow."
@@ -55,7 +55,7 @@ label Chap2_Knock:
     without at the very least knocking, you close your eyes to brace yourself on 
     telling the Councilman of your presence."
     show ks angry at right
-    show sb line at left 
+    show sb excited at left 
     with dissolve
     ks "Um. Excuse me."
     p "?!?"
@@ -72,7 +72,7 @@ label Chap2_ForLastTime:
     call maLoveIncrease
     call loveNotification
     p "You know what."
-    show sb ouch
+    show sb annoyed
     show ks oh
     sb "[p]!"
     p "If you're gonna keep insulting me, at least have the decency to do so face 
@@ -96,7 +96,7 @@ label Chap2_RoomMess:
     "Not that that mattered much to you anyways."
     p "You know I'd be focusing on other things were I in your shoes."
     p "For someone that's always enforcing the rules, clearly you need to brush up on whatever handbook you wrote."
-    show sb happy
+    show sb neutral
     sb "Oooo~"
     show sb oh
     sb "I-I mean–! Ooo…oo…h my."
@@ -288,7 +288,7 @@ label Chap2_HandleIt:
     "Rolling your eyes at the pitiful display of shortness before you, you turn away from [sb]."
     "This causes them to let out a pathetic whine, and after a few more attempts to safely dismount, [sb] ends up with their face smacked right against the unforgiving 
     dirt below."
-    show sb ouch
+    show sb annoyed
     sb "Ouch…"
     return
 ############################################################
@@ -313,7 +313,7 @@ label Chap2_SakuraBully:
     call loveNotification
     p "Don't ask me, [sb] was the one who went ahead and pried into the guy's past."
     p "I was only doing that Mikael guy a favor so that he wouldn't flour bomb us!"
-    show sb line
+    show sb excited
     sb "H-Hey! I couldn't help it~"
     sb "Just looking at him caused all sorts of emotions to swell up within me…"
     sb "It almost made me want to cry~"
@@ -353,8 +353,8 @@ label Chap2_StayQuiet:
     call sbLoveDecrease
     call loveNotification
     scene BG YYFront
-    show ah bored at center
-    show sb ouch at right
+    show ah angry at center
+    show sb annoyed at right
     with dissolve
     "Trusting Amari's word to not try and attack you both, you simply stare in awe at the vivid image which [sb] once again paints for you."
     "It's almost scary."

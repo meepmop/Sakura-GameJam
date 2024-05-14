@@ -43,7 +43,7 @@ label Proto_Insult:
     call sbLoveDecrease
     call loveNotification
 
-    show sb line
+    show sb excited
 
     p "Hey! What the hell's wrong with you?!"
     p "How'd you even get up in that tree in the first place!?"
@@ -61,7 +61,7 @@ label Proto_Insult:
 ############################################################
 label Proto_MomSent:
 
-    show sb line
+    show sb excited
 
     p "So…uh. Are you that guy?"
     p "You know. The one who was supposed to be here a couple hours ago?"
@@ -70,7 +70,7 @@ label Proto_MomSent:
 
     sb "Honestly. Is it bad that I don't have an answer to that?"
     sb "I could be."
-    show sb happy
+    show sb neutral
     sb "But I could also just be some random guy who just so happened to fall 
     out from that tree."
     show sb neutral
@@ -78,7 +78,7 @@ label Proto_MomSent:
     return
 label Proto_WhyLate:
 
-    show sb line
+    show sb excited
 
     p "You kept me waiting for a while. Don't tell me you fell asleep in that tree."
     p "Honestly…how does my mom even come up with these guys?"
@@ -87,7 +87,7 @@ label Proto_WhyLate:
 
     sb "Kept you waiting, you say?"
 
-    show sb happy
+    show sb neutral
 
     sb "Would it be bad to admit that I don't even know who you are~?"
     return
@@ -98,7 +98,7 @@ label Proto_Ridiculous:
     p "This is ridiculous."
     p "There's no way some stupid fall could just cause you to suddenly blank out on who the Hell you are!!"
     p "I'm gonna call the cops-"
-    show sb happy
+    show sb neutral
     sb "Why don't we just get started~"
     "[sb] casts a wink your way and lets out another lighthearted laugh." 
     "You can't tell whether your face flushes from endearment or annoyance."

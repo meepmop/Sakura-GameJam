@@ -62,7 +62,7 @@ label Chap1_SearchChoice:
             call situTriggerReset
             jump Chapter1_Cont_NearbyClass
         # player can only check the supply closet once
-        "Check the supply closet" if not choice1Chosen:
+        "Check the supply closet." if not choice1Chosen:
             jump Chap1_SuppyCloset
         # game will end here if they choose this
         "Cut your losses and just leave.":
@@ -93,7 +93,7 @@ label Chap1_Scream:
     p "What the Hell!? G-Get your hands off of me!!"
     "Amari's lips seem to curl into a full on grin at your discontent."
 
-    show ah vhappy
+    show ah dramatic
 
     "He laughs, gripping onto your hands with an even more firm grip than before."
     ah "Yes! Scream for me! Sing out your woes in the form of absolute fear for which 
@@ -168,7 +168,7 @@ label Chap1_WellActually:
     call loveNotification
     "Feeling yourself deflate, you hang your head low at the other’s insults."
     "Doing so, out of the corner of your eye, you catch the slight creasing of Kaito’s eyes."
-    show ah bored
+    show ah angry
     "However, Amari appears less than pleased."
     ah "How dull."
     ah "I’d have at least appreciated a show of expression."
@@ -209,7 +209,7 @@ label Chap1_IsThatFlour:
     show ah twt
     ah "And about a few kilos worth too~"
     p "Why’d someone even do such a thing?"
-    show ah bored
+    show ah annoyed
     ah "Is it not obvious? They’re simply dying for attention."
 
     return
@@ -237,7 +237,7 @@ label Chap1_IgnoreVoice:
     "In fact, you can feel quite the headache coming on."
     "It irritates you to the point that when you finally decide to direct your 
     attention towards the source of said voice, your face is ice cold."
-    show sb happy
+    show sb neutral
     $ renpy.music.play("audio/Music/Sakura_Intro.ogg", fadein=1.0)
     $ renpy.music.queue("audio/Music/Sakura_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
     sb "[p]?? It’s me– I…just wanted to check back in with you, haha~"
@@ -253,7 +253,7 @@ label Chap1_TurnHead:
     $ renpy.music.queue("audio/Music/Sakura_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
     show sb neutral
     sb "Are you alright..?"
-    show sb happy
+    show sb neutral
     sb "You know, once I’d ran off…I realized I’d forgotten my new companion, haha~"
 
     return
@@ -272,7 +272,7 @@ label Chap1_WhoHellYou:
     "Their lips part into a wide grin, and they pull [sb] close into their embrace."
     "Now resting their chin against [sb]'s shoulder blade, both you and them can feel as 
     though that despite the other’s excitement, it’d be best not to get on their bad side."
-    show ma vhappy
+    show ma happy
     ma "Who the Hell am I?"
 
     $ m_name = 'Mikael'
@@ -290,7 +290,7 @@ label Chap1_NotAnother:
     hadn’t spoken up at all."
     "Now resting their chin against [sb]'s shoulder blade, both of you can only wait to see 
     what this lunatic’s next moves were."
-    show ma vhappy
+    show ma happy
     $ m_name = 'Mikael'
     ma "If anyone were to appear before you, you’d best be glad that it was YuraYura’s very own Mikael Amoris, current President of the infamous Baking Club~"
 
@@ -301,13 +301,13 @@ label Chap1_IDoneDay:
     call sbLoveDecrease
     call loveNotification
     p "I think I’ve had enough."
-    show sb ouch
+    show sb annoyed
     "About to turn on your heels and leave this mess of a day behind, you can see [sb]'s eyes glisten."
     "It was almost as if they had asked you not to leave."
     "Not like that mattered to you anyways."
     ma "Ya know, maybe you and Sakuraba ain’t so different after all."
     "Now pulling [sb] closer to him, the mysterious man opts to rest their face against his prey’s shoulder blade."
-    show ma vhappy
+    show ma happy
     $ m_name = 'Mikael'
     ma "Be careful abandoning your friends, lest I, Mikael Amoris, current President of the infamous Baking Club, set you as my next target!"
 
@@ -382,12 +382,12 @@ label Chap1_Cookies:
     # + Affection (SB)
     call sbLoveIncrease
     call loveNotification
-    show sb ouch
+    show sb annoyed
     p "What ever happened to those Sakura cookies, [sb]?"
     "Just as you ask this, you see [sb]'s face darken, and you are met with a rather sheepish smile."
     sb "I…uh…traded them for that ice cream~"
     sb "Though, I guess that’s out the window now, huh?"
-    show ma vhappy
+    show ma happy
     ma "My offer still stands, ya know!"
 
     return
@@ -403,7 +403,7 @@ label Chap1_RemainQuietAgain:
     "You blink. Once. Twice."
     "Trying to recall what they said, you’re about to shamefully ask Mikael to repeat himself."
     sb "Oh, I can answer this~ [pCon] [p]!"
-    show sb happy
+    show sb neutral
     sb "[pCon] helping me recover my memories~"
     return
 label Chap1_IntroduceSelf:
@@ -425,7 +425,7 @@ label Chap1_IntroduceSelfWithConfidence:
     "Briefly closing your eyes, you snap them open once more with a cheesy at best 
     grin and clasp Mikael’s hand into your own."
     p "I am [p]! And I am not a wallflower!!!"
-    show ma vhappy
+    show ma happy
     ma "That’s the spirit!!!"
     return
 ############################################################

@@ -7,7 +7,7 @@ label Chapter2:
         matrixcolor SepiaMatrix(tint=u'#ffeec2', desat=(0.2126, 0.7152, 0.0722))
     $ renpy.music.play("audio/Music/DayBegins_Intro.ogg", fadein=1.0)
     $ renpy.music.queue("audio/Music/DayBegins_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
-    show ma basic at center:
+    show ma neutral at center:
         matrixcolor SepiaMatrix(tint=u'#ffeec2', desat=(0.2126, 0.7152, 0.0722))
         alpha 0.9
     with Dissolve(0.6)
@@ -28,7 +28,7 @@ label Chapter2:
     p "What does \"smooze\" even mean??"
     show sb thinking
     sb "I believe it's a term more commonly used abroad~"
-    show sb line
+    show sb excited
     ############################################################
     menu lastChat:
         sb "I'm to assume you've had your head wrapped around Mikael's ever since our last \"chat?\""
@@ -81,7 +81,7 @@ label Chapter2:
     # and looks rather messy.*
     # *Kaito's Theme Plays*
     ks "I'm assuming Amoris is up to something yet again?"
-    show sb ouch
+    show sb annoyed
     ############################################################
     menu wallflowerStranger:
         ks "He must be reaching the bottom of the barrel if he's enlisting the help of not only a wallflower, but a complete stranger nonetheless."
@@ -96,7 +96,7 @@ label Chapter2:
     "Almost 1."
     "You had no idea how you were going to last another half hour with this man."
     "After all, just a few minutes with him had already made you want to punch him."
-    show sb happy
+    show sb neutral
     ############################################################
     menu sbSendMichievous:
         "It's then you catch a glimpse of the slightly mischievous grin which [sb] casts your way."
@@ -131,7 +131,7 @@ label Chapter2:
     # *The CG gets disrupted by a rather displeased looking Kaito.*
     scene BG Classroom
     show ks angry at center
-    show sb ouch at right
+    show sb annoyed at right
     with hpunch
     ks "Enough!"
     "You notice how Kaito's fists are now clenched."
@@ -156,7 +156,7 @@ label Chapter2:
     "It almost reminded you of one of your favorite idols."
     "Not that you had the time to be thinking about this sort of stuff anyways with said man now actively chasing you through the hallway."
     p "H-He's fast!"
-    show sb ouch
+    show sb annoyed
     sb "I think we've done a bit too well, don't ya think~"
     show ks angry
     ks "Get back here and reap what you've both sewn!!"
@@ -190,7 +190,6 @@ label Chapter2:
     # *Insert CG of Amari on horseback extending their hand out towards you. 
     # Don't ask how they got an entire horse both on Campus and inside the building, 
     # just roll with it.*
-    #call Music_ahTheme
     ah "Care for a lift~?"
     ah "Well. Not that you've much of a choice."
     ah "Not unless you wish to suffer at the hands of my one and only best friend~"
@@ -248,7 +247,7 @@ label Chapter2:
     ah "I'm quite certain Kaito-Kun should have been kept more than busy with that stunt."
     show ah neutral
     "Hopping off their steed, Amari runs his fingers through their mane, cooing out a few words of praise in the process."
-    show sb ouch at right with dissolve
+    show sb annoyed at right with dissolve
     "Deciding to join them on the comfort which was the ground, you notice that [sb] appears to be struggling."
     ############################################################
     menu strugglingSakura:
@@ -259,7 +258,7 @@ label Chapter2:
         "They can handle it":
             call Chap2_HandleIt
     ############################################################
-    show ah vhappy
+    show ah dramatic
     ah "You know, dramatics aside, I am beyond happy to finally have you both to myself~"
     ############################################################
     menu startSwinging:
@@ -285,10 +284,10 @@ label Chapter2:
     ############################################################
     sb "Alright, alright!"
     sb "You just have to promise. No trying to hurt me or [p]. Don't shoot the messenger!"
-    show ah shine
+    show ah dramatic
     ah "You have my word– My heart, even~! Now, speak..!"
     ah "Speak to me the words which set Kaito-Kun's heart ablaze~!"
-    show sb ouch
+    show sb annoyed
     "With a huff, [sb] manages to pry themselves away from Amari."
     "They press their fingers together, and glance towards you."
     "It was as if they were silently asking for your support."
@@ -310,13 +309,13 @@ label Chapter2:
         "Stay Quiet":
             scene BG YYFront 
             show ah neutral at center
-            show sb ouch at right
+            show sb annoyed at right
             with dissolve
             call Chap2_StayQuiet
         "Speak up":
             scene BG YYFront 
             show ah neutral at center
-            show sb ouch at right
+            show sb annoyed at right
             with dissolve
             call Chap2_SpeakUp
     ############################################################
@@ -331,7 +330,7 @@ label Chapter2:
     show ah twt
     ah "I see."
     ah "A shame, really."
-    show ah shine
+    show ah dramatic
     ah "I'd of loved to hear what happened next~"
     ah "After all, each retelling of tragedy has its own unique touch."
     "With a wink, Amari twirls their body to end up right behind you."
@@ -365,7 +364,7 @@ label Chapter2:
     ############################################################
     ah "Everything shall fall in place soon enough~!"
     ah "Just trust in the blossom of fate, and she shall deliver!"
-    show ah shine
+    show ah dramatic
     ah "You have my word!"
     window auto hide
     $ quick_menu = False 
