@@ -21,10 +21,7 @@ image ks angry = At("Characters/Kaito/KS_Angry.png", sprite_highlight('kaito'))
 image ks bashful = At("Characters/Kaito/KS_Bashful.png", sprite_highlight('kaito'))
 image ks blush = At("Characters/Kaito/KS_Blush.png", sprite_highlight('kaito'))
 image ks happy = At("Characters/Kaito/KS_Happy.png", sprite_highlight('kaito'))
-image ks neutral = At("Characters/Kaito/KS_BasicPose_P1.png", sprite_highlight('kaito'))
-image ks thinking = At("Characters/Kaito/KS_EyesClosed_P1.png", sprite_highlight('kaito'))
-image ks bashful = At("Characters/Kaito/KS_Nervous_P2.png", sprite_highlight('kaito'))
-image ks oh = At("Characters/Kaito/KS_EyebrowsRaised_P1.png", sprite_highlight('kaito'))
+image ks neutral = At("Characters/Kaito/KS_Neutral.png", sprite_highlight('kaito'))
 
 ################################################################################
 # Amari

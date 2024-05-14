@@ -113,7 +113,7 @@ label Chap2_YouMess:
     p "You know, a mask can't hide everything."
     p "When was the last time you even took a break?"
     p "Shouldn't that dramatic looking guy be the one asking you these things??"
-    show ks neutral
+    show ks angry
     ks "Well…they're…"
     p "Not here. Exactly."
     return

@@ -81,6 +81,7 @@ label Chapter2:
     # *Kaito's Theme Plays*
     ks "I'm assuming Amoris is up to something yet again?"
     show sb annoyed
+    show ks neutral
     ############################################################
     menu wallflowerStranger:
         ks "He must be reaching the bottom of the barrel if he's enlisting the help of not only a wallflower, but a complete stranger nonetheless."
@@ -95,7 +96,7 @@ label Chapter2:
     "Almost 1."
     "You had no idea how you were going to last another half hour with this man."
     "After all, just a few minutes with him had already made you want to punch him."
-    show sb neutral
+    show sb excited
     ############################################################
     menu sbSendMichievous:
         "It's then you catch a glimpse of the slightly mischievous grin which [sb] casts your way."
@@ -120,7 +121,8 @@ label Chapter2:
     # *A CG of what looks to be a younger Kaito getting an octopus-cut hot dog fed to him by
     # Mikael pops up. Kaito is purposely positioned so that you can only see the back of his head. 
     # There are sakura petals littering the area around them. No one else is around them.*
-    scene CG C2 kseat
+    scene CG C2 kseat with dissolve:
+        matrixcolor SepiaMatrix(tint=u'#ffeec2', desat=(0.2126, 0.7152, 0.0722))
     sb "I mean~ I just knew I recognized something about you two."
     ma "Do you like it?"
     ma "I made sure to pack your favorite~"
@@ -165,11 +167,13 @@ label Chapter2:
     sb "Oh, how kind~"
     sb "Did you hear that? That must mean he cares~"
     p "No, that means he's going to kick our ass!"
+    $ renpy.music.play("audio/Music/Chase_FleetingBlossoms_Intro.ogg", fadein=1.0)
+    $ renpy.music.queue("audio/Music/Chase_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
     scene BG YYInsideThirdFloor
     show sb neutral at center
     with hpunch
     "With your chest pounding from the sudden need to run, you find your head scrambling at the sight of a forked path."
-    show sb thinking
+    show sb excited
     sb "I'm thinking we go left."
     sb "After all, there are more beautiful decorations leading that way."
     ############################################################

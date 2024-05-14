@@ -413,7 +413,8 @@ label festivalactivities:
             hide ks
             show sb at center
             with dissolve
-            $ renpy.music.play("audio/Music/Festival_FleetingBlossoms_V1.mp3", fadein=1.0,loop=True)
+            $ renpy.music.play("audio/Music/Festival_FleetingBlossoms_Intro.ogg", fadein=1.0, loop=True)
+            $ renpy.music.queue("audio/Music/Festival_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
 
             jump festivalactivities
 
@@ -422,10 +423,12 @@ label festivalactivities:
             $ games = True
             call ahLoveIncrease
             call loveNotification
+            show sb neutral
             "Taking notice of a giant Mochi-Themed plush which passes you by, make your way towards its source."
             gm "Come one, come all!"
             gm "Scoop a Sakura Petal, and win a prize~"
             gm "It’ll only cost ya 500 Yen~"
+            show sb excited
             sb "Oh~ We’d love to!"
             sb "Isn’t that right, [playerName]?"
 
@@ -634,21 +637,21 @@ label festivalactivities:
 
             "As Amari rides away on their stallion, [sb] takes your hand into their own."
             "You aren’t exactly a fan of the sudden touching, but you figured for the sake of your \"date,\" you’d allow it."
-            $ renpy.music.play("audio/Music/Festival_FleetingBlossoms_V1.mp3", fadein=1.0,loop=True)
+            $ renpy.music.play("audio/Music/Festival_FleetingBlossoms_Intro.ogg", fadein=1.0, loop=True)
+            $ renpy.music.queue("audio/Music/Festival_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
 
             jump festivalactivities
 
 
         "Let [sb] decide." if sbdecide == False:
-            if foodstalls or games == False:
+            if foodstalls == False or games == False:
                 menu:
                     "Selecting this choice will advance the story. Are you sure you want to hang out with [sb] before doing the other activites?"
-                    "Continue":
+                    "Continue!":
                         pass
-                    "Complete other activites first.":
+                    "Complete the remaining activites first.":
                         jump festivalactivities
             stop music fadeout 1.0
-            $ sbdecide = True
             $ renpy.music.play("audio/Music/Sakura_Intro.ogg", fadein=1.0)
             $ renpy.music.queue("audio/Music/Sakura_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
             call sbLoveIncrease
