@@ -93,7 +93,7 @@ label Chap1_Scream:
     p "What the Hell!? G-Get your hands off of me!!"
     "Amari's lips seem to curl into a full on grin at your discontent."
 
-    show ah dramatic
+    show ah dramatic with Dissolve(0.3)
 
     "He laughs, gripping onto your hands with an even more firm grip than before."
     ah "Yes! Scream for me! Sing out your woes in the form of absolute fear for which 
@@ -114,6 +114,7 @@ label Chap1_StayStill:
     call loveNotification
     "You remain still as a statue."
     show ah neutral
+    show ks angry
     "Unmoving, you can only lazily direct your gaze to the equally unimpressed man behind them."
     "It’s almost as if by locking eye contact, you both seem to ask if Amari had 
     finished with their antics."
@@ -239,7 +240,7 @@ label Chap1_IgnoreVoice:
     attention towards the source of said voice, your face is ice cold."
     show sb oh with dissolve
     $ renpy.music.play("audio/Music/Sakura_Intro.ogg", fadein=1.0)
-    $ renpy.music.queue("audio/Music/Sakura_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
+    $ renpy.music.queue("audio/Music/Sakura_Loop.ogg", clear_queue=False,loop=True)
     sb "[p]?? It’s me– I…just wanted to check back in with you, haha~"
 
     return
@@ -250,7 +251,7 @@ label Chap1_TurnHead:
     "Despite how utterly crazy these last few days have been, you figure it 
     can’t possibly get any worse and begrudgingly turn towards the source of the voice."
     $ renpy.music.play("audio/Music/Sakura_Intro.ogg", fadein=1.0)
-    $ renpy.music.queue("audio/Music/Sakura_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
+    $ renpy.music.queue("audio/Music/Sakura_Loop.ogg", clear_queue=False,loop=True)
     show sb neutral with dissolve
     sb "Are you alright..?"
     sb "You know, once I’d ran off…I realized I’d forgotten my new companion, haha~"
@@ -354,6 +355,7 @@ label Chap1_Sakuraba:
     call loveNotification
     p "It sounds like you and that Sakuraba guy don’t really get along."
     p "Did he make you drop your ice cream too?"
+    show ma angry
     "Mikael reaches to scratch at the back of his head."
     "It appears as though despite the frown which paints his lips, his eyes 
     hold a story which only he could tell."

@@ -106,6 +106,8 @@ label epilogues:
             $ k_name = "???"
             ks "For once it seems like we can {i}agree{/i} on something."
             #A CG of Kaito sitting right next to you can be seen. You're both on some bench in the streets leading up to the Campus. It's nighttime, and lanterns are all floating in the dark sky around you. They're looking off ahead, their mask tossed aside and with a stoic look to them. Their lips also appear bruised.
+            $ renpy.music.play("audio/Music/EndingKaito_FleetingBlossoms_Intro.ogg", fadein=1.0)
+            $ renpy.music.queue("audio/Music/EndingKaito_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True)
             scene BG YYFront:
                 zoom 1.0 pos (0,0)
             show ks neutral at center
@@ -176,6 +178,8 @@ label epilogues:
             "However, after what seemed like an eternity of searching with little to no results, you find yourself letting out a pathetic whine while flopping face first into some grass."
             $ m_name = "???"
             ma "You and me both~"
+            $ renpy.music.play("audio/Music/EndingMikael_FleetingBlossoms_Intro.ogg", fadein=1.0)
+            $ renpy.music.queue("audio/Music/EndingMikael_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True)
             scene BG YYFront:
                 zoom 1.0 pos (0,0)
             show ma neutral at center
@@ -252,15 +256,17 @@ label epilogues:
             "However, after what seemed like an eternity of searching with little to no results, you find yourself letting out a pathetic whine while slumping against some nearby wall."
             $ a_name = "???"
             ah "Oh my~ How uncomfortable you look~"
+            $ renpy.music.play("audio/Music/EndingAmari_FleetingBlossoms_Intro.ogg", fadein=1.0)
+            $ renpy.music.queue("audio/Music/EndingAmari_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True)
             #*A CG of Amari is shown. They've taken to sitting next to you, with Bushi nearby munching on what appears to be some Sakura petals. Amari is positioned so that they've a hand on their forehead in a rather dramatic fashion.*
             show ah happy at center with dissolve
             $ a_name = "Amari"
             ah "Allow us to join you!"
             "Bushi huffs. It seems they'd rather focus on their evening snack than her owner's antics."
-            show ah dramatic
+            show ah dramatic with Dissolve(0.3)
             ah "That look of dread..."
             ah "The utter sense of sorrow...!"
-            show ah neutral
+            show ah neutral with Dissolve(0.3)
             ah "While I'd {i}love{/i} to see more of it, something tells me you need a bit more than that."
             ah "Tell me, my beloved [p], what has you so glum?"
             ah "Where is your knight clad in an armor of cherry blossoms when you need them most~!?!"
@@ -288,12 +294,12 @@ label epilogues:
             ah "Simple!"
             "You watch as a manic grin crosses Amari's face as they pull you up from your spot."
             #*A CG of Amari holding you Waltz style is shown. The MC looks nervous while Amari has that fire look in their eyes.*
-            show ah dramatic
+            show ah dramatic with Dissolve(0.3)
             ah "{i}I{/i} shall play that part."
             ah "After all, I'm quite the actress~"
             ah "With my dear Kaito-Kun tying up his spare ends, I'm afraid I've quite a lot of time to spend with my newfound friend."
             ah "You've that concert to go to as well."
-            show ah blush
+            show ah blush with Dissolve(0.3)
             ah "Ahhh~ The memories we shall make~!"
             ah "I'll even paint my nails for the occasion!!"
             ah "I'm sure, once [sb] sees how much more of a {i}wonderful{/i} companion I am, they'll come rushing back in no time~"

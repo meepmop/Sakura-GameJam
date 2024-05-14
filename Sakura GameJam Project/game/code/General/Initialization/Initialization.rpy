@@ -10,29 +10,9 @@ init:
     default sbdecide = False
 
 label start:
+
+    scene black with fade
     
-    menu levelSelect:
-        "Choose a chapter"
-        "Prologue":
-            jump Protologue
-        "Chapter 1":
-            # for debugging
-            $ sb = "Sakura"
-            jump Chapter1
-        "Chapter 2":
-            # for debugging
-            $ sb = "Sakura"
-            $ k_name = "Kaito"
-            $ a_name = "Amari"
-            $ m_name = "Mikael"
-            jump Chapter2
-        "Chapter 3":
-            # for debugging
-            $ sb = "Sakura"
-            $ k_name = "Kaito"
-            $ a_name = "Amari"
-            $ m_name = "Mikael"
-            jump chapter3
+    jump Protologue
     
-    # jump Protologue
     return

@@ -164,18 +164,16 @@ label Chap2_FutherPush:
     call ahLoveDecrease
     call maLoveIncrease
     call loveNotification
-    "Figuring this would be a good opportunity to deal some sweet, sweet, emotional 
-    damage, you clear your throat loudly enough to get the room's attention."
-    p "I may not know half of what [sb] was referring to, but clearly you must be 
-    pretty screwed up if just referencing that Mikael guy has you so bothered."
+    "Figuring this would be a good opportunity to deal some sweet, sweet, emotional damage, you clear your throat loudly enough to get the room's attention."
+    p "I may not know half of what [sb] was referring to, but clearly you must be pretty screwed up if just referencing that Mikael guy has you so bothered."
     p "Not just anyone would make me wanna shove some poor guy's ice cream out of 
     their hands."
-    p "I mean, not unless we were lovers. But who could ever love a stuck up, pompous, 
-    prick like you–"
+    p "I mean, not unless we were lovers. But who could ever love a stuck up, pompous, prick like you–"
     "Pausing mid sentence, you suddenly felt a heavy sense of dread pooling in your 
     stomach."
-    "It seemed like in the time it took you to have your little \"moment,\" Kaito 
-    had already taken to rolling up his sleeves."
+    "It seemed like in the time it took you to have your little \"moment,\" Kaito  had already taken to rolling up his sleeves."
+    $ renpy.music.play("audio/Music/Chase_FleetingBlossoms_Intro.ogg", fadein=1.0)
+    $ renpy.music.queue("audio/Music/Chase_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True)
     ks "Are you finished?"
     p "...What're you doing?"
     show ks neutral

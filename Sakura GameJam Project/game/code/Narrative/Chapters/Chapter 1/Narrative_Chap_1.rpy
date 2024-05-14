@@ -5,7 +5,7 @@ label Chapter1:
     
     # *There would be casual/'lighthearted' musical beats happening here.*
     $ renpy.music.play("audio/Music/DayBegins_Intro.ogg", fadein=1.0)
-    $ renpy.music.queue("audio/Music/DayBegins_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
+    $ renpy.music.queue("audio/Music/DayBegins_Loop.ogg", clear_queue=False,loop=True)
     scene BG YYFront with fade
     $ quick_menu = True
     "The weekend passes by just as quickly as it came."
@@ -55,7 +55,7 @@ label Chapter1:
     p "Here we are."
     p "This is where we'll start, I guess."
 
-    show sb oh
+    show sb excited
 
     sb "Woooow~! How pretty..~!"
     sb "It's as though nature itself has reflected itself in this very hallway..!"
@@ -103,7 +103,7 @@ label Chapter1_Cont_NearbyClass:
         subpixel True matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(0.0)*BrightnessMatrix(-1.58)*HueMatrix(0.0) 
     with dissolve
     $ renpy.music.play("audio/Music/Amari_Intro.ogg", fadein=1.0,loop=True)
-    $ renpy.music.queue("audio/Music/Amari_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
+    $ renpy.music.queue("audio/Music/Amari_Loop.ogg", clear_queue=False,loop=True)
 
     ks "Unbelievable!!"
     p "Huh–"
@@ -140,7 +140,7 @@ label Chapter1_Cont_NearbyClass:
 
     "Their eyes glisten with a manic fire as they firmly take your hands into their own."
 
-    show ah twt
+    show ah twt with Dissolve(0.3)
 
     ah "You!!"
     ############################################################
@@ -158,9 +158,9 @@ label Chapter1_Cont_NearbyClass:
     ks "Enough."
     # *A CG of both Amari and Kaito standing side by side appears. Kaito looks less than impressed while Amari is seen striking a pose.*
     # *Kaito's theme will now play.*
-    $ renpy.music.play("audio/Music/Kaito_FleetingBlossoms_Intro.ogg", fadein=1.0,loop=True)
-    $ renpy.music.queue("audio/Music/Kaito_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
-    show ah owo
+    $ renpy.music.play("audio/Music/Kaito_FleetingBlossoms_Intro.ogg", fadein=1.0)
+    $ renpy.music.queue("audio/Music/Kaito_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True)
+    show ah owo with Dissolve(0.3)
     ah "Aww...you're no fun~!"
     "Now moving back to Kaito's side, Amari strikes a pose."
     "Or rather…a few poses. Much to Kaito's displeasure."
@@ -274,7 +274,7 @@ label Chapter1_Cont_NearbyClass:
     # towards the MC. Mikael appears to be grinning while [SB] looks like they're currently fearing for their life.*
     # *Mikael's theme plays.*
     $ renpy.music.play("audio/Music/Mikael2_Intro.ogg", fadein=1.0)
-    $ renpy.music.queue("audio/Music/Mikael2_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
+    $ renpy.music.queue("audio/Music/Mikael2_Loop.ogg", clear_queue=False,loop=True)
     scene CG C1 mahug with dissolve
     sb "Uhh…is it really necessary to be this close?"
     sb "You know, personal space is a thing."
@@ -342,6 +342,7 @@ label Chapter1_Cont_NearbyClass:
     ma "Would you mind tellin' me what you two are doin' here anyways?"
     ma "While I somewhat recognize your face, I know for sure I haven't seen flower 
     boy over here before."
+    show sb excited
     "You quickly cast a glance [sb]'s way, taking notice of how embarrassed they look 
     at Mikael's makeshift 'title'."
     p "Well, apparently they don't remember who they are."
