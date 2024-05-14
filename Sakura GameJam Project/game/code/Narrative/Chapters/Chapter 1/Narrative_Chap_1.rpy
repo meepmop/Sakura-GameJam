@@ -136,7 +136,7 @@ label Chapter1_Cont_NearbyClass:
     "Before you've the chance to leave, you find yourself cornered by the louder of the two people."
     
     show ah dramatic
-    show ks shine
+    show ks happy
 
     "Their eyes glisten with a manic fire as they firmly take your hands into their own."
 
@@ -182,7 +182,7 @@ label Chapter1_Cont_NearbyClass:
     "Taking the time to adjust his vest, Kaito makes his way towards the 
     opposite end of the classroom."
 
-    show ks sad
+    show ks bashful
     
     "Running his fingers across the powdered white substance which coats the 
     desk in front of him, you notice the glint of sorrow which lingers behind his mask."
@@ -221,10 +221,10 @@ label Chapter1_Cont_NearbyClass:
     sta "HELP ME! PRESIDENT-SAMA!! IT'S EVERYWHERE!!!!"
     stb "The flour bomber is back again! Run!!"
     stc "My eyes!! They're so dry!!!!"
-    show ks oh
+    show ks neutral
     ks "..!"
     ks "Mikael!!!"
-    hide ks
+    hide ks with dissolve
     "Without skipping a beat, Kaito can be seen bolting out of the area."
     ks "Out of my way!"
     # *Some clattering sound effects could be heard*
@@ -234,7 +234,7 @@ label Chapter1_Cont_NearbyClass:
     ah "Oh dear…there he goes again~"
     ah "I shouldn't leave poor Kaito-Kun alone too long."
     ah "May we cross paths once more in the near future! My beloved [p]~!"
-    hide ah
+    hide ah with dissolve
     "With a dramatic twirl, Amari decides to take their leave, leaving you alone 
     in the room just as, if not, even more confused than when you had entered it."
     "Once finally alone, you can't help but let out a heavy sigh."
@@ -251,13 +251,14 @@ label Chapter1_Cont_NearbyClass:
     form of apology…"
     sb "However, that rather scary looking guy with the mask went ahead and knocked 
     it right from my hands!"
-    sb "Talk about a bummer. Huh..~?"
-    jd "If you'd like, I can get you somethin' even better~"
-    sb "Oh. That'd be wonderful~"
+    sb "Talk about a bummer. Huh...~?"
+    ma "If you'd like, I can get you somethin' even better~"
     show sb neutral
+    sb "Oh. That'd be wonderful~"
+    show sb excited
     "[sb]'s lips curl into a warm smile." 
     show sb oh at left
-    show ma happy at right
+    show ma neutral at right
     with dissolve
     ############################################################
     menu newCharacter:
@@ -299,7 +300,7 @@ label Chapter1_Cont_NearbyClass:
     ############################################################
     scene BG Classroom
     show sb oh at left
-    show ma happy at right
+    show ma neutral at right
     with dissolve
     ma "So, about that ice cream~"
     ma "How ‘Bout I whip y'all up some as an apology for Sakuraba's bitchiness?"
@@ -350,12 +351,12 @@ label Chapter1_Cont_NearbyClass:
     "However, judging from how the man before you was scratching their chin, you 
     feared that still might be the case."
     ma "So you're sayin' they just fell from some tree?!"
-    show ma happy
+    show ma neutral
     ma "Talk about cool!!"
     show sb annoyed
     sb "It was rather painful, you see~"
+    show ma angry
     ma "Oh, I bet!"
-    show ma wink1
     ma "You see, one time Kaito ‘n I–"
     ############################################################
     menu michaelTenses:

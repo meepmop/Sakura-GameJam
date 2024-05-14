@@ -36,7 +36,7 @@ label chapter3:
             show ma wink1 at center with hpunch
             "Immediately upon saying this, you're met with a boisterous laugh and a firm hand on your shoulder."
             ma "Where have I heard that one before~"
-    show ma happy
+    show ma neutral
     ma "So [playerName]. Are ya ready for today~?"
     ma "I know we haven't had much of a chance to chat. But I just wanted to say thanks~"
     show ma wink2
@@ -72,7 +72,7 @@ label chapter3:
     p "Well, they were... stopping to get us some breakfast."
     p "That old lady who runs the nearby sweet stand's apparently been giving them cookies all week."
 
-    show ma happy
+    show ma neutral
 
     ma "Ohhh! Miss Ayaka!"
     ma "She's the best!"
@@ -134,7 +134,7 @@ label chapter3:
     with dissolve
     ma "Alright, alright, alright...~"
     hide sb with dissolve
-    show ma happy at center with move
+    show ma neutral at center with move
     "Clapping his hands together, Mikael makes their way in front of you."
     "Much to [sb]'s' delight, you're met with a bundle of excitement in the form of a poorly drawn \"Battle Plan.\""
     ma "So!"
@@ -164,13 +164,13 @@ label chapter3:
             "Boba...drinks...those stupid rigged carnival games..."
             "You just knew that [sb] would be an absolute sucker for it."
 
-    show ma happy
+    show ma neutral
 
     ma "If it makes ya feel better, I'm only sayin' this so you can keep Sakuraba busy a bit longer."
     ma "Guy's a sucker for stickin' his nose where it ain't belong."
     ma "Especially when it comes to people who've been gettin' on his bad side~"
 
-    show ma happy at left
+    show ma neutral at left
     show sb thinking at right
     with dissolve
 
@@ -203,7 +203,7 @@ label chapter3:
             sb "Y-You wouldn't kill me, would you?"
             sb "I just need to last the rest of today so–"
 
-            show ma happy
+            show ma neutral
 
             ma "Of course not~"
             ma "We're friends now, I know I can trust you."
@@ -269,7 +269,7 @@ label festivalactivities:
             $ renpy.music.queue("audio/Music/Kaito_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
 
             show sb at left
-            show ks oh at right
+            show ks neutral at right
             with dissolve
 
             "Hearing [sb]'s gasp, you turn and are met with a familiar face."
@@ -307,7 +307,7 @@ label festivalactivities:
                     "Out of the corner of your eye, you also see [sb] nearly choke on their own, making it hard for you to not laugh at the display."
 
                     p "Thanks..."
-            show ks thinking
+            show ks neutral
 
             ks "They’re tasty, are they not?"
             ks "And rather cute, too."
@@ -331,7 +331,7 @@ label festivalactivities:
                     ks "If it means I can enjoy myself for a day, then so be it~"
                     ks "Besides, judging from what Amari has told me, Mikael would never ruin such a traditional festival."
 
-                    show ks shine
+                    show ks happy
 
                     ks "He’s afraid of the \"Hundred years bad luck\" it’s said to bring, fufufu~"
 
@@ -359,7 +359,7 @@ label festivalactivities:
 
             sb "Not really."
 
-            show ks oh
+            show ks neutral
 
             ks "..."
             sb "All you did was pay for some snacks!"
@@ -507,7 +507,7 @@ label festivalactivities:
             gm "Try as many times as your hearts desire~"
             p "This isn’t some scam is it–"
 
-            show sb annoyed
+            show sb angry
 
             sb "Come on!!!"
             sb "Not it. Not it–Another dud!!"
@@ -751,6 +751,9 @@ label festivalactivities:
                     p "Cut it out. I don’t like other people crying..."
                     p "We still have time. And even then–"
             stop music fadeout 1.0
+            show sb angry
+            $ renpy.music.play("audio/Music/Melancholy_FleetingBlossoms_Intro.ogg", fadein=1.0)
+            $ renpy.music.queue("audio/Music/Melancholy_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
             sb "It doesn’t matter anymore!"
             #*A CG Of SB smacking away the MC’s hand can be seen. They look frantic as tears stream down their cheeks.*
             p "?!?!"
@@ -759,7 +762,7 @@ label festivalactivities:
             sb "I’m just…I’m…!"
             "A series of loud bangs can be heard radiating through the area."
             "You instinctively turn your head towards its source."
-            hide sb
+            hide sb with dissolve
             "However, when glancing back to check on [sb], you see that they’ve disappeared."
             "Seeing the disgruntled crowd of nearby people beginning to panic."
 

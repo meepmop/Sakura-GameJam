@@ -73,7 +73,7 @@ label Chap2_ForLastTime:
     call loveNotification
     p "You know what."
     show sb annoyed
-    show ks oh
+    show ks neutral
     sb "[p]!"
     p "If you're gonna keep insulting me, at least have the decency to do so face 
     to face!"
@@ -113,7 +113,7 @@ label Chap2_YouMess:
     p "You know, a mask can't hide everything."
     p "When was the last time you even took a break?"
     p "Shouldn't that dramatic looking guy be the one asking you these things??"
-    show ks oh
+    show ks neutral
     ks "Well…they're…"
     p "Not here. Exactly."
     return
@@ -178,7 +178,7 @@ label Chap2_FutherPush:
     had already taken to rolling up his sleeves."
     ks "Are you finished?"
     p "...What're you doing?"
-    show ks thinking
+    show ks neutral
     ks "Isn't it obvious?"
     ks "I am giving both you and your unknown companion here time to run."
     ks "While I am not particularly fond of encouraging on-campus violence, as President of the Student Council, I'm sure I can grant myself this one exception."
@@ -328,6 +328,7 @@ label Chap2_NudgeSB:
     call loveNotification
     p "C'mon, [sb]~ Try peering into their past or something…"
     p "Unless what you pulled back there was just for show~"
+    show sb oh
     sb "Way to put me on the spot…" 
     sb "So cruel~"
     return

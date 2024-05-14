@@ -15,7 +15,7 @@ label Chapter2:
     ma "Ya just gotta keep him busy, butter him up, smooze him. Ya know?"
     ma "If ya do, ya got my word. Both you and Flower Boy over there won't be gettin' any of 
     my white stuff on ya~"
-    scene BG YYInside
+    scene BG YYInsideThirdFloor
     show sb neutral at center
     with Dissolve(0.6)
     "You can't help but hang your head low at the redhead's choice of wording."
@@ -51,7 +51,7 @@ label Chapter2:
     ma "On Wednesday, I've got some errands to run, so if ya can, make sure he doesn't leave his 
     office until at least 1:30."
     ma "I'm sure with Flower boy here, it'll be a piece of cake!"
-    scene BG YYInside
+    scene BG YYInsideThirdFloor
     show sb oh at center
     with Dissolve(0.6)
     "Briefly taking a look back at your phone, you see that the current time is 12:45."
@@ -60,7 +60,6 @@ label Chapter2:
     sb "You ready?" 
     sb "Remember, we've just gotta prevent the guy from leaving until the time Mikael said."
     sb "If anything, I've got a few ‘tricks' up my sleeve~"
-    sb "So...let's do this!"
     ############################################################
     menu letsDoThis:
         sb "So…let's do this!"
@@ -111,7 +110,7 @@ label Chapter2:
     sb "You know, for some reason, now that I actually think about it, that name sounds familiar."
     sb "You and that Mikael guy would always have lunch at the nearby park~"
     sb "The Anime-Themed Bento boxes were your favorite, were they not?"
-    show ks oh
+    show ks neutral
     "Both you and Kaito stare confusedly at [sb]."
     ks "How did you…"
     "The sudden shift in attention almost causes [sb] to stumble."
@@ -166,7 +165,7 @@ label Chapter2:
     sb "Oh, how kind~"
     sb "Did you hear that? That must mean he cares~"
     p "No, that means he's going to kick our ass!"
-    scene BG YYInside
+    scene BG YYInsideThirdFloor
     show sb neutral at center
     with hpunch
     "With your chest pounding from the sudden need to run, you find your head scrambling at the sight of a forked path."
