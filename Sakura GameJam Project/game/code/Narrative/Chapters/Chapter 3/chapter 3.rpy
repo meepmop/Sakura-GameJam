@@ -54,7 +54,7 @@ label chapter3:
             call maLoveIncrease from _call_maLoveIncrease_17
             call loveNotification from _call_loveNotification_68
             p "Yeah, yeah."
-            p "Honestly, I”m just hoping we can find some answers today."
+            p "Honestly, I'm just hoping we can find some answers today."
             p "If not, Amari might appear with {i}two{/i} horses this time."
         "You didn't tell us...":
             call maLoveDecrease from _call_maLoveDecrease_8
@@ -486,7 +486,7 @@ label festivalactivities:
                     p "What the fuck!?"
                     p "I-Is that–"
 
-                    show ah happy 
+                    show ah happy with Dissolve(0.3)
                     ah "My beloved pet bull, Bushi!"
                     ah "We’ve both come to this festival dressed to impress!"
                     ah "And with the mention of games...I just knew I would find my beautiful blossom here~"
@@ -496,7 +496,7 @@ label festivalactivities:
                     call loveNotification from _call_loveNotification_89
                     p "Oh no. Absolutely not. Get the Hell away from us!"
 
-                    show ah annoyed
+                    show ah annoyed with Dissolve(0.3)
 
                     ah "Unfortunately, once Bushi has set her sights on something, she's \"locked in!\""
 
@@ -568,7 +568,7 @@ label festivalactivities:
                     sb "I take my anger back– Good job, [playerName]!!!"
             gm "I think this one best suits your friend over there."
 
-            show ah dramatic
+            show ah dramatic with Dissolve(0.3)
 
             ah "How adorable!"
 
@@ -587,7 +587,7 @@ label festivalactivities:
 
                     sb "Yeah…me neither."
                     sb "Can you say it in a more [sb]-themed way...~?"
-                    show ah owo
+                    show ah owo with Dissolve(0.3)
                     "You notice Amari huffing as they flip at their hair."
 
                     ah "Is it not obvious?"
@@ -620,11 +620,11 @@ label festivalactivities:
                     ah "Yes. This year’s festival is to serve as my dear Kaito-Kun’s \"Fresh Start.\""
                     ah "A year where going forward…he will either choose to mend or permanently leave behind his past."
 
-                    show ah dramatic
+                    show ah dramatic with Dissolve(0.3)
 
                     ah "I’m rather excited for it, you see~"
 
-            show ah neutral
+            show ah neutral with Dissolve(0.3)
 
             ah "Though, I’d rather not bore you both with an ending prematurely stated."
             ah "Why don’t you both continue on your little \"date?\""

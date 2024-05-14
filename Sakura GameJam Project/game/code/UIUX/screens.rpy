@@ -580,7 +580,7 @@ screen about():
 
             label "Fleeting Blossoms"
             ## Credits
-            text _("Producer: Hailey Rojas \nProgrammers: Giovanna Gowmez, Kristi Jimenez\nSprites: Des\nBackgrounds, Logo Designer: Mika Dilig\nGUI Artist: Taylor Dinh\nComposer: sfeldman\n")
+            text _("Producer: Hailey Rojas \nProgrammers: Giovanna Gowmez, Kristi Jimenez\nSprite Artist: Destini Barkasy\nBackgrounds, Logo Designer: Mika Dilig\nGUI Artist: Taylor Dinh\nComposer: Sacha Feldman\n")
             text _("Version [config.version!t]\n")
 
             ## gui.about is usually set in options.rpy.

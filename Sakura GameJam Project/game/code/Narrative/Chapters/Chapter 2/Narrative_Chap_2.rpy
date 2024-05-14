@@ -6,7 +6,7 @@ label Chapter2:
     scene BG Classroom:
         matrixcolor SepiaMatrix(tint=u'#ffeec2', desat=(0.2126, 0.7152, 0.0722))
     $ renpy.music.play("audio/Music/DayBegins_Intro.ogg", fadein=1.0)
-    $ renpy.music.queue("audio/Music/DayBegins_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
+    $ renpy.music.queue("audio/Music/DayBegins_Loop.ogg", clear_queue=False,loop=True)
     show ma neutral at center:
         matrixcolor SepiaMatrix(tint=u'#ffeec2', desat=(0.2126, 0.7152, 0.0722))
         alpha 0.9
@@ -59,6 +59,7 @@ label Chapter2:
     "Whatever that means."
     sb "You ready?" 
     sb "Remember, we've just gotta prevent the guy from leaving until the time Mikael said."
+    show sb excited
     sb "If anything, I've got a few ‘tricks' up my sleeve~"
     ############################################################
     menu letsDoThis:
@@ -71,7 +72,7 @@ label Chapter2:
     "Kaito takes a moment to survey the area."
     "When he notices it seems to be just you two here, you see him step aside to gesture for you both to step inside."
     $ renpy.music.play("audio/Music/Kaito_FleetingBlossoms_Intro.ogg", fadein=1.0,loop=True)
-    $ renpy.music.queue("audio/Music/Kaito_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
+    $ renpy.music.queue("audio/Music/Kaito_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True)
     scene BG Classroom
     show sb neutral at right
     show ks angry at left
@@ -167,8 +168,6 @@ label Chapter2:
     sb "Oh, how kind~"
     sb "Did you hear that? That must mean he cares~"
     p "No, that means he's going to kick our ass!"
-    $ renpy.music.play("audio/Music/Chase_FleetingBlossoms_Intro.ogg", fadein=1.0)
-    $ renpy.music.queue("audio/Music/Chase_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
     scene BG YYInsideThirdFloor
     show sb neutral at center
     with hpunch
@@ -188,7 +187,7 @@ label Chapter2:
     ah "Your beloved Amari is here, dawning a chariot befitting that of a princess, nonetheless!"
     "Turning your attention towards the source of the dramatics, your eyes widen at the sight before you."
     $ renpy.music.play("audio/Music/Amari_Intro.ogg", fadein=1.0)
-    $ renpy.music.queue("audio/Music/Amari_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
+    $ renpy.music.queue("audio/Music/Amari_Loop.ogg", clear_queue=False,loop=True)
     scene CG C2 ahhorse with dissolve
     # *Insert CG of Amari on horseback extending their hand out towards you. 
     # Don't ask how they got an entire horse both on Campus and inside the building, 
@@ -209,14 +208,16 @@ label Chapter2:
     ah "Ahahaha! How absolutely wonderful~!"
     ah "One could even classify such as amazing~ Don't you think?"
     ks "I've found you–!"
+    scene BG YYInside
+    show sb neutral at left
+    show ah happy at center
+    show ks angry at right
+    with dissolve
     sb "Uh oh."
-    "Quickly snapping at the reins of their stallion, Amari continues to cackle as the 
-    horse bucks beneath you all."
-    "Both you and [sb] hold on for dear life while the animal charges through the 
-    passing by students and straight for Kaito."
+    "Quickly snapping at the reins of their stallion, Amari continues to cackle as the horse bucks beneath you all."
+    "Both you and [sb] hold on for dear life while the animal charges through the passing by students and straight for Kaito."
     ks "A-Amari!?"
     ah "‘Tis nothing personal, Kaito-Kun~"
-    ah "Consider this just part of the show~!"
     ############################################################
     menu partOfShow:
         ah "Consider this just part of the show~!"
@@ -225,11 +226,6 @@ label Chapter2:
         "Taunt Kaito":
             call Chap2_TauntKaito from _call_Chap2_TauntKaito
     ############################################################
-    scene BG YYInside
-    show sb neutral at left
-    show ah happy at center
-    show ks angry at right 
-    with dissolve
     "Fortunately enough for Kaito, it seemed as though luck was on his side."
     "Having taken a leap of faith, Kaito had just barely in the knick of time dodged the impending doom which was Amari."
     "Though, judging from how excited the eccentric was despite nearly trampling his supposed \"best friend,\" something told you that this wasn't too out of the norm for them."
@@ -261,7 +257,7 @@ label Chapter2:
         "They can handle it":
             call Chap2_HandleIt from _call_Chap2_HandleIt
     ############################################################
-    show ah dramatic
+    show ah dramatic with Dissolve(0.3)
     ah "You know, dramatics aside, I am beyond happy to finally have you both to myself~"
     ############################################################
     menu startSwinging:
@@ -271,7 +267,7 @@ label Chapter2:
         "[sb] bullied him":
             call Chap2_SakuraBully from _call_Chap2_SakuraBully
     ############################################################
-    show ah neutral
+    show ah neutral with Dissolve(0.3)
     ah "I see…"
     "Clapping their hands together, with a spark of burning passion, Amari takes [sb]'s hands into their own."
     ah "Oh, flower of dawn, won't you relay to me your wisdom?!"
@@ -287,7 +283,7 @@ label Chapter2:
     ############################################################
     sb "Alright, alright!"
     sb "You just have to promise. No trying to hurt me or [p]. Don't shoot the messenger!"
-    show ah dramatic
+    show ah dramatic with Dissolve(0.3)
     ah "You have my word– My heart, even~! Now, speak..!"
     ah "Speak to me the words which set Kaito-Kun's heart ablaze~!"
     show sb annoyed
@@ -328,12 +324,13 @@ label Chapter2:
     sb "I-I'm only saying what comes to mind– it's only when sakura petals fall, 
     that I can truly gain a sense of who someone really is."
     sb "It's not like I can learn your whole life story…"
+    show ah dramatic with Dissolve(0.3)
     ah "Oho~"
     ah "Ohohoho~"
-    show ah twt
+    show ah twt with Dissolve(0.3)
     ah "I see."
     ah "A shame, really."
-    show ah dramatic
+    show ah dramatic with Dissolve(0.3)
     ah "I'd of loved to hear what happened next~"
     ah "After all, each retelling of tragedy has its own unique touch."
     "With a wink, Amari twirls their body to end up right behind you."
@@ -346,7 +343,7 @@ label Chapter2:
         "The only thing that's \"tragic\" is…":
             call Chap2_OnlyTragic from _call_Chap2_OnlyTragic
     ############################################################
-    show ah owo
+    show ah owo with Dissolve(0.3)
     "Humming out a small tune, Amari releases their hold on you."
     "Rather than pay mind to your feelings on the matter, they instead focus their attention towards the Sakura tree once more."
     ah "The Cherry Blossom season is nearing its conclusion."
@@ -367,7 +364,7 @@ label Chapter2:
     ############################################################
     ah "Everything shall fall in place soon enough~!"
     ah "Just trust in the blossom of fate, and she shall deliver!"
-    show ah dramatic
+    show ah dramatic with Dissolve(0.3)
     ah "You have my word!"
     window auto hide
     $ quick_menu = False 
