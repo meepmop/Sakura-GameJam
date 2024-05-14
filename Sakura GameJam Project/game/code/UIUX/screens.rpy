@@ -358,7 +358,7 @@ screen main_menu():
 
     add gui.main_menu_background
     add "petal_effect" zoom 0.75
-    add "gui/Fleeting_Blossoms_Logo.png":
+    add "gui/Fleeting_Blossoms_Logo2.png":
         xalign 0.5
         yalign 0.5
 
