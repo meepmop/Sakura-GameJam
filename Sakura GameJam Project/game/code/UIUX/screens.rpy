@@ -349,7 +349,7 @@ style navigation_button_text:
 ## Used to display the main menu when Ren'Py starts.
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
-image petal_effect = Movie(play="gui/PinkPetalEffect.webm")
+image petal_effect = Movie(play="gui/FB_MainMenu_Petals.webm")
 
 
 
@@ -357,8 +357,8 @@ screen main_menu():
     tag menu
 
     add gui.main_menu_background
-    add "petal_effect"
-    add "gui/Fleeting_Blossoms_Logo.png":
+    add "petal_effect" zoom 0.75
+    add "gui/Fleeting_Blossoms_Logo2.png":
         xalign 0.5
         yalign 0.5
 
