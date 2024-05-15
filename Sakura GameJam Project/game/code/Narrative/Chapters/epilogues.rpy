@@ -92,8 +92,11 @@ label epilogues:
             $ quick_menu = False
             window auto hide
             scene black with Dissolve(2.0)
-            stop music fadeout 3.0
+            show text "To be continued..." with dissolve
             pause 3.0
+            hide text with Dissolve(1.0)
+            stop music fadeout 3.0
+            pause 4.0
             return
         "Look for Kaito.":
             p "W-Where the Hell did they go!?"
@@ -167,8 +170,11 @@ label epilogues:
             $ quick_menu = False
             window auto hide
             scene black with Dissolve(2.0)
-            stop music fadeout 3.0
+            show text "To be continued..." with dissolve
             pause 3.0
+            hide text with Dissolve(1.0)
+            stop music fadeout 3.0
+            pause 4.0
             return
         "Look for Mikael.":
             scene BG YYFront:
@@ -243,8 +249,11 @@ label epilogues:
             $ quick_menu = False
             window auto hide
             scene black with Dissolve(2.0)
-            stop music fadeout 3.0
+            show text "To be continued..." with dissolve
             pause 3.0
+            hide text with Dissolve(1.0)
+            stop music fadeout 3.0
+            pause 4.0
             return
         "Look for Amari.":
             scene BG YYFront:
@@ -308,6 +317,9 @@ label epilogues:
             $ quick_menu = False
             window auto hide
             scene black with Dissolve(2.0)
-            stop music fadeout 3.0
+            show text "To be continued..." with dissolve
             pause 3.0
+            hide text with Dissolve(1.0)
+            stop music fadeout 3.0
+            pause 4.0
             return

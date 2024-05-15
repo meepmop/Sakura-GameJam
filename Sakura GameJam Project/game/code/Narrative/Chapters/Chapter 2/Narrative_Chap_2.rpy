@@ -2,6 +2,9 @@ label Chapter2:
     # Open up with asset of the school Hallway*
     # General lighthearted music is playing.*
     # A slightly transparent sprite of Mikael is used*
+    show text "Day: Wednesday\n\nSetting: YuraYura Academy upper-level hallways\n\nTime: Morning" with dissolve
+    pause 3.0
+    hide text with dissolve
     $ quick_menu = True
     scene BG Classroom:
         matrixcolor SepiaMatrix(tint=u'#ffeec2', desat=(0.2126, 0.7152, 0.0722))
@@ -152,6 +155,10 @@ label Chapter2:
     show sb oh
     sb "Oh dear."
     "Judging from the ominous tone of Kaito's voice, you quickly reached to grab at [sb]'s arm."
+    scene BG YYInsideThirdFloor 
+    show sb oh at left
+    show ks angry at right
+    with dissolve
     "Now turning to make a run for it, you could only imagine what would have become of you two 
     if you hadn't."
     "After all, just from a mere glance, you could see the sheer difference in mass between yours and Kaito's arms."
@@ -168,7 +175,7 @@ label Chapter2:
     sb "Oh, how kind~"
     sb "Did you hear that? That must mean he cares~"
     p "No, that means he's going to kick our ass!"
-    scene BG YYInsideThirdFloor
+    hide ks
     show sb neutral at center
     with hpunch
     "With your chest pounding from the sudden need to run, you find your head scrambling at the sight of a forked path."
@@ -228,6 +235,9 @@ label Chapter2:
     ############################################################
     "Fortunately enough for Kaito, it seemed as though luck was on his side."
     "Having taken a leap of faith, Kaito had just barely in the knick of time dodged the impending doom which was Amari."
+    show ah happy:
+        xzoom -1.0
+    with dissolve
     "Though, judging from how excited the eccentric was despite nearly trampling his supposed \"best friend,\" something told you that this wasn't too out of the norm for them."
     window auto hide
     $ quick_menu = False

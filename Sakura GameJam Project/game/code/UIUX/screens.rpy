@@ -356,7 +356,7 @@ image petal_effect = Movie(play="gui/FB_MainMenu_Petals.webm")
 screen main_menu():
     tag menu
 
-    add gui.main_menu_background
+    add "BG/Placeholder/bg_SchoolFront.png"
     add "petal_effect" zoom 0.75
     add "gui/Fleeting_Blossoms_Logo2.png":
         xalign 0.5

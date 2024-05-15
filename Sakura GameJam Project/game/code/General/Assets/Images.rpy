@@ -1,7 +1,7 @@
 # defined backgrounds
 ################################################################################
 image BG YYFront = "BG/Placeholder/bg_SchoolFront.png"
-image BG YYInside = "BG/Placeholder/bg_SchoolInside.png"
+image BG YYInside = "BG/Placeholder/Class_Hallway_ver3.png"
 image BG YYInsideThirdFloor = "BG/Placeholder/Class_Hallway_Empty2.png"
 image BG Classroom = "BG/Placeholder/bg_Classroom.png"
 ################################################################################

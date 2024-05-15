@@ -1,4 +1,8 @@
 label chapter3:
+    scene black 
+    show text "Day: Friday\n\nSetting: Streets leading to YuraYura Academy\n\nTime: Afternoon"
+    pause 3.0
+    hide text with dissolve
     $ quick_menu = True
     $ renpy.music.play("audio/Music/DayBegins_Intro.ogg", fadein=1.0)
     $ renpy.music.queue("audio/Music/DayBegins_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
@@ -754,7 +758,7 @@ label festivalactivities:
                     p "Cut it out. I don’t like other people crying..."
                     p "We still have time. And even then–"
             stop music fadeout 1.0
-            show sb angry
+            show sb angry with hpunch
             $ renpy.music.play("audio/Music/Melancholy_FleetingBlossoms_Intro.ogg", fadein=1.0)
             $ renpy.music.queue("audio/Music/Melancholy_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
             sb "It doesn’t matter anymore!"
