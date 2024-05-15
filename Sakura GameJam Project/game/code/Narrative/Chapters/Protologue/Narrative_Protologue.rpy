@@ -13,7 +13,7 @@ label Protologue:
     # game actually starts
     # *Open with a black screen, and soft, hopeful music playing.*
     $ renpy.music.play("audio/Music/DayBegins_Intro.ogg", fadein=1.0)
-    $ renpy.music.queue("audio/Music/DayBegins_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
+    $ renpy.music.queue("audio/Music/DayBegins_Loop.ogg", clear_queue=False,loop=True)
     p "It seems like this year's bloom will be even better than the last."
     p "{i}Sigh{/i}"
     
@@ -70,7 +70,7 @@ label Protologue:
     show sb annoyed
     with Fade(0.0,0.0,1.0)
     $ renpy.music.play("audio/Music/Sakura_Intro.ogg", fadein=1.0)
-    $ renpy.music.queue("audio/Music/Sakura_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
+    $ renpy.music.queue("audio/Music/Sakura_Loop.ogg", clear_queue=False,loop=True)
     ############################################################
     menu MyHead:
         sb "My head..."

@@ -145,6 +145,8 @@ label Chap2_Uhh:
     call ksLoveIncrease
     call ahLoveIncrease
     call loveNotification
+    $ renpy.music.play("audio/Music/Chase_FleetingBlossoms_Intro.ogg", fadein=1.0)
+    $ renpy.music.queue("audio/Music/Chase_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True)
     "As much as you'd love to tear into Kaito yourself, judging from the genuine hurt which laced the man's voice, you gathered that [sb]'s words hit a bit too close to home."
     "In fact, you noticed how rather than sit there and take [sb]'s wrath, 
     Kaito was beginning to roll up his sleeves."

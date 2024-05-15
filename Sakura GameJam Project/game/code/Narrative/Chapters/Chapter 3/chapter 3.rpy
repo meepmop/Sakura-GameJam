@@ -5,7 +5,7 @@ label chapter3:
     hide text with dissolve
     $ quick_menu = True
     $ renpy.music.play("audio/Music/DayBegins_Intro.ogg", fadein=1.0)
-    $ renpy.music.queue("audio/Music/DayBegins_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
+    $ renpy.music.queue("audio/Music/DayBegins_Loop.ogg", clear_queue=False,loop=True)
     scene BG YYFront with fade
     "It's already Friday."
     "Time passes quickly when you're dealing with crazy."
@@ -130,8 +130,8 @@ label chapter3:
     sb "After all, if my memories don't resurface by then, I'm not sure they ever will."
     #*The scene shifts to outside of YuraYura. Once again, couples are everywhere. Stalls are set up with all sorts of vendors, and it seems like everything is going smoothly.
     #*A peaceful yet uplifting festival theme is playing*
-    $ renpy.music.play("audio/Music/Festival_FleetingBlossoms_Intro.ogg", fadein=1.0, loop=True)
-    $ renpy.music.queue("audio/Music/Festival_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
+    $ renpy.music.play("audio/Music/Festival_FleetingBlossoms_Intro.ogg", fadein=1.0)
+    $ renpy.music.queue("audio/Music/Festival_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True)
     scene BG YYFront
     show sb neutral at right
     show ma neutral at left 
@@ -269,8 +269,8 @@ label festivalactivities:
 
             sb "Really??"
 
-            $ renpy.music.play("audio/Music/Kaito_FleetingBlossoms_Intro.ogg", fadein=1.0,loop=True)
-            $ renpy.music.queue("audio/Music/Kaito_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
+            $ renpy.music.play("audio/Music/Kaito_FleetingBlossoms_Intro.ogg", fadein=1.0)
+            $ renpy.music.queue("audio/Music/Kaito_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True)
 
             show sb at left
             show ks neutral at right
@@ -417,8 +417,8 @@ label festivalactivities:
             hide ks
             show sb at center
             with dissolve
-            $ renpy.music.play("audio/Music/Festival_FleetingBlossoms_Intro.ogg", fadein=1.0, loop=True)
-            $ renpy.music.queue("audio/Music/Festival_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
+            $ renpy.music.play("audio/Music/Festival_FleetingBlossoms_Intro.ogg", fadein=1.0)
+            $ renpy.music.queue("audio/Music/Festival_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True)
 
             jump festivalactivities
 
@@ -474,7 +474,7 @@ label festivalactivities:
             sb "I recognize that laugh!"
             "[sb]’s lips curl into a wide smile."
             $ renpy.music.play("audio/Music/Amari_Intro.ogg", fadein=1.0)
-            $ renpy.music.queue("audio/Music/Amari_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
+            $ renpy.music.queue("audio/Music/Amari_Loop.ogg", clear_queue=False,loop=True)
             show ah dramatic at right
             show sb neutral at left
             with dissolve
@@ -641,8 +641,8 @@ label festivalactivities:
 
             "As Amari rides away on their stallion, [sb] takes your hand into their own."
             "You aren’t exactly a fan of the sudden touching, but you figured for the sake of your \"date,\" you’d allow it."
-            $ renpy.music.play("audio/Music/Festival_FleetingBlossoms_Intro.ogg", fadein=1.0, loop=True)
-            $ renpy.music.queue("audio/Music/Festival_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
+            $ renpy.music.play("audio/Music/Festival_FleetingBlossoms_Intro.ogg", fadein=1.0)
+            $ renpy.music.queue("audio/Music/Festival_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True)
 
             jump festivalactivities
 
@@ -657,7 +657,7 @@ label festivalactivities:
                         jump festivalactivities
             stop music fadeout 1.0
             $ renpy.music.play("audio/Music/Sakura_Intro.ogg", fadein=1.0)
-            $ renpy.music.queue("audio/Music/Sakura_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
+            $ renpy.music.queue("audio/Music/Sakura_Loop.ogg", clear_queue=False,loop=True)
             call sbLoveIncrease
             call loveNotification
             "Seeing little point in dragging this out any longer than necessary, you let [sb] take the lead."
@@ -760,7 +760,7 @@ label festivalactivities:
             stop music fadeout 1.0
             show sb angry with hpunch
             $ renpy.music.play("audio/Music/Melancholy_FleetingBlossoms_Intro.ogg", fadein=1.0)
-            $ renpy.music.queue("audio/Music/Melancholy_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
+            $ renpy.music.queue("audio/Music/Melancholy_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True)
             sb "It doesn’t matter anymore!"
             #*A CG Of SB smacking away the MC’s hand can be seen. They look frantic as tears stream down their cheeks.*
             p "?!?!"
