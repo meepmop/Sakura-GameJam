@@ -201,6 +201,8 @@ init python:
     build.classify('game/**.ttf', 'archive')
     build.classify('game/**.otf', 'archive')
     build.classify('game/**.txt', 'archive')
+    build.classify('game/**.webm', 'archive')
+    build.classify('game/**.psd', 'archive')
 
     ## Files matching documentation patterns are duplicated in a mac app build,
     ## so they appear in both the app and the zip file.
