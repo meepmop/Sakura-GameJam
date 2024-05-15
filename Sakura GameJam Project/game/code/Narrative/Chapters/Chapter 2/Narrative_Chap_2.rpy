@@ -74,7 +74,7 @@ label Chapter2:
     ############################################################
     "Kaito takes a moment to survey the area."
     "When he notices it seems to be just you two here, you see him step aside to gesture for you both to step inside."
-    $ renpy.music.play("audio/Music/Kaito_FleetingBlossoms_Intro.ogg", fadein=1.0,loop=True)
+    $ renpy.music.play("audio/Music/Kaito_FleetingBlossoms_Intro.ogg", fadein=1.0)
     $ renpy.music.queue("audio/Music/Kaito_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True)
     scene BG Classroom
     show sb neutral at right
@@ -251,7 +251,7 @@ label Chapter2:
     with Dissolve(0.6)
     $ quick_menu = True
     $ renpy.music.play("audio/Music/Sakura_Intro.ogg", fadein=1.0)
-    $ renpy.music.queue("audio/Music/Sakura_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
+    $ renpy.music.queue("audio/Music/Sakura_Loop.ogg", clear_queue=False,loop=True)
     ah "Ahh~ What joy that always brings me."
     ah "I'm quite certain Kaito-Kun should have been kept more than busy with that stunt."
     show ah neutral
@@ -305,7 +305,7 @@ label Chapter2:
     show sb neutral
     sb "Judging from how dramatic you are...I'm assuming that's in character."
     $ renpy.music.play("audio/Music/Melancholy_FleetingBlossoms_Intro.ogg", fadein=1.0)
-    $ renpy.music.queue("audio/Music/Melancholy_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True,fadein=1.0)
+    $ renpy.music.queue("audio/Music/Melancholy_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True)
     scene CG C2 ahpray with dissolve
     
     # *A CG of a younger Amari seemingly praying at this tree is shown. They have 
