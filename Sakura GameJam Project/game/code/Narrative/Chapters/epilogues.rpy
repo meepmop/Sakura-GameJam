@@ -92,8 +92,11 @@ label epilogues:
             $ quick_menu = False
             window auto hide
             scene black with Dissolve(2.0)
-            stop music fadeout 3.0
+            show text "To be continued..." with dissolve
             pause 3.0
+            hide text with Dissolve(1.0)
+            stop music fadeout 3.0
+            pause 4.0
             return
         "Look for Kaito.":
             p "W-Where the Hell did they go!?"
@@ -110,14 +113,14 @@ label epilogues:
             $ renpy.music.queue("audio/Music/EndingKaito_FleetingBlossoms_Loop.ogg", clear_queue=False,loop=True)
             scene BG YYFront:
                 zoom 1.0 pos (0,0)
-            show ks neutral at center
+            show ks neutral no mask at center
             with dissolve
             p "Your mask..."
             $ k_name = "Kaito"
             ks "There's no longer a need for it."
             "While Kaito's jaw remained firmly clenched, his eyes seemed to glisten with a story untold."
             "Of all the people who could have joined you in your misery, you were comforted in the fact that Kaito wouldn't make dramatics from it."
-            show ks bashful
+            show ks bashful no mask
             ks "This has been quite the week, wouldn't you agree?"
             ks "Going from some random wallflower to someone worth remembering."
             ks "Does it not make you feel like the Protagonist of some cheesy slice of life anime?"
@@ -125,13 +128,14 @@ label epilogues:
             "Though, you'd be lying if it wasn't a welcome distraction at the moment."
             p "I guess."
             p "At least in those anime, the main character's companion doesn't disappear on the last day…"
-            show ks neutral
+            show ks neutral no mask
             ks "Oh, on the contrary."
             ks "You see there are plenty of tales which end on the more bittersweet note."
             ks "Beating Angels, Titan Attack, Fairy Tale–"
-            show ks happy
+            show ks happy no mask
             ks "Ah… forgive me. Perhaps this is a conversation for another time."
             ks "Now that I think about it, this is the first time we have truly had the chance to speak one on one."
+            show ks pout no mask
             ks "I almost don't know what else to say…"
             ks "I've no reason to chastise, nor ridicule you for the matter."
             ks "I suppose I can simply enjoy what time we have, embracing one another's presence."
@@ -141,16 +145,16 @@ label epilogues:
             p "I'm assuming this is the first time you've had a moment to rest in a hot minute, huh."
             p "What ever happened to Mikael's big \"stunt?\""
             p "I'm assuming those bangs earlier were from him."
-            show ks angry
+            show ks angry no mask
             ks "He was a fool, that's what."
             ks "Trying to carry over 80 kilograms worth of wooden crates. Unbelievable."
             ks "It wouldn't be the first time he's done something stupid."
             ks "Won't be the last either."
             #*A CG of the sky with hundreds of floating lanterns appears. You're watching from the perspective of Kaito and you sitting on the bench, with the addition of bustling city life going on around you all*
-            show ks neutral
+            show ks neutral no mask
             "Kaito lets his eyes briefly flutter open."
             "Taking in the beauty of the night time lanterns, you see his face brighten like a child getting to see their favorite toy."
-            show ks blush
+            show ks bashful no mask sideeye
             ks "Say...[p]."
             ks "I know this is rather forward, but Mikael had informed me of your need for a \"concert partner.\""
             ks "I understand with how I've acted towards you and [sb], that I would most likely not be your first choice."
@@ -161,14 +165,17 @@ label epilogues:
             "Taking Kaito's hand into your own, you give it a firm squeeze."
             p "Well all go then."
             p "Mikael and Amari, too."
-            show ks happy
+            show ks happy no mask
             ks "Fufufu~ It's a date, then."
 
             $ quick_menu = False
             window auto hide
             scene black with Dissolve(2.0)
-            stop music fadeout 3.0
+            show text "To be continued..." with dissolve
             pause 3.0
+            hide text with Dissolve(1.0)
+            stop music fadeout 3.0
+            pause 4.0
             return
         "Look for Mikael.":
             scene BG YYFront:
@@ -243,8 +250,11 @@ label epilogues:
             $ quick_menu = False
             window auto hide
             scene black with Dissolve(2.0)
-            stop music fadeout 3.0
+            show text "To be continued..." with dissolve
             pause 3.0
+            hide text with Dissolve(1.0)
+            stop music fadeout 3.0
+            pause 4.0
             return
         "Look for Amari.":
             scene BG YYFront:
@@ -308,6 +318,9 @@ label epilogues:
             $ quick_menu = False
             window auto hide
             scene black with Dissolve(2.0)
-            stop music fadeout 3.0
+            show text "To be continued..." with dissolve
             pause 3.0
+            hide text with Dissolve(1.0)
+            stop music fadeout 3.0
+            pause 4.0
             return

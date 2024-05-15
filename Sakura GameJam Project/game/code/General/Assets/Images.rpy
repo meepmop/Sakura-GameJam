@@ -1,7 +1,7 @@
 # defined backgrounds
 ################################################################################
 image BG YYFront = "BG/Placeholder/bg_SchoolFront.png"
-image BG YYInside = "BG/Placeholder/bg_SchoolInside.png"
+image BG YYInside = "BG/Placeholder/Class_Hallway_ver3.png"
 image BG YYInsideThirdFloor = "BG/Placeholder/Class_Hallway_Empty2.png"
 image BG Classroom = "BG/Placeholder/bg_Classroom.png"
 ################################################################################
@@ -22,6 +22,15 @@ image ks bashful = At("Characters/Kaito/KS_Bashful.png", sprite_highlight('kaito
 image ks blush = At("Characters/Kaito/KS_Blush.png", sprite_highlight('kaito'))
 image ks happy = At("Characters/Kaito/KS_Happy.png", sprite_highlight('kaito'))
 image ks neutral = At("Characters/Kaito/KS_Neutral.png", sprite_highlight('kaito'))
+
+image ks angry no mask = At("Characters/Kaito/KS_Angry_WO_Mask.png", sprite_highlight('kaito'))
+image ks bashful no mask = At("Characters/Kaito/KS_Bashful_WO_Mask.png", sprite_highlight('kaito'))
+image ks bashful no mask sideeye = At("Characters/Kaito/KS_Bashful_WO_Mask_Sideeye.png", sprite_highlight('kaito'))
+image ks happy no mask = At("Characters/Kaito/KS_Happy_WO_Mask.png", sprite_highlight('kaito'))
+image ks neutral no mask = At("Characters/Kaito/KS_Neutral_WO_Mask.png", sprite_highlight('kaito'))
+image ks smile no mask = At("Characters/Kaito/KS_Neutral_WO_Mask_Smile.png", sprite_highlight('kaito'))
+image ks pout no mask = At("Characters/Kaito/KS_Pout_WO_Mask.png", sprite_highlight('kaito'))
+image ks tired no mask = At("Characters/Kaito/KS_Tired_Sigh_WO_Mask.png", sprite_highlight('kaito'))
 
 ################################################################################
 # Amari
